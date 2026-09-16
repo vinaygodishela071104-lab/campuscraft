@@ -1,0 +1,1577 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CampusCraft | School Uniforms & Sportswear|Customization</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="customization.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./images/logo.png"
+            alt="CampusCraft Logo"
+            class="brand-logo"
+            id="headerLogo"
+          />
+        </a>
+
+        <div class="brand-content">
+          <h1 class="brand-name">
+            <span class="campus">Campus</span>
+            <span class="craft">Craft</span>
+          </h1>
+
+          <div class="brand-subtitle">
+            <span class="brand-line"></span>
+
+            <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+            <span class="brand-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           NAVIGATION
+      ========================================= -->
+
+      <nav>
+        <ul class="nav-links">
+          <!-- HOME -->
+
+          <li class="dropdown">
+            <a href="index.html">
+              Home
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html">Home 1</a>
+              </li>
+
+              <li>
+                <a href="home2.html">Home 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ABOUT -->
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="product.html">
+              Products
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="mobile-products-link">
+                <a href="product.html">Products</a>
+              </li>
+
+              <li>
+                <a href="school-uniforms.html"> School Uniforms </a>
+              </li>
+
+              <li>
+                <a href="sportswear.html">Sportswear</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="School.html">School Orders</a>
+          </li>
+          <li>
+            <a href="Customization.html">Customization</a>
+          </li>
+
+          <!-- CONTACT -->
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+          <!-- MOBILE CART -->
+
+          <li class="mobile-cart-item">
+            <button
+              class="mobile-cart-btn"
+              id="mobileCartToggle"
+              type="button"
+              aria-label="Open cart"
+              aria-expanded="false"
+              aria-controls="cartPanel"
+            >
+              <span class="mobile-cart-btn__label">
+                <i data-lucide="shopping-bag"></i>
+
+                Cart
+              </span>
+
+              <span class="cart-count mobile-cart-count" id="mobileCartCount">
+                0
+              </span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- MOBILE ENQUIRE BUTTON -->
+
+        <div class="mobile-login">
+          <a href="contact.html" class="login-btn">
+            <i data-lucide="message-circle"></i>
+
+            <span>Enquire Now</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- ========================================
+           HEADER BUTTONS
+      ========================================= -->
+
+      <div class="buttons">
+        <!-- RTL -->
+
+        <button
+          class="icon-btn rtl-btn"
+          id="rtlToggle"
+          title="RTL Mode"
+          aria-label="Toggle RTL mode"
+          type="button"
+        >
+          <i data-lucide="arrow-left-right"></i>
+        </button>
+
+        <!-- DARK MODE -->
+
+        <button
+          class="icon-btn dark-btn"
+          id="darkToggle"
+          title="Dark Mode"
+          aria-label="Toggle dark mode"
+          type="button"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+        <!-- DESKTOP CART -->
+
+        <button
+          class="icon-btn cart-btn desktop-cart-btn"
+          id="cartToggle"
+          title="Cart"
+          aria-label="Open cart"
+          aria-expanded="false"
+          aria-controls="cartPanel"
+          type="button"
+        >
+          <i data-lucide="shopping-bag"></i>
+
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- DESKTOP ENQUIRE BUTTON -->
+
+        <a href="contact.html" class="login-btn desktop-login">
+          <i data-lucide="message-circle"></i>
+
+          <span>Enquire Now</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+
+        <button
+          class="icon-btn menu-btn"
+          id="menuToggle"
+          title="Menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- ========================================
+           CART PANEL
+      ========================================= -->
+
+      <div
+        class="cart-panel"
+        id="cartPanel"
+        hidden
+        aria-labelledby="cartPanelTitle"
+      >
+        <!-- CART HEADER -->
+
+        <div class="cart-panel__head">
+          <h3 id="cartPanelTitle">Your Cart</h3>
+
+          <button
+            type="button"
+            class="cart-panel__close"
+            id="cartClose"
+            aria-label="Close cart"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- CART BODY -->
+
+        <div class="cart-panel__body">
+          <!-- EMPTY CART -->
+
+          <div class="cart-panel__empty" id="cartEmptyState">
+            <i data-lucide="shopping-cart"></i>
+
+            <p>No products selected yet.</p>
+
+            <small>
+              Your selected uniforms and sportswear will appear here.
+            </small>
+          </div>
+
+          <!-- CART PRODUCTS -->
+
+          <div class="cart-items" id="cartItems"></div>
+        </div>
+
+        <!-- CART FOOTER -->
+
+        <div class="cart-panel__footer">
+          <div class="cart-panel__total">
+            <span>Subtotal</span>
+
+            <strong id="cartSubtotal">₹0</strong>
+          </div>
+
+          <button id="buyNowBtn" class="cart-buy-btn" type="button">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </header>
+    <section
+      class="customization-hero"
+      aria-labelledby="customization-hero-title"
+    >
+      <div class="customization-hero__background"></div>
+
+      <div class="customization-container customization-hero__container">
+        <div class="customization-hero__visual">
+          <div class="customization-hero__image-card">
+            <img
+              src="./images/navy.png"
+              alt="Students wearing customized Campus Craft uniforms"
+            />
+          </div>
+
+          <div class="customization-hero__floating-card">
+            <span class="customization-hero__floating-icon">✓</span>
+
+            <div>
+              <strong>Made for your school</strong>
+              <span>Designed around your identity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="customization-hero__content">
+          <p class="customization-hero__eyebrow">Campus Craft Customization</p>
+
+          <h1 id="customization-hero-title" class="customization-hero__title">
+            Create a Uniform <span>That Belongs to You</span>
+          </h1>
+
+          <p class="customization-hero__description">
+            Design school uniforms and sportswear with your own colours, logo,
+            names, numbers, and signature details.
+          </p>
+
+          <div class="customization-hero__actions">
+            <a class="btn-primary" href="#customize-design">
+              Start Customizing
+            </a>
+
+            <a
+              class="btn-secondary customization-hero__secondary-button"
+              href="contact.html"
+            >
+              Request a Quote
+            </a>
+          </div>
+
+          <div class="customization-hero__features">
+            <div class="customization-hero__feature">
+              <span class="customization-hero__feature-icon">✓</span>
+              <span>Custom school colours</span>
+            </div>
+
+            <div class="customization-hero__feature">
+              <span class="customization-hero__feature-icon">✓</span>
+              <span>Logo and name placement</span>
+            </div>
+
+            <div class="customization-hero__feature">
+              <span class="customization-hero__feature-icon">✓</span>
+              <span>Comfortable performance fabrics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="customize-options"
+      id="customize-design"
+      aria-labelledby="customize-options-title"
+    >
+      <div class="customization-container">
+        <div class="customize-options__heading">
+          <p class="customize-options__eyebrow">Build Your Collection</p>
+
+          <h2 id="customize-options-title" class="section-title">
+            Choose What to <span>Customize</span>
+          </h2>
+
+          <p class="customize-options__intro">
+            Select the uniform or sportswear category you want to create, then
+            personalize it with your school colours, logo, names, and details.
+          </p>
+        </div>
+
+        <div class="customize-options__grid">
+          <article class="customize-option-card customize-option-card--large">
+            <img
+              src="./images/uniform.png"
+              alt="Students wearing customized school uniforms"
+              class="customize-option-card__image"
+            />
+
+            <div class="customize-option-card__overlay"></div>
+
+            <div class="customize-option-card__content">
+              <span class="customize-option-card__number">01</span>
+              <h3>School Uniforms</h3>
+              <p>
+                Design smart and comfortable everyday uniforms for your school.
+              </p>
+
+              <a href="#custom-quote" class="customize-option-card__link">
+                Customize Uniform
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="customize-option-card">
+            <img
+              src="./images/sportsjersey.png"
+              alt="Customized school sports jersey"
+              class="customize-option-card__image"
+            />
+
+            <div class="customize-option-card__overlay"></div>
+
+            <div class="customize-option-card__content">
+              <span class="customize-option-card__number">02</span>
+              <h3>Sports Jerseys</h3>
+              <p>Create performance jerseys with team names and numbers.</p>
+
+              <a href="#custom-quote" class="customize-option-card__link">
+                Customize Jersey
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="customize-option-card">
+            <img
+              src="./images/sportswear.png"
+              alt="Customized school house T-shirts"
+              class="customize-option-card__image"
+            />
+
+            <div class="customize-option-card__overlay"></div>
+
+            <div class="customize-option-card__content">
+              <span class="customize-option-card__number">03</span>
+              <h3>House T-Shirts</h3>
+              <p>Show school spirit with custom house colours and graphics.</p>
+
+              <a href="#custom-quote" class="customize-option-card__link">
+                Customize T-Shirt
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="customize-option-card">
+            <img
+              src="./images/track.png"
+              alt="Customized school tracksuit"
+              class="customize-option-card__image"
+            />
+
+            <div class="customize-option-card__overlay"></div>
+
+            <div class="customize-option-card__content">
+              <span class="customize-option-card__number">04</span>
+              <h3>Tracksuits</h3>
+              <p>
+                Build coordinated tracksuits for training, travel, and events.
+              </p>
+
+              <a href="#custom-quote" class="customize-option-card__link">
+                Customize Tracksuit
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="customize-option-card">
+            <img
+              src="./images/team.png"
+              alt="Students wearing customized team kits"
+              class="customize-option-card__image"
+            />
+
+            <div class="customize-option-card__overlay"></div>
+
+            <div class="customize-option-card__content">
+              <span class="customize-option-card__number">05</span>
+              <h3>Team Kits</h3>
+              <p>
+                Match your players with complete teamwear made for performance.
+              </p>
+
+              <a href="#custom-quote" class="customize-option-card__link">
+                Customize Team Kit
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="custom-process" aria-labelledby="custom-process-title">
+      <div class="customization-container">
+        <div class="custom-process__header">
+          <p class="custom-process__eyebrow">Simple From Start to Finish</p>
+
+          <h2 id="custom-process-title" class="section-title">
+            How It <span>Works</span>
+          </h2>
+
+          <p class="custom-process__intro">
+            From choosing your product to receiving the finished uniforms, our
+            guided process makes every step simple, clear, and stress-free.
+          </p>
+        </div>
+
+        <div class="custom-process__steps">
+          <article class="custom-process__step custom-process__step--active">
+            <div class="custom-process__step-top">
+              <span class="custom-process__step-number">01</span>
+
+              <span class="custom-process__step-icon" aria-hidden="true">
+                <i data-lucide="shirt"></i>
+              </span>
+            </div>
+
+            <div class="custom-process__step-content">
+              <h3>Choose Your Product</h3>
+
+              <p>
+                Select school uniforms, sports jerseys, house T-shirts,
+                tracksuits, team kits, or staffwear.
+              </p>
+            </div>
+          </article>
+
+          <div class="custom-process__arrow" aria-hidden="true">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <article class="custom-process__step">
+            <div class="custom-process__step-top">
+              <span class="custom-process__step-number">02</span>
+
+              <span class="custom-process__step-icon" aria-hidden="true">
+                <i data-lucide="palette"></i>
+              </span>
+            </div>
+
+            <div class="custom-process__step-content">
+              <h3>Shape Your Design</h3>
+
+              <p>
+                Choose your school colours, fabrics, styles, trims, patterns,
+                and preferred logo placement options for every details.
+              </p>
+            </div>
+          </article>
+
+          <div class="custom-process__arrow" aria-hidden="true">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <article class="custom-process__step">
+            <div class="custom-process__step-top">
+              <span class="custom-process__step-number">03</span>
+
+              <span class="custom-process__step-icon" aria-hidden="true">
+                <i data-lucide="cloud-upload"></i>
+              </span>
+            </div>
+
+            <div class="custom-process__step-content">
+              <h3>Share Your Details</h3>
+
+              <p>
+                Upload your school logo and share names, numbers, quantities,
+                sizes, and preferred delivery details with our team.
+              </p>
+            </div>
+          </article>
+
+          <div class="custom-process__arrow" aria-hidden="true">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <article class="custom-process__step">
+            <div class="custom-process__step-top">
+              <span class="custom-process__step-number">04</span>
+
+              <span class="custom-process__step-icon" aria-hidden="true">
+                <i data-lucide="badge-check"></i>
+              </span>
+            </div>
+
+            <div class="custom-process__step-content">
+              <h3>Review and Approve</h3>
+
+              <p>
+                Review your digital mockup, confirm every final detail, and
+                approve the complete design before production begins.
+              </p>
+            </div>
+          </article>
+
+          <div class="custom-process__arrow" aria-hidden="true">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <article class="custom-process__step">
+            <div class="custom-process__step-top">
+              <span class="custom-process__step-number">05</span>
+
+              <span class="custom-process__step-icon" aria-hidden="true">
+                <i data-lucide="package-check"></i>
+              </span>
+            </div>
+
+            <div class="custom-process__step-content">
+              <h3>We Make It Happen</h3>
+
+              <p>
+                Your approved uniforms move through production, quality
+                inspection and delivery to your school.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="custom-process__bottom">
+          <span class="custom-process__bottom-icon" aria-hidden="true">
+            <i data-lucide="circle-help"></i>
+          </span>
+
+          <p>
+            Need help choosing the right option?
+            <a href="#custom-quote">Talk to a Campus Craft designer</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="design-preview"
+      id="customize-design"
+      aria-labelledby="design-preview-title"
+    >
+      <div class="customization-container">
+        <div class="design-preview__header">
+          <p class="design-preview__eyebrow">Choose Your Base Product</p>
+
+          <h2 id="design-preview-title" class="section-title">
+            Select a Product and <span>Make It Yours</span>
+          </h2>
+
+          <p class="design-preview__intro">
+            Choose the basic uniform model you need, select your preferred
+            colours, and share your customization requirements with the Campus
+            Craft team.
+          </p>
+        </div>
+
+        <div class="design-preview__builder">
+          <div class="design-preview__visual-panel">
+            <div class="design-preview__visual-top">
+              <div>
+                <span class="design-preview__visual-label"
+                  >Selected Product</span
+                >
+
+                <h3 id="preview-product-name">Performance T-Shirt</h3>
+              </div>
+
+              <div
+                class="design-preview__view-switcher"
+                role="group"
+                aria-label="Product image view"
+              >
+                <button
+                  class="design-preview__view-button is-active"
+                  type="button"
+                  data-view="front"
+                  aria-pressed="true"
+                >
+                  <i data-lucide="scan-face"></i>
+                  Front
+                </button>
+
+                <button
+                  class="design-preview__view-button"
+                  type="button"
+                  data-view="back"
+                  aria-pressed="false"
+                >
+                  <i data-lucide="scan-back"></i>
+                  Back
+                </button>
+              </div>
+            </div>
+
+            <div class="design-preview__canvas">
+              <div
+                class="design-preview__canvas-decoration design-preview__canvas-decoration--one"
+              ></div>
+
+              <div
+                class="design-preview__canvas-decoration design-preview__canvas-decoration--two"
+              ></div>
+
+              <div class="design-preview__product-image-wrapper">
+                <img
+                  id="product-preview-image"
+                  class="design-preview__product-image"
+                  src="/images/tshirt-front.png"
+                  alt="Performance T-shirt front view"
+                />
+
+                <div class="design-preview__image-badge">
+                  <i data-lucide="image"></i>
+                  <span>Basic product model</span>
+                </div>
+              </div>
+
+              <div class="design-preview__product-info">
+                <div class="design-preview__product-info-main">
+                  <span class="design-preview__product-category">
+                    Campus Craft Collection
+                  </span>
+
+                  <h3 id="preview-product-info-title">Performance T-Shirt</h3>
+
+                  <p id="preview-product-description">
+                    Lightweight performance wear designed for sports activities,
+                    school events, and everyday movement.
+                  </p>
+                </div>
+
+                <div class="design-preview__product-tags">
+                  <span>
+                    <i data-lucide="wind"></i>
+                    Breathable fabric
+                  </span>
+
+                  <span>
+                    <i data-lucide="shirt"></i>
+                    Custom colours
+                  </span>
+
+                  <span>
+                    <i data-lucide="badge-check"></i>
+                    School branding
+                  </span>
+                </div>
+
+                <div class="design-preview__product-meta">
+                  <div>
+                    <small>Product type</small>
+                    <strong id="preview-product-type">Sportswear</strong>
+                  </div>
+
+                  <div>
+                    <small>Best for</small>
+                    <strong id="preview-product-use">Sports and events</strong>
+                  </div>
+
+                  <div>
+                    <small>Order type</small>
+                    <strong>Bulk customization</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="design-preview__preview-caption">
+                <i data-lucide="mouse-pointer-2"></i>
+                <span>Select colours and share your requirements</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="design-preview__controls-panel">
+            <div class="design-preview__controls-heading">
+              <div>
+                <span class="design-preview__step-label">
+                  Product Request
+                </span>
+
+                <span class="design-preview__step-description">
+                  Select the product and share your requirements
+                </span>
+              </div>
+
+              <span class="design-preview__request-status">
+                <i data-lucide="clipboard-list"></i>
+                One form
+              </span>
+            </div>
+
+            <div class="design-preview__control-group">
+              <label
+                class="design-preview__control-label"
+                for="preview-product"
+              >
+                Choose product
+              </label>
+
+              <div class="design-preview__select-wrapper">
+                <select id="preview-product" class="design-preview__select">
+                  <option
+                    value="performance-tshirt"
+                    data-name="Performance T-Shirt"
+                    data-type="Sportswear"
+                    data-use="Sports and events"
+                    data-description="Lightweight performance wear designed for sports activities, school events, and everyday movement."
+                    data-front="./images/tshirt-front.png"
+                    data-back="./images/tshirt-back.png"
+                  >
+                    Performance T-Shirt
+                  </option>
+
+                  <option
+                    value="school-polo"
+                    data-name="School Polo T-Shirt"
+                    data-type="School uniform"
+                    data-use="Daily schoolwear"
+                    data-description="A smart and comfortable polo style suitable for regular school days and institutional wear."
+                    data-front="./images/polo-front.png"
+                    data-back="./images/polo-back.png"
+                  >
+                    School Polo T-Shirt
+                  </option>
+
+                  <option
+                    value="house-tshirt"
+                    data-name="House T-Shirt"
+                    data-type="Housewear"
+                    data-use="House activities"
+                    data-description="A bold house T-shirt designed to display team identity during school activities and competitions."
+                    data-front="./images/house-front.png"
+                    data-back="./images/house-back.png"
+                  >
+                    House T-Shirt
+                  </option>
+
+                  <option
+                    value="sports-jersey"
+                    data-name="Sports Jersey"
+                    data-type="Teamwear"
+                    data-use="Team sports"
+                    data-description="A customizable team jersey created for school teams, academies, tournaments, and sports events."
+                    data-front="./images/sports-jersey-front.png"
+                    data-back="./images/sports-jersey-back.png"
+                  >
+                    Sports Jersey
+                  </option>
+
+                  <option
+                    value="training-top"
+                    data-name="Training Top"
+                    data-type="Training wear"
+                    data-use="Practice sessions"
+                    data-description="A flexible training top designed for warm-ups, practice sessions, fitness activities, and outdoor use."
+                    data-front="./images/training-top-front.png"
+                    data-back="./images/training-top-back.png"
+                  >
+                    Training Top
+                  </option>
+
+                  <option
+                    value="tracksuit-jacket"
+                    data-name="Tracksuit Jacket"
+                    data-type="Outerwear"
+                    data-use="Travel and winterwear"
+                    data-description="A coordinated tracksuit jacket designed for school travel, outdoor activities, training, and winter use."
+                    data-front="./images/tracksuit-jacket-front.png"
+                    data-back="./images/tracksuit-jacket-back.png"
+                  >
+                    Tracksuit Jacket
+                  </option>
+                </select>
+
+                <i data-lucide="chevron-down"></i>
+              </div>
+            </div>
+
+            <div class="design-preview__control-group">
+              <span class="design-preview__control-label">
+                Choose product colours
+              </span>
+
+              <div class="design-preview__colour-row">
+                <div class="design-preview__colour-control">
+                  <label for="primary-colour">Main colour</label>
+
+                  <div class="design-preview__colour-input">
+                    <input
+                      id="primary-colour"
+                      type="color"
+                      value="#062b5c"
+                      aria-label="Choose main product colour"
+                    />
+
+                    <span id="primary-colour-value">#062B5C</span>
+                  </div>
+                </div>
+
+                <div class="design-preview__colour-control">
+                  <label for="secondary-colour">Accent colour</label>
+
+                  <div class="design-preview__colour-input">
+                    <input
+                      id="secondary-colour"
+                      type="color"
+                      value="#f5a000"
+                      aria-label="Choose accent product colour"
+                    />
+
+                    <span id="secondary-colour-value">#F5A000</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="design-preview__colour-note">
+                Colour selections will be used by our design team while
+                preparing your final customized design.
+              </p>
+
+              <div
+                class="design-preview__swatches"
+                aria-label="Preset colour combinations"
+              >
+                <button
+                  type="button"
+                  class="design-preview__swatch is-selected"
+                  data-primary="#062b5c"
+                  data-secondary="#f5a000"
+                  style="--swatch-primary: #062b5c; --swatch-secondary: #f5a000"
+                  aria-label="Navy and gold"
+                ></button>
+
+                <button
+                  type="button"
+                  class="design-preview__swatch"
+                  data-primary="#111111"
+                  data-secondary="#ffffff"
+                  style="--swatch-primary: #111111; --swatch-secondary: #ffffff"
+                  aria-label="Black and white"
+                ></button>
+
+                <button
+                  type="button"
+                  class="design-preview__swatch"
+                  data-primary="#176b87"
+                  data-secondary="#dff6ff"
+                  style="--swatch-primary: #176b87; --swatch-secondary: #dff6ff"
+                  aria-label="Blue and light blue"
+                ></button>
+
+                <button
+                  type="button"
+                  class="design-preview__swatch"
+                  data-primary="#7c1f35"
+                  data-secondary="#f4c95d"
+                  style="--swatch-primary: #7c1f35; --swatch-secondary: #f4c95d"
+                  aria-label="Maroon and gold"
+                ></button>
+
+                <button
+                  type="button"
+                  class="design-preview__swatch"
+                  data-primary="#146b43"
+                  data-secondary="#e8f5e9"
+                  style="--swatch-primary: #146b43; --swatch-secondary: #e8f5e9"
+                  aria-label="Green and light green"
+                ></button>
+              </div>
+            </div>
+
+            <div class="design-preview__control-group">
+              <label class="design-preview__control-label" for="school-logo">
+                Upload school logo
+              </label>
+
+              <label class="design-preview__upload-box" for="school-logo">
+                <span class="design-preview__upload-icon">
+                  <i data-lucide="upload-cloud"></i>
+                </span>
+
+                <span class="design-preview__upload-content">
+                  <strong>Upload your logo</strong>
+                  <small>PNG, JPG, SVG, PDF up to 5MB</small>
+                </span>
+
+                <i
+                  class="design-preview__upload-arrow"
+                  data-lucide="arrow-up-right"
+                ></i>
+              </label>
+
+              <input
+                id="school-logo"
+                class="design-preview__file-input"
+                type="file"
+                accept=".png,.jpg,.jpeg,.svg,.pdf"
+              />
+
+              <div id="logo-file-name" class="design-preview__file-name">
+                No file selected
+              </div>
+            </div>
+
+            <div class="design-preview__input-row">
+              <div class="design-preview__control-group">
+                <label class="design-preview__control-label" for="uniform-name">
+                  Name or school text
+                </label>
+
+                <input
+                  id="uniform-name"
+                  class="design-preview__text-input"
+                  type="text"
+                  maxlength="30"
+                  placeholder="Example: Campus Craft"
+                />
+              </div>
+
+              <div class="design-preview__control-group">
+                <label
+                  class="design-preview__control-label"
+                  for="uniform-number"
+                >
+                  Quantity
+                </label>
+
+                <input
+                  id="uniform-number"
+                  class="design-preview__text-input"
+                  type="number"
+                  min="1"
+                  value="50"
+                  placeholder="50"
+                />
+              </div>
+            </div>
+
+            <div class="design-preview__summary">
+              <div class="design-preview__summary-icon">
+                <i data-lucide="clipboard-check"></i>
+              </div>
+
+              <div>
+                <strong>Basic model selected</strong>
+
+                <p>
+                  Our design team will use your selections to prepare the final
+                  customization.
+                </p>
+              </div>
+            </div>
+
+            <div class="design-preview__actions">
+              <button
+                class="btn-primary design-preview__quote-button"
+                type="button"
+                id="preview-quote-button"
+              >
+                Request This Product
+                <i data-lucide="arrow-right"></i>
+              </button>
+
+              <button
+                class="design-preview__reset-button"
+                type="button"
+                id="reset-preview"
+              >
+                <i data-lucide="rotate-ccw"></i>
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="custom-quote"
+      id="custom-quote"
+      aria-labelledby="custom-quote-title"
+    >
+      <div class="customization-container custom-quote__container">
+        <div class="custom-quote__content">
+          <span class="custom-quote__pill">
+            <i data-lucide="sparkles"></i>
+            Let’s create something unique
+          </span>
+
+          <h2 id="custom-quote-title" class="section-title">
+            Request Your <span>Custom Quote</span>
+          </h2>
+
+          <p class="custom-quote__intro">
+            Your product selection is ready. Share your school details and our
+            team will help turn your chosen base model into a uniform that
+            represents your school.
+          </p>
+
+          <div class="custom-quote__process">
+            <div class="custom-quote__process-item">
+              <span class="custom-quote__process-icon">
+                <i data-lucide="package"></i>
+              </span>
+
+              <div>
+                <h3>Tell us what you need</h3>
+
+                <p>
+                  Share the selected product, quantity, preferred colours, size
+                  range, and delivery timeline.
+                </p>
+              </div>
+            </div>
+
+            <div class="custom-quote__process-item">
+              <span class="custom-quote__process-icon">
+                <i data-lucide="upload-cloud"></i>
+              </span>
+
+              <div>
+                <h3>Send your school identity</h3>
+
+                <p>
+                  Upload your logo and mention the required branding position,
+                  printing, embroidery, or other details.
+                </p>
+              </div>
+            </div>
+
+            <div class="custom-quote__process-item">
+              <span class="custom-quote__process-icon">
+                <i data-lucide="badge-check"></i>
+              </span>
+
+              <div>
+                <h3>Review your design direction</h3>
+
+                <p>
+                  Our team reviews your request and prepares the next design and
+                  pricing details for your approval.
+                </p>
+              </div>
+            </div>
+
+            <div class="custom-quote__process-item">
+              <span class="custom-quote__process-icon">
+                <i data-lucide="truck"></i>
+              </span>
+
+              <div>
+                <h3>Move towards production</h3>
+
+                <p>
+                  After approval, we help coordinate sampling, production,
+                  quality checking, packaging, and delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="custom-quote__benefits">
+            <span>
+              <i data-lucide="check"></i>
+              Bulk order support
+            </span>
+
+            <span>
+              <i data-lucide="check"></i>
+              School branding guidance
+            </span>
+
+            <span>
+              <i data-lucide="check"></i>
+              Design assistance
+            </span>
+
+            <span>
+              <i data-lucide="check"></i>
+              Clear quote details
+            </span>
+          </div>
+        </div>
+
+        <form class="custom-quote__form" id="custom-quote-form">
+          <div class="custom-quote__selected-product">
+            <div class="custom-quote__selected-icon">
+              <i data-lucide="package"></i>
+            </div>
+
+            <div>
+              <span>Selected product</span>
+
+              <strong id="quote-selected-product"> Performance T-Shirt </strong>
+            </div>
+          </div>
+
+          <div class="custom-quote__form-heading">
+            <h3>Share your details</h3>
+
+            <span>Required fields are marked *</span>
+          </div>
+
+          <div class="custom-quote__form-grid">
+            <div class="custom-quote__field">
+              <label for="quote-school-name">School name *</label>
+
+              <input
+                id="quote-school-name"
+                name="schoolName"
+                type="text"
+                required
+                placeholder="Enter school name"
+              />
+            </div>
+
+            <div class="custom-quote__field">
+              <label for="quote-contact-name">Contact person *</label>
+
+              <input
+                id="quote-contact-name"
+                name="contactName"
+                type="text"
+                required
+                placeholder="Enter contact person"
+              />
+            </div>
+
+            <div class="custom-quote__field">
+              <label for="quote-email">Email address *</label>
+
+              <input
+                id="quote-email"
+                name="email"
+                type="email"
+                required
+                placeholder="name@example.com"
+              />
+            </div>
+
+            <div class="custom-quote__field">
+              <label for="quote-phone">Phone number *</label>
+
+              <input
+                id="quote-phone"
+                name="phone"
+                type="tel"
+                required
+                placeholder="Enter phone number"
+              />
+            </div>
+
+            <div class="custom-quote__field">
+              <label for="quote-quantity">Required quantity *</label>
+
+              <input
+                id="quote-quantity"
+                name="quantity"
+                type="number"
+                min="1"
+                required
+                placeholder="Enter quantity"
+              />
+            </div>
+
+            <div class="custom-quote__field">
+              <label for="quote-delivery-date"> Required delivery date </label>
+
+              <input id="quote-delivery-date" name="deliveryDate" type="date" />
+            </div>
+
+            <div class="custom-quote__field custom-quote__field--full">
+              <label for="quote-message"> Additional requirements </label>
+
+              <textarea
+                id="quote-message"
+                name="message"
+                rows="5"
+                placeholder="Mention sizes, logo placement, fabric requirements, or other details"
+              ></textarea>
+            </div>
+          </div>
+
+          <input type="hidden" id="quote-product-value" name="product" />
+
+          <input type="hidden" id="quote-main-colour" name="mainColour" />
+
+          <input type="hidden" id="quote-accent-colour" name="accentColour" />
+
+          <input type="hidden" id="quote-school-text" name="schoolText" />
+
+          <input type="hidden" id="quote-view" name="view" />
+
+          <input type="hidden" id="quote-logo-name" name="logoName" />
+
+          <label class="custom-quote__consent">
+            <input type="checkbox" required />
+
+            <span>
+              I agree to be contacted by the Campus Craft team about this
+              request.
+            </span>
+          </label>
+
+          <button class="btn-primary custom-quote__submit" type="submit">
+            Submit Quote Request
+            <i data-lucide="send"></i>
+          </button>
+
+          <p
+            class="custom-quote__status"
+            id="custom-quote-status"
+            role="status"
+          ></p>
+        </form>
+      </div>
+    </section>
+    <section class="quote-cta" id="quote-cta" aria-labelledby="quote-cta-title">
+      <div class="customization-container">
+        <div class="quote-cta__card">
+          <div class="quote-cta__pattern quote-cta__pattern--one"></div>
+          <div class="quote-cta__pattern quote-cta__pattern--two"></div>
+
+          <div class="quote-cta__content">
+            <span class="quote-cta__pill">
+              <i data-lucide="sparkles"></i>
+              Designed around your school
+            </span>
+
+            <span class="quote-cta__quote-mark">“</span>
+
+            <h2 id="quote-cta-title" class="quote-cta__title">
+              Create a uniform that
+              <span>represents your school.</span>
+            </h2>
+
+            <p class="quote-cta__description">
+              Choose your product, share your colours and logo, and let Campus
+              Craft help you create a comfortable uniform your students can be
+              proud of.
+            </p>
+
+            <div class="quote-cta__quote-source">
+              <span class="quote-cta__source-line"></span>
+              <span>Campus Craft Customization</span>
+            </div>
+
+            <div class="quote-cta__actions">
+              <a
+                class="btn-primary quote-cta__primary-button"
+                href="contact.html"
+              >
+                Request a Quote
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+              <a
+                class="btn-secondary quote-cta__secondary-button"
+                href="product.html"
+              >
+                Explore Products
+                <i data-lucide="grid-2x2"></i>
+              </a>
+            </div>
+
+            <div class="quote-cta__details">
+              <span>
+                <i data-lucide="package"></i>
+                Select product
+              </span>
+
+              <span>
+                <i data-lucide="palette"></i>
+                Choose colours
+              </span>
+
+              <span>
+                <i data-lucide="upload-cloud"></i>
+                Upload logo
+              </span>
+
+              <span>
+                <i data-lucide="file-check-2"></i>
+                Receive quote
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <!-- BRAND -->
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img
+                src="./images/logo.png"
+                alt="CampusCraft Logo"
+                class="brand-logo"
+                id="footerLogo"
+              />
+            </a>
+
+            <div class="brand-content footer-branding">
+              <h1 class="brand-name">
+                <span class="campus">Campus</span>
+                <span class="craft">Craft</span>
+              </h1>
+
+              <div class="brand-subtitle">
+                <span class="brand-line"></span>
+
+                <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+                <span class="brand-line"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            CampusCraft provides quality school uniforms, sportswear and
+            accessories designed for comfort, durability and everyday
+            performance.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="product.html"> Products </a>
+            </li>
+
+            <li>
+              <a href="Customization.html">Customization</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <div class="footer-col">
+          <h3>Products</h3>
+
+          <ul>
+            <li>
+              <a href="school-uniforms.html"> School Uniforms </a>
+            </li>
+
+            <li>
+              <a href="sportswear.html"> Sportswear </a>
+            </li>
+
+            <li>
+              <a href="sportswear.html"> School Accessories </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Team Kits </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Custom Uniforms </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INFORMATION -->
+
+        <div class="footer-col">
+          <h3>Information</h3>
+
+          <ul>
+            <li>
+              <a href="404.html"> 404 page </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Bulk Orders </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Enquiries </a>
+            </li>
+            <li>
+              <a href="contact.html"> Customization Guide </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+
+          <ul class="contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+
+              Hyderabad, Telangana
+            </li>
+
+            <li>
+              <i data-lucide="phone"></i>
+
+              +91 98765 43210
+            </li>
+
+            <li>
+              <i data-lucide="mail"></i>
+
+              hello@campuscraft.com
+            </li>
+          </ul>
+
+          <!-- SOCIAL MEDIA -->
+
+          <div class="social">
+            <a href="#" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           FOOTER BOTTOM
+      ========================================= -->
+
+      <div class="footer-bottom">
+        <p>© 2026 CampusCraft. All Rights Reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms &amp; Conditions </a>
+
+          <a href="#" class="top-btn" aria-label="Back to top">
+            <i data-lucide="arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    <script src="https://unpkg.com/lucide@latest"></script> -->
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="customization.js"></script>
+  </body>
+</html>

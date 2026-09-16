@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon – Campus Craft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/logo-white.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="comming.css" />
+  </head>
+  <body>
+    <div class="theme-toggles">
+      <button
+        class="icon-btn rtl-btn"
+        id="rtlToggle"
+        title="RTL Mode"
+        aria-label="Toggle RTL mode"
+        type="button"
+      >
+        <i data-lucide="arrow-left-right"></i>
+      </button>
+
+      <button
+        class="icon-btn dark-btn"
+        id="darkToggle"
+        title="Dark Mode"
+        aria-label="Toggle dark mode"
+        type="button"
+      >
+        <i data-lucide="moon"></i>
+      </button>
+    </div>
+
+    <main class="upcoming-page">
+      <div class="upcoming__inner">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="./images/logo.png"
+              alt="CampusCraft Logo"
+              class="brand-logo"
+            />
+          </a>
+
+          <div class="brand-content">
+            <h1 class="brand-name">
+              <span class="campus">Campus</span>
+              <span class="craft">Craft</span>
+            </h1>
+
+            <div class="brand-subtitle">
+              <span class="brand-line"></span>
+              <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+              <span class="brand-line"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="upcoming__content">
+          <h2 class="upcoming__title">
+            Something great is <span>in the works</span>
+          </h2>
+
+          <p class="upcoming__text">
+            We’re preparing a new experience for you. This page will be live
+            soon with fresh collections and updates.
+          </p>
+
+          <div class="upcoming__actions">
+            <a href="index.html" class="btn-primary"> Go to Home </a>
+            <a href="product.html" class="btn-secondary"> Browse Products </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="comming.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>

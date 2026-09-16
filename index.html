@@ -1,0 +1,1801 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CampusCraft | School Uniforms & Sportswear |Index page</title>
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./images/logo.png"
+            alt="CampusCraft Logo"
+            class="brand-logo"
+            id="headerLogo"
+          />
+        </a>
+
+        <div class="brand-content">
+          <h1 class="brand-name">
+            <span class="campus">Campus</span>
+            <span class="craft">Craft</span>
+          </h1>
+
+          <div class="brand-subtitle">
+            <span class="brand-line"></span>
+
+            <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+            <span class="brand-line"></span>
+          </div>
+        </div>
+      </div>
+
+  
+
+      <nav>
+        <ul class="nav-links">
+      
+
+          <li class="dropdown">
+            <a href="index.html">
+              Home
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html">Home 1</a>
+              </li>
+
+              <li>
+                <a href="home2.html">Home 2</a>
+              </li>
+            </ul>
+          </li>
+
+        
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="product.html">
+              Products
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="mobile-products-link">
+                <a href="product.html">Products</a>
+              </li>
+
+              <li>
+                <a href="school-uniforms.html"> School Uniforms </a>
+              </li>
+
+              <li>
+                <a href="sportswear.html">Sportswear</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="School.html">School Orders</a>
+          </li>
+          <li>
+            <a href="Customization.html">Customization</a>
+          </li>
+
+       
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+      
+
+          <li class="mobile-cart-item">
+            <button
+              class="mobile-cart-btn"
+              id="mobileCartToggle"
+              type="button"
+              aria-label="Open cart"
+              aria-expanded="false"
+              aria-controls="cartPanel"
+            >
+              <span class="mobile-cart-btn__label">
+                <i data-lucide="shopping-bag"></i>
+
+                Cart
+              </span>
+
+              <span class="cart-count mobile-cart-count" id="mobileCartCount">
+                0
+              </span>
+            </button>
+          </li>
+        </ul>
+
+     
+
+        <div class="mobile-login">
+          <a href="contact.html" class="login-btn">
+            <i data-lucide="message-circle"></i>
+
+            <span>Enquire Now</span>
+          </a>
+        </div>
+      </nav>
+
+   
+
+      <div class="buttons">
+  
+
+        <button
+          class="icon-btn rtl-btn"
+          id="rtlToggle"
+          title="RTL Mode"
+          aria-label="Toggle RTL mode"
+          type="button"
+        >
+          <i data-lucide="arrow-left-right"></i>
+        </button>
+
+   
+
+        <button
+          class="icon-btn dark-btn"
+          id="darkToggle"
+          title="Dark Mode"
+          aria-label="Toggle dark mode"
+          type="button"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+   
+
+        <button
+          class="icon-btn cart-btn desktop-cart-btn"
+          id="cartToggle"
+          title="Cart"
+          aria-label="Open cart"
+          aria-expanded="false"
+          aria-controls="cartPanel"
+          type="button"
+        >
+          <i data-lucide="shopping-bag"></i>
+
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+       
+
+        <a href="contact.html" class="login-btn desktop-login">
+          <i data-lucide="message-circle"></i>
+
+          <span>Enquire Now</span>
+        </a>
+
+   
+
+        <button
+          class="icon-btn menu-btn"
+          id="menuToggle"
+          title="Menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+
+      <div
+        class="cart-panel"
+        id="cartPanel"
+        hidden
+        aria-labelledby="cartPanelTitle"
+      >
+    
+        <div class="cart-panel__head">
+          <h3 id="cartPanelTitle">Your Cart</h3>
+
+          <button
+            type="button"
+            class="cart-panel__close"
+            id="cartClose"
+            aria-label="Close cart"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+
+        <div class="cart-panel__body">
+      
+
+          <div class="cart-panel__empty" id="cartEmptyState">
+            <i data-lucide="shopping-cart"></i>
+
+            <p>No products selected yet.</p>
+
+            <small>
+              Your selected uniforms and sportswear will appear here.
+            </small>
+          </div>
+
+   
+
+          <div class="cart-items" id="cartItems"></div>
+        </div>
+
+
+        <div class="cart-panel__footer">
+          <div class="cart-panel__total">
+            <span>Subtotal</span>
+
+            <strong id="cartSubtotal">₹0</strong>
+          </div>
+
+          <button id="buyNowBtn" class="cart-buy-btn" type="button">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="campus-hero">
+      <div class="campus-hero-bg"></div>
+      <div class="campus-hero-grid"></div>
+
+      <div class="campus-hero-container">
+        <div class="campus-hero-content">
+          <div class="campus-hero-bookmark">
+            <div class="hero-bookmark-icon">
+              <i data-lucide="school"></i>
+            </div>
+
+            <div class="hero-bookmark-text">
+              <small>TRUSTED MANUFACTURING</small>
+              <span>SCHOOL UNIFORM & SPORTSWEAR</span>
+            </div>
+          </div>
+
+          <h1 class="campus-hero-title">
+            Uniforms Made for
+            <span>Every School.</span>
+            Quality Made to
+            <span>Last.</span>
+          </h1>
+
+          <p class="campus-hero-description">
+            From everyday school uniforms to performance sportswear, accessories
+            and custom branding, we manufacture reliable, high-quality apparel
+            for schools and institutions at scale.
+          </p>
+
+          <div class="campus-hero-actions">
+            <a href="contact.html" class="btn-primary hero-primary-btn">
+              Request a Quote
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="product.html" class="hero-outline-btn">
+              <i class="fa-solid fa-border-all"></i>
+              Explore Products
+            </a>
+          </div>
+
+          <div class="campus-hero-features">
+            <div class="hero-feature">
+              <div class="hero-feature-icon">
+                <i class="fa-solid fa-industry"></i>
+              </div>
+
+              <div class="hero-feature-text">
+                <strong>Bulk</strong>
+                <span>Manufacturing</span>
+              </div>
+            </div>
+
+            <div class="hero-feature">
+              <div class="hero-feature-icon">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+
+              <div class="hero-feature-text">
+                <strong>Custom</strong>
+                <span>Branding</span>
+              </div>
+            </div>
+
+            <div class="hero-feature">
+              <div class="hero-feature-icon">
+                <i class="fa-solid fa-truck"></i>
+              </div>
+
+              <div class="hero-feature-text">
+                <strong>Reliable</strong>
+                <span>Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="campus-hero-trust">
+            <span class="trust-line"></span>
+            <p>UNIFORMS FOR A BRIGHTER TOMORROW</p>
+          </div>
+        </div>
+
+        <div class="campus-hero-visual">
+          <div class="hero-visual-glow"></div>
+
+          <div class="hero-custom-note">
+            <span>Made for</span>
+            <strong>Your School</strong>
+            <i class="fa-solid fa-arrow-down-long"></i>
+          </div>
+
+          <div class="hero-dots hero-dots-top">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="hero-product-card hero-main-product">
+            <div class="hero-product-image">
+              <img src="./images/blazzer.png" alt="School Blazer" />
+            </div>
+
+            <div class="hero-product-label">
+              <span>Premium</span>
+              <strong>School Blazer</strong>
+            </div>
+          </div>
+
+          <div class="hero-product-card hero-product-shirt">
+            <div class="hero-product-image">
+              <img src="./images/shirt.png" alt="School Shirt" />
+            </div>
+
+            <div class="hero-small-label">School Shirt</div>
+          </div>
+
+          <div class="hero-product-card hero-product-sports">
+            <div class="hero-product-image">
+              <img src="./images/sportswear.png" alt="Sportswear" />
+            </div>
+
+            <div class="hero-small-label">Sportswear</div>
+          </div>
+
+          <div class="hero-product-card hero-product-skirt">
+            <div class="hero-product-image">
+              <img src="./images/skirts.png" alt="School Skirt" />
+            </div>
+
+            <div class="hero-small-label">School Skirt</div>
+          </div>
+
+          <div class="hero-product-card hero-product-bag">
+            <div class="hero-product-image">
+              <img src="./images/bag.png" alt="School Backpack" />
+            </div>
+
+            <div class="hero-small-label">Backpack</div>
+          </div>
+
+          <div class="hero-orange-mark hero-orange-mark-one">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="hero-orange-mark hero-orange-mark-two">
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="hero-dots hero-dots-bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="trust-stats-section">
+      <div class="trust-stats-container">
+        <div class="trust-stats-intro">
+          <span class="trust-stats-eyebrow">Trusted by Schools</span>
+          <h2 class="section-heading">
+            Institutional credibility
+            <span>backed by scale and service</span>
+          </h2>
+          <p>
+            Partnering with schools for reliable uniform manufacturing, bulk
+            fulfillment, and custom identity solutions tailored to institutional
+            needs.
+          </p>
+        </div>
+
+        <div class="trust-stats-grid">
+          <article class="trust-stat-card">
+            <div class="trust-stat-icon">
+              <i data-lucide="school"></i>
+            </div>
+            <h3>100+</h3>
+            <p>Schools Served</p>
+          </article>
+
+          <article class="trust-stat-card">
+            <div class="trust-stat-icon">
+              <i data-lucide="shirt"></i>
+            </div>
+            <h3>10,000+</h3>
+            <p>Uniforms Manufactured</p>
+          </article>
+
+          <article class="trust-stat-card">
+            <div class="trust-stat-icon">
+              <i data-lucide="package-check"></i>
+            </div>
+            <h3>Bulk</h3>
+            <p>Order Support</p>
+          </article>
+
+          <article class="trust-stat-card">
+            <div class="trust-stat-icon">
+              <i data-lucide="badge-check"></i>
+            </div>
+            <h3>Custom</h3>
+            <p>Branding Available</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="product-categories-section">
+      <div class="product-categories-container">
+        <div class="product-categories-intro">
+          <span class="product-categories-eyebrow">Product Categories</span>
+          <h2 class="section-heading">
+            Explore our
+            <span>core product lines</span>
+          </h2>
+          <p>
+            From everyday school essentials to high-performance sportswear,
+            discover product categories designed for institutions, teams, and
+            growing student needs.
+          </p>
+        </div>
+
+        <div class="product-categories-grid">
+          <article class="product-category-card">
+            <div class="product-category-media">
+              <img
+                src="./images/uniform.png"
+                alt="School uniforms category"
+                loading="lazy"
+              />
+              <span class="product-category-badge">Core Range</span>
+            </div>
+
+            <div class="product-category-content">
+              <div class="product-category-icon">
+                <i data-lucide="graduation-cap"></i>
+              </div>
+              <h3>School Uniforms</h3>
+              <p>
+                Premium daily-wear uniforms crafted for comfort, durability, and
+                a clean institutional look.
+              </p>
+              <a
+                href="school-uniforms.html"
+                class="btn-primary product-category-btn"
+              >
+                Explore Product
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="product-category-card">
+            <div class="product-category-media">
+              <img
+                src="./images/schoolsports.png"
+                alt="Sportswear category"
+                loading="lazy"
+              />
+              <span class="product-category-badge">Performance</span>
+            </div>
+
+            <div class="product-category-content">
+              <div class="product-category-icon">
+                <i data-lucide="shirt"></i>
+              </div>
+              <h3>Sportswear</h3>
+              <p>
+                Performance-focused kits, jerseys, and active uniforms built for
+                training sessions and school events.
+              </p>
+              <a
+                href="sportswear.html"
+                class="btn-primary product-category-btn"
+              >
+                Explore Product
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="product-category-card">
+            <div class="product-category-media">
+              <img
+                src="./images/accessories.png"
+                alt="School accessories category"
+                loading="lazy"
+              />
+              <span class="product-category-badge">Everyday Utility</span>
+            </div>
+
+            <div class="product-category-content">
+              <div class="product-category-icon">
+                <i data-lucide="backpack"></i>
+              </div>
+              <h3>School Accessories</h3>
+              <p>
+                Bags, belts, ties, socks, and practical add-ons that complete
+                the full schoolwear requirement.
+              </p>
+              <a
+                href="product.html"
+                class="btn-primary product-category-btn"
+              >
+                Explore Product
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="product-category-card">
+            <div class="product-category-media">
+              <img
+                src="./images/team.png"
+                alt="Custom team kits category"
+                loading="lazy"
+              />
+              <span class="product-category-badge">Custom Orders</span>
+            </div>
+
+            <div class="product-category-content">
+              <div class="product-category-icon">
+                <i data-lucide="badge-check"></i>
+              </div>
+              <h3>Custom / Team Kits</h3>
+              <p>
+                Tailored kits with school branding, event identity, and bulk
+                support for houses, clubs, and teams.
+              </p>
+              <a href="contact.html" class="btn-primary product-category-btn">
+                Explore Product
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="why-campuscraft-section" id="why-campuscraft">
+      <div class="why-campuscraft-wrapper">
+        <div class="why-campuscraft-image-side">
+          <div class="why-campuscraft-image-wrap">
+            <img
+              src="./images/manufancturing.png"
+              alt="CampusCraft school uniform manufacturing and quality presentation"
+              class="why-campuscraft-image"
+            />
+
+            <div class="why-campuscraft-image-badge">
+              <i data-lucide="badge-check"></i>
+              <span>Trusted by Schools</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-campuscraft-content-side">
+          <span class="why-campuscraft-eyebrow">Why Choose CampusCraft?</span>
+
+          <h2 class="section-heading">
+            Built for schools that value
+            <span>quality, durability, and trust</span>
+          </h2>
+
+          <p class="why-campuscraft-text">
+            CampusCraft combines premium material selection, precise production,
+            and institution-focused service to deliver uniforms and schoolwear
+            solutions that look professional, feel comfortable, and perform
+            reliably at scale.
+          </p>
+
+          <div class="why-campuscraft-points">
+            <article class="why-campuscraft-point">
+              <div class="why-campuscraft-point-icon">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <div class="why-campuscraft-point-content">
+                <h3>Premium Fabric</h3>
+                <p>
+                  Soft-touch, refined materials selected for long-lasting
+                  quality and a polished school presentation.
+                </p>
+              </div>
+            </article>
+
+            <article class="why-campuscraft-point">
+              <div class="why-campuscraft-point-icon">
+                <i data-lucide="scissors"></i>
+              </div>
+              <div class="why-campuscraft-point-content">
+                <h3>Durable Stitching</h3>
+                <p>
+                  Strong construction and dependable finishing designed to
+                  withstand daily wear and repeated washing.
+                </p>
+              </div>
+            </article>
+
+            <article class="why-campuscraft-point">
+              <div class="why-campuscraft-point-icon">
+                <i data-lucide="shirt"></i>
+              </div>
+              <div class="why-campuscraft-point-content">
+                <h3>Comfortable Fit</h3>
+                <p>
+                  Structured yet practical garment design that supports comfort
+                  throughout class, travel, and activity.
+                </p>
+              </div>
+            </article>
+
+            <article class="why-campuscraft-point">
+              <div class="why-campuscraft-point-icon">
+                <i data-lucide="shield-check"></i>
+              </div>
+              <div class="why-campuscraft-point-content">
+                <h3>Custom School Branding</h3>
+                <p>
+                  Logos, badges, and school identity details are applied with
+                  care for a consistent branded appearance.
+                </p>
+              </div>
+            </article>
+
+            <article class="why-campuscraft-point">
+              <div class="why-campuscraft-point-icon">
+                <i data-lucide="factory"></i>
+              </div>
+              <div class="why-campuscraft-point-content">
+                <h3>Bulk Manufacturing</h3>
+                <p>
+                  Production capacity is built to support institution-level
+                  orders with consistency and organized output.
+                </p>
+              </div>
+            </article>
+
+            <article class="why-campuscraft-point">
+              <div class="why-campuscraft-point-icon">
+                <i data-lucide="truck"></i>
+              </div>
+              <div class="why-campuscraft-point-content">
+                <h3>Reliable Delivery</h3>
+                <p>
+                  Timely dispatch and dependable coordination help schools
+                  receive essentials when they need them.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bulk-orders-section" id="bulk-orders">
+      <div class="bulk-orders-shell">
+        <div class="bulk-orders-top">
+          <div class="bulk-orders-intro">
+            <span class="bulk-orders-eyebrow"
+              >Bulk Manufacturing for Schools</span
+            >
+
+            <h2 class="section-heading">
+              From 100 to 10,000+ Pieces —
+              <span>Built for Institutional Orders</span>
+            </h2>
+
+            <p class="bulk-orders-text">
+              CampusCraft is equipped for institutional-scale production with a
+              reliable workflow that supports school-specific requirements,
+              quantity planning, and delivery schedules without compromising
+              finish or consistency.
+            </p>
+
+            <div class="bulk-orders-stats">
+              <div class="bulk-orders-stat">
+                <strong>100+</strong>
+                <span>Minimum scalable batches</span>
+              </div>
+              <div class="bulk-orders-stat">
+                <strong>10,000+</strong>
+                <span>High-volume production capacity</span>
+              </div>
+              <div class="bulk-orders-stat">
+                <strong>Planned</strong>
+                <span>Dispatch aligned to school schedules</span>
+              </div>
+            </div>
+
+            <div class="bulk-orders-actions">
+              <a href="contact.html" class="btn-primary">
+                Start a Bulk Order
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bulk-orders-visual">
+            <div class="bulk-orders-image-wrap">
+              <img
+                src="./images/bulk.png"
+                alt="Institutional school uniform bulk manufacturing process"
+                class="bulk-orders-image"
+              />
+
+              <div class="bulk-orders-overlay bulk-orders-overlay-top">
+                <span class="bulk-orders-overlay-label">Production Scale</span>
+                <h3>Large-Scale Manufacturing</h3>
+                <p>
+                  Structured output planning for institutional school orders.
+                </p>
+              </div>
+
+              <div class="bulk-orders-overlay bulk-orders-overlay-bottom">
+                <span class="bulk-orders-overlay-label">Dispatch Planning</span>
+                <h3>Scheduled Delivery</h3>
+                <p>Timelines coordinated around academic rollout needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bulk-orders-feature-band">
+          <article class="bulk-orders-feature">
+            <div class="bulk-orders-feature-icon">
+              <i data-lucide="factory"></i>
+            </div>
+            <div class="bulk-orders-feature-content">
+              <h3>Large-Scale Production</h3>
+              <p>
+                Built to manage institutional quantities efficiently and
+                reliably.
+              </p>
+            </div>
+          </article>
+
+          <article class="bulk-orders-feature">
+            <div class="bulk-orders-feature-icon">
+              <i data-lucide="ruler"></i>
+            </div>
+            <div class="bulk-orders-feature-content">
+              <h3>Consistent Sizing</h3>
+              <p>
+                Standardized sizing control across repeated bulk requirements.
+              </p>
+            </div>
+          </article>
+
+          <article class="bulk-orders-feature">
+            <div class="bulk-orders-feature-icon">
+              <i data-lucide="badge-check"></i>
+            </div>
+            <div class="bulk-orders-feature-content">
+              <h3>Quality Inspection</h3>
+              <p>
+                Careful checks for finish, stitching, fabric, and order quality.
+              </p>
+            </div>
+          </article>
+
+          <article class="bulk-orders-feature">
+            <div class="bulk-orders-feature-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div class="bulk-orders-feature-content">
+              <h3>School-Specific Designs</h3>
+              <p>
+                Brand-aligned uniforms with badges, trims, and approved details.
+              </p>
+            </div>
+          </article>
+
+          <article class="bulk-orders-feature">
+            <div class="bulk-orders-feature-icon">
+              <i data-lucide="truck"></i>
+            </div>
+            <div class="bulk-orders-feature-content">
+              <h3>Scheduled Delivery</h3>
+              <p>
+                Delivery planning matched to school timelines and rollout
+                windows.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section
+      class="manufacturing-centerline-section"
+      id="manufacturing-process"
+    >
+      <div class="manufacturing-centerline-wrapper">
+        <div class="manufacturing-centerline-header">
+          <span class="manufacturing-centerline-eyebrow"
+            >Our Manufacturing Process</span
+          >
+
+          <h2 class="section-heading">
+            From requirement to final delivery —
+            <span>a structured manufacturing journey</span>
+          </h2>
+
+          <p class="manufacturing-centerline-text">
+            CampusCraft follows a premium production process that takes each
+            school order through planning, design, sourcing, manufacturing,
+            inspection, and final dispatch with consistency and care.
+          </p>
+        </div>
+
+        <div class="manufacturing-centerline-timeline">
+          <article class="manufacturing-centerline-step left">
+            <div class="manufacturing-centerline-card">
+              <div class="manufacturing-centerline-icon">
+                <i data-lucide="clipboard-list"></i>
+              </div>
+              <h3>Requirement</h3>
+              <p>
+                School quantities, sizes, branding needs, and delivery
+                expectations are gathered and planned clearly.
+              </p>
+            </div>
+            <div class="manufacturing-centerline-node">
+              <span>01</span>
+            </div>
+            <div class="manufacturing-centerline-spacer"></div>
+          </article>
+
+          <article class="manufacturing-centerline-step right">
+            <div class="manufacturing-centerline-spacer"></div>
+            <div class="manufacturing-centerline-node">
+              <span>02</span>
+            </div>
+            <div class="manufacturing-centerline-card">
+              <div class="manufacturing-centerline-icon">
+                <i data-lucide="pen-tool"></i>
+              </div>
+              <h3>Design</h3>
+              <p>
+                Uniform styling, logo placement, trims, and institution-specific
+                design details are finalized carefully.
+              </p>
+            </div>
+          </article>
+
+          <article class="manufacturing-centerline-step left">
+            <div class="manufacturing-centerline-card">
+              <div class="manufacturing-centerline-icon">
+                <i data-lucide="layers-3"></i>
+              </div>
+              <h3>Fabric Selection</h3>
+              <p>
+                Appropriate fabrics are selected based on comfort, durability,
+                climate needs, and schoolwear practicality.
+              </p>
+            </div>
+            <div class="manufacturing-centerline-node">
+              <span>03</span>
+            </div>
+            <div class="manufacturing-centerline-spacer"></div>
+          </article>
+
+          <article class="manufacturing-centerline-step right">
+            <div class="manufacturing-centerline-spacer"></div>
+            <div class="manufacturing-centerline-node">
+              <span>04</span>
+            </div>
+            <div class="manufacturing-centerline-card">
+              <div class="manufacturing-centerline-icon">
+                <i data-lucide="factory"></i>
+              </div>
+              <h3>Manufacturing</h3>
+              <p>
+                Bulk production is managed through an organized workflow built
+                for scale, consistency, and execution quality.
+              </p>
+            </div>
+          </article>
+
+          <article class="manufacturing-centerline-step left">
+            <div class="manufacturing-centerline-card">
+              <div class="manufacturing-centerline-icon">
+                <i data-lucide="badge-check"></i>
+              </div>
+              <h3>Quality Check</h3>
+              <p>
+                Every batch is checked for stitching, finishing, measurements,
+                branding accuracy, and final presentation.
+              </p>
+            </div>
+            <div class="manufacturing-centerline-node">
+              <span>05</span>
+            </div>
+            <div class="manufacturing-centerline-spacer"></div>
+          </article>
+
+          <article class="manufacturing-centerline-step right">
+            <div class="manufacturing-centerline-spacer"></div>
+            <div class="manufacturing-centerline-node">
+              <span>06</span>
+            </div>
+            <div class="manufacturing-centerline-card">
+              <div class="manufacturing-centerline-icon">
+                <i data-lucide="truck"></i>
+              </div>
+              <h3>Delivery</h3>
+              <p>
+                Completed orders are packed and dispatched as per the school
+                timeline and planned rollout schedule.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="school-customization-section" id="customization">
+      <div class="school-customization-wrapper">
+        <div class="school-customization-content">
+          <span class="school-customization-eyebrow"
+            >Customization Made for Your School</span
+          >
+
+          <h2 class="section-heading">
+            Uniforms designed around your identity —
+            <span>not just ready-made options</span>
+          </h2>
+
+          <p class="school-customization-text">
+            CampusCraft helps schools personalize uniforms and sportswear with
+            branding, color, fit, and pattern options that reflect the school’s
+            identity while maintaining production quality and consistency.
+          </p>
+
+          <div class="school-customization-highlight">
+            <div class="school-customization-highlight-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <div class="school-customization-highlight-text">
+              <h3>Built for institution-level personalization</h3>
+              <p>
+                From embroidery and initials to house-wise sportswear and custom
+                sizing, every detail can be adapted to your school requirements.
+              </p>
+            </div>
+          </div>
+
+          <div class="school-customization-cta">
+            <a href="customization.html" class="btn-primary">
+              Explore Customization
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="school-customization-options">
+          <article class="school-customization-item">
+            <div class="school-customization-item-icon">
+              <i data-lucide="badge-check"></i>
+            </div>
+            <h3>School Logo Embroidery</h3>
+            <p>
+              Neat embroidered logo application for a polished and professional
+              school identity.
+            </p>
+          </article>
+
+          <article class="school-customization-item">
+            <div class="school-customization-item-icon">
+              <i data-lucide="palette"></i>
+            </div>
+            <h3>Custom Colors</h3>
+            <p>
+              Uniform and sportswear color combinations aligned with your
+              institution branding.
+            </p>
+          </article>
+
+          <article class="school-customization-item">
+            <div class="school-customization-item-icon">
+              <i data-lucide="type"></i>
+            </div>
+            <h3>Name / Initial Printing</h3>
+            <p>
+              Personalized printing options for student names, initials, or
+              staff identifiers.
+            </p>
+          </article>
+
+          <article class="school-customization-item">
+            <div class="school-customization-item-icon">
+              <i data-lucide="shirt"></i>
+            </div>
+            <h3>House-wise Sportswear</h3>
+            <p>
+              Separate house-based sports uniforms with distinct colors and team
+              identity details.
+            </p>
+          </article>
+
+          <article class="school-customization-item">
+            <div class="school-customization-item-icon">
+              <i data-lucide="swatch-book"></i>
+            </div>
+            <h3>Custom Patterns</h3>
+            <p>
+              School-specific trims, piping, stripe work, and pattern detailing
+              for a unique look.
+            </p>
+          </article>
+
+          <article class="school-customization-item">
+            <div class="school-customization-item-icon">
+              <i data-lucide="ruler"></i>
+            </div>
+            <h3>Size Customization</h3>
+            <p>
+              Flexible size planning for different age groups, class ranges, and
+              institution requirements.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="bulk-booking-section" id="bulk-booking">
+      <div class="bulk-booking-wrapper">
+  
+        <aside class="bulk-booking-summary">
+          <span class="bulk-booking-eyebrow">Bulk Order Booking</span>
+
+          <h2 class="section-heading">
+            Bulk order planning
+            <span>made simple for school management</span>
+          </h2>
+
+          <p class="bulk-booking-summary-text">
+            Build the order step by step. Your selected products, estimated
+            quantity, and customization choices update live here while the form
+            stays clean and focused.
+          </p>
+
+          <div class="bulk-summary-card">
+            <div class="bulk-summary-block">
+              <span class="bulk-summary-label">Selected Products</span>
+              <ul class="bulk-summary-list" id="selectedProductsList">
+                <li>No products selected yet</li>
+              </ul>
+            </div>
+
+            <div class="bulk-summary-metrics">
+              <div class="bulk-summary-metric">
+                <span>Estimated Quantity</span>
+                <strong id="selectedQuantityCount">0</strong>
+              </div>
+
+              <div class="bulk-summary-metric">
+                <span>Customizations</span>
+                <strong id="selectedCustomizationCount">0</strong>
+              </div>
+            </div>
+
+            <div class="bulk-summary-block">
+              <span class="bulk-summary-label">Customization Options</span>
+              <ul class="bulk-summary-list" id="selectedCustomizationsList">
+                <li>No customization selected yet</li>
+              </ul>
+            </div>
+
+            <div class="bulk-summary-note">
+              <h3>Order workflow</h3>
+              <p id="bulkStepTitle">
+                Step 1: Select the required product categories.
+              </p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="bulk-booking-form-box">
+          <form class="bulk-booking-form" id="bulkBookingForm" novalidate>
+            <div class="bulk-form-topbar">
+              <div class="bulk-form-step active" id="stepIndicator1">
+                <span>01</span>
+                <p>Products</p>
+              </div>
+              <div class="bulk-form-step" id="stepIndicator2">
+                <span>02</span>
+                <p>Quantity</p>
+              </div>
+              <div class="bulk-form-step" id="stepIndicator3">
+                <span>03</span>
+                <p>School</p>
+              </div>
+              <div class="bulk-form-step" id="stepIndicator4">
+                <span>04</span>
+                <p>Delivery</p>
+              </div>
+            </div>
+
+            <div class="bulk-form-content">
+              <section class="bulk-form-step-panel" id="bulkStep1">
+                <div class="bulk-form-box-header">
+                  <h3>Select Product Categories</h3>
+                  <p>
+                    Choose all categories required for the school’s bulk order
+                    program.
+                  </p>
+                </div>
+
+                <div class="bulk-booking-product-grid expanded-product-grid">
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="products"
+                      value="School Uniform Sets"
+                    />
+                    <span>School Uniform Sets</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="products"
+                      value="Formal Shirts"
+                    />
+                    <span>Formal Shirts</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="Blouses" />
+                    <span>Blouses</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="Trousers" />
+                    <span>Trousers</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="Shorts" />
+                    <span>Shorts</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="Skirts" />
+                    <span>Skirts</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="Pinafores" />
+                    <span>Pinafores</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="Tunics" />
+                    <span>Tunics</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="Blazers" />
+                    <span>Blazers</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="Sweaters" />
+                    <span>Sweaters</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="Cardigans" />
+                    <span>Cardigans</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="products"
+                      value="Winter Jackets"
+                    />
+                    <span>Winter Jackets</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="products"
+                      value="Sports Uniforms"
+                    />
+                    <span>Sports Uniforms</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input type="checkbox" name="products" value="PE Kits" />
+                    <span>PE Kits</span>
+                  </label>
+                </div>
+              </section>
+
+    
+              <section class="bulk-form-step-panel" id="bulkStep2" hidden>
+                <div class="bulk-form-box-header">
+                  <h3>Quantity & Customization</h3>
+                  <p>
+                    Define estimated order volume and school-specific
+                    personalization needs.
+                  </p>
+                </div>
+
+                <div class="bulk-booking-grid two-col compact-grid">
+                  <div class="bulk-field">
+                    <label for="estimatedQuantity">Estimated Quantity</label>
+                    <input
+                      type="number"
+                      id="estimatedQuantity"
+                      name="estimatedQuantity"
+                      min="1"
+                      placeholder="Enter total quantity"
+                      required
+                    />
+                  </div>
+
+                  <div class="bulk-field">
+                    <label for="studentStrength">Student Strength</label>
+                    <input
+                      type="number"
+                      id="studentStrength"
+                      name="studentStrength"
+                      min="1"
+                      placeholder="Approx. student count"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="bulk-booking-product-grid compact-selection-grid bulk-spacing-top"
+                >
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="customization"
+                      value="School Logo Embroidery"
+                    />
+                    <span>Logo Embroidery</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="customization"
+                      value="Custom Colors"
+                    />
+                    <span>Custom Colors</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="customization"
+                      value="Name / Initial Printing"
+                    />
+                    <span>Name / Initials</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="customization"
+                      value="House-wise Sportswear"
+                    />
+                    <span>House-wise Sportswear</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="customization"
+                      value="Custom Patterns"
+                    />
+                    <span>Custom Patterns</span>
+                  </label>
+
+                  <label class="bulk-product-option">
+                    <input
+                      type="checkbox"
+                      name="customization"
+                      value="Size Customization"
+                    />
+                    <span>Size Customization</span>
+                  </label>
+                </div>
+
+                <div class="bulk-field bulk-spacing-top">
+                  <label for="customizationNotes">Customization Notes</label>
+                  <textarea
+                    id="customizationNotes"
+                    name="customizationNotes"
+                    rows="3"
+                    placeholder="Mention logo placement, pattern references, initials, or size requirements"
+                  ></textarea>
+                </div>
+              </section>
+
+     
+              <section class="bulk-form-step-panel" id="bulkStep3" hidden>
+                <div class="bulk-form-box-header">
+                  <h3>School Information</h3>
+                  <p>
+                    Enter the institution and main coordination contact details.
+                  </p>
+                </div>
+
+                <div class="bulk-booking-grid two-col compact-grid">
+                  <div class="bulk-field">
+                    <label for="schoolName">School Name</label>
+                    <input
+                      type="text"
+                      id="schoolName"
+                      name="schoolName"
+                      placeholder="Enter school name"
+                      required
+                    />
+                  </div>
+
+                  <div class="bulk-field">
+                    <label for="contactPerson">Contact Person</label>
+                    <input
+                      type="text"
+                      id="contactPerson"
+                      name="contactPerson"
+                      placeholder="Enter contact name"
+                      required
+                    />
+                  </div>
+
+                  <div class="bulk-field">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      placeholder="Enter phone number"
+                      pattern="[0-9]{10}"
+                      required
+                    />
+                  </div>
+
+                  <div class="bulk-field">
+                    <label for="emailAddress">Email Address</label>
+                    <input
+                      type="email"
+                      id="emailAddress"
+                      name="emailAddress"
+                      placeholder="Enter email address"
+                      required
+                    />
+                  </div>
+
+                  <div class="bulk-field full-width">
+                    <label for="schoolAddress">School Address</label>
+                    <textarea
+                      id="schoolAddress"
+                      name="schoolAddress"
+                      rows="3"
+                      placeholder="Enter school address"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+              </section>
+
+
+              <section class="bulk-form-step-panel" id="bulkStep4" hidden>
+                <div class="bulk-form-box-header">
+                  <h3>Delivery & Final Review</h3>
+                  <p>
+                    Complete the operational details needed to process the bulk
+                    order efficiently.
+                  </p>
+                </div>
+
+                <div class="bulk-booking-grid two-col compact-grid">
+                  <div class="bulk-field">
+                    <label for="requiredTimeline">Required Timeline</label>
+                    <input
+                      type="date"
+                      id="requiredTimeline"
+                      name="requiredTimeline"
+                      required
+                    />
+                  </div>
+
+                  <div class="bulk-field">
+                    <label for="deliveryMode">Delivery Preference</label>
+                    <select id="deliveryMode" name="deliveryMode" required>
+                      <option value="">Select option</option>
+                      <option value="Single Delivery">Single Delivery</option>
+                      <option value="Phase-wise Delivery">
+                        Phase-wise Delivery
+                      </option>
+                      <option value="Discuss with team">
+                        Discuss with team
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="bulk-field">
+                    <label for="sizeBreakup">Size Breakup Available?</label>
+                    <select id="sizeBreakup" name="sizeBreakup" required>
+                      <option value="">Select option</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                      <option value="Will share later">Will share later</option>
+                    </select>
+                  </div>
+
+                  <div class="bulk-field">
+                    <label for="sampleRequired">Need Sample Approval?</label>
+                    <select id="sampleRequired" name="sampleRequired" required>
+                      <option value="">Select option</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div>
+
+                  <div class="bulk-field full-width">
+                    <label for="extraNotes">Additional Notes</label>
+                    <textarea
+                      id="extraNotes"
+                      name="extraNotes"
+                      rows="3"
+                      placeholder="Add approval process, delivery scheduling, procurement notes, or meeting preferences"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="bulk-review-strip">
+                  <div>
+                    <span>Products</span>
+                    <strong id="reviewProductsCount">0 selected</strong>
+                  </div>
+                  <div>
+                    <span>Quantity</span>
+                    <strong id="reviewQuantityCount">0</strong>
+                  </div>
+                  <div>
+                    <span>Customizations</span>
+                    <strong id="reviewCustomizationCount">0 selected</strong>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="bulk-form-footer">
+              <p
+                class="bulk-booking-feedback"
+                id="bulkBookingFeedback"
+                aria-live="polite"
+              ></p>
+
+              <div class="bulk-form-footer-actions">
+                <button
+                  type="button"
+                  class="btn-secondary"
+                  id="backStepBtn"
+                  hidden
+                >
+                  Back
+                </button>
+                <button type="button" class="btn-primary" id="nextStepBtn">
+                  Next
+                  <i data-lucide="arrow-right"></i>
+                </button>
+                <button
+                  type="submit"
+                  class="btn-primary"
+                  id="submitStepBtn"
+                  hidden
+                >
+                  Submit Enquiry
+                  <i data-lucide="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="school-cta-section" id="bulk-cta">
+      <div class="school-cta-container">
+        <div class="school-cta-card">
+          <span class="school-cta-eyebrow">Bulk Orders Made Easy</span>
+
+          <h2 class="section-heading">
+            Ready to place your school bulk order?
+            <span
+              >Let’s plan uniforms, customization, and delivery in one smooth
+              process</span
+            >
+          </h2>
+
+          <p class="school-cta-text">
+            Share your school requirements with our team and get a structured
+            bulk-order experience for uniforms, sportswear, accessories, and
+            institution-specific customization needs.
+          </p>
+
+          <div class="school-cta-actions">
+            <a href="School.html" class="btn-primary">
+              Start Bulk Booking
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+            <a href="contact.html" class="btn-secondary"> Contact Our Team </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+  
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img
+                src="./images/logo.png"
+                alt="CampusCraft Logo"
+                class="brand-logo"
+                id="footerLogo"
+              />
+            </a>
+
+            <div class="brand-content footer-branding">
+              <h1 class="brand-name">
+                <span class="campus">Campus</span>
+                <span class="craft">Craft</span>
+              </h1>
+
+              <div class="brand-subtitle">
+                <span class="brand-line"></span>
+
+                <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+                <span class="brand-line"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            CampusCraft provides quality school uniforms, sportswear and
+            accessories designed for comfort, durability and everyday
+            performance.
+          </p>
+        </div>
+
+  
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="product.html"> Products </a>
+            </li>
+
+            <li>
+              <a href="Customization.html">Customization</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <div class="footer-col">
+          <h3>Products</h3>
+
+          <ul>
+            <li>
+              <a href="school-uniforms.html"> School Uniforms </a>
+            </li>
+
+            <li>
+              <a href="sportswear.html"> Sportswear </a>
+            </li>
+
+            <li>
+              <a href="school-uniforms.html"> School Accessories </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Team Kits </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Custom Uniforms </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <div class="footer-col">
+          <h3>Information</h3>
+
+          <ul>
+            <li>
+              <a href="404.html"> 404 page </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Bulk Orders </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Enquiries </a>
+            </li>
+            <li>
+              <a href="contact.html"> Customization Guide </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+
+          <ul class="contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+
+              Hyderabad, Telangana
+            </li>
+
+            <li>
+              <i data-lucide="phone"></i>
+
+              +91 98765 43210
+            </li>
+
+            <li>
+              <i data-lucide="mail"></i>
+
+              hello@campuscraft.com
+            </li>
+          </ul>
+
+   
+
+          <div class="social">
+            <a href="#" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer-bottom">
+        <p>© 2026 CampusCraft. All Rights Reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms &amp; Conditions </a>
+
+          <a href="#" class="top-btn" aria-label="Back to top">
+            <i data-lucide="arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

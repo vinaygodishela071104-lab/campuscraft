@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CampusCraft | School Uniforms & Sportswear|Sports-Wear</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="School.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./images/logo.png"
+            alt="CampusCraft Logo"
+            class="brand-logo"
+            id="headerLogo"
+          />
+        </a>
+
+        <div class="brand-content">
+          <h1 class="brand-name">
+            <span class="campus">Campus</span>
+            <span class="craft">Craft</span>
+          </h1>
+
+          <div class="brand-subtitle">
+            <span class="brand-line"></span>
+
+            <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+            <span class="brand-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           NAVIGATION
+      ========================================= -->
+
+      <nav>
+        <ul class="nav-links">
+          <!-- HOME -->
+
+          <li class="dropdown">
+            <a href="index.html">
+              Home
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html">Home 1</a>
+              </li>
+
+              <li>
+                <a href="home2.html">Home 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ABOUT -->
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <!-- PRODUCTS -->
+
+          <li class="dropdown">
+            <a href="product.html">
+              Products
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="mobile-products-link">
+                <a href="product.html">Products</a>
+              </li>
+
+              <li>
+                <a href="school-uniforms.html"> School Uniforms </a>
+              </li>
+
+              <li>
+                <a href="sportswear.html">Sportswear</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="School.html">School Orders</a>
+          </li>
+          <li>
+            <a href="Customization.html">Customization</a>
+          </li>
+          <!-- CONTACT -->
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+          <!-- MOBILE CART -->
+
+          <li class="mobile-cart-item">
+            <button
+              class="mobile-cart-btn"
+              id="mobileCartToggle"
+              type="button"
+              aria-label="Open cart"
+              aria-expanded="false"
+              aria-controls="cartPanel"
+            >
+              <span class="mobile-cart-btn__label">
+                <i data-lucide="shopping-bag"></i>
+
+                Cart
+              </span>
+
+              <span class="cart-count mobile-cart-count" id="mobileCartCount">
+                0
+              </span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- MOBILE ENQUIRE BUTTON -->
+
+        <div class="mobile-login">
+          <a href="contact.html" class="login-btn">
+            <i data-lucide="message-circle"></i>
+
+            <span>Enquire Now</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- ========================================
+           HEADER BUTTONS
+      ========================================= -->
+
+      <div class="buttons">
+        <!-- RTL -->
+
+        <button
+          class="icon-btn rtl-btn"
+          id="rtlToggle"
+          title="RTL Mode"
+          aria-label="Toggle RTL mode"
+          type="button"
+        >
+          <i data-lucide="arrow-left-right"></i>
+        </button>
+
+        <!-- DARK MODE -->
+
+        <button
+          class="icon-btn dark-btn"
+          id="darkToggle"
+          title="Dark Mode"
+          aria-label="Toggle dark mode"
+          type="button"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+        <!-- DESKTOP CART -->
+
+        <button
+          class="icon-btn cart-btn desktop-cart-btn"
+          id="cartToggle"
+          title="Cart"
+          aria-label="Open cart"
+          aria-expanded="false"
+          aria-controls="cartPanel"
+          type="button"
+        >
+          <i data-lucide="shopping-bag"></i>
+
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- DESKTOP ENQUIRE BUTTON -->
+
+        <a href="contact.html" class="login-btn desktop-login">
+          <i data-lucide="message-circle"></i>
+
+          <span>Enquire Now</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+
+        <button
+          class="icon-btn menu-btn"
+          id="menuToggle"
+          title="Menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- ========================================
+           CART PANEL
+      ========================================= -->
+
+      <div
+        class="cart-panel"
+        id="cartPanel"
+        hidden
+        aria-labelledby="cartPanelTitle"
+      >
+        <!-- CART HEADER -->
+
+        <div class="cart-panel__head">
+          <h3 id="cartPanelTitle">Your Cart</h3>
+
+          <button
+            type="button"
+            class="cart-panel__close"
+            id="cartClose"
+            aria-label="Close cart"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- CART BODY -->
+
+        <div class="cart-panel__body">
+          <!-- EMPTY CART -->
+
+          <div class="cart-panel__empty" id="cartEmptyState">
+            <i data-lucide="shopping-cart"></i>
+
+            <p>No products selected yet.</p>
+
+            <small>
+              Your selected uniforms and sportswear will appear here.
+            </small>
+          </div>
+
+          <!-- CART PRODUCTS -->
+
+          <div class="cart-items" id="cartItems"></div>
+        </div>
+
+        <!-- CART FOOTER -->
+
+        <div class="cart-panel__footer">
+          <div class="cart-panel__total">
+            <span>Subtotal</span>
+
+            <strong id="cartSubtotal">₹0</strong>
+          </div>
+
+          <button id="buyNowBtn" class="cart-buy-btn" type="button">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="bulk-hero">
+      <div class="bulk-hero__content">
+        <span class="bulk-hero__tag">Bulk Order for Schools</span>
+        <h1 class="bulk-hero__title">
+          Bulk uniform orders for <span>schools & institutions</span>
+        </h1>
+
+        <p class="bulk-hero__text">
+          Premium quality uniforms, sports kits, and accessories with custom
+          branding, bulk pricing, and on-time delivery across India.
+        </p>
+
+        <div class="bulk-hero__actions">
+          <a href="#bulk-enquiry-form" class="btn-primary"> Request a Quote </a>
+          <a
+            href="https://wa.me/910000000000"
+            target="_blank"
+            class="btn-secondary whats"
+          >
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="bulk-included">
+      <div class="bulk-included__inner">
+        <div class="bulk-included__header">
+          <span class="bulk-included__tag">What’s Included</span>
+
+          <h2 class="bulk-included__title">
+            Everything in a <span>bulk uniform order</span>
+          </h2>
+
+          <p class="bulk-included__text">
+            From fabric selection to final delivery, each bulk order includes
+            careful quality checks, custom stitching, branding options, and
+            coordinated logistics to make uniform management simple for your
+            school.
+          </p>
+        </div>
+
+        <div class="bulk-included__grid">
+          <div class="bulk-included__card">
+            <div class="bulk-included__icon">
+              <i data-lucide="check-circle"></i>
+            </div>
+            <h3 class="bulk-included__card-title">Fabric & Quality Check</h3>
+            <p class="bulk-included__card-text">
+              Premium fabrics with strict quality checks for color, stitching,
+              and durability.
+            </p>
+          </div>
+
+          <div class="bulk-included__card">
+            <div class="bulk-included__icon">
+              <i data-lucide="ruler"></i>
+            </div>
+            <h3 class="bulk-included__card-title">Custom Stitching</h3>
+            <p class="bulk-included__card-text">
+              Stitching as per your school’s size chart and design
+              specifications.
+            </p>
+          </div>
+
+          <div class="bulk-included__card">
+            <div class="bulk-included__icon">
+              <i data-lucide="award"></i>
+            </div>
+            <h3 class="bulk-included__card-title">Logo & Branding</h3>
+            <p class="bulk-included__card-text">
+              Logo embroidery or screen printing on shirts, blazers, sports
+              kits, and more.
+            </p>
+          </div>
+
+          <div class="bulk-included__card">
+            <div class="bulk-included__icon">
+              <i data-lucide="tag"></i>
+            </div>
+            <h3 class="bulk-included__card-title">Name Tapes / Labels</h3>
+            <p class="bulk-included__card-text">
+              Optional name tapes or labels for easy identification of each
+              student’s uniform.
+            </p>
+          </div>
+
+          <div class="bulk-included__card">
+            <div class="bulk-included__icon">
+              <i data-lucide="package"></i>
+            </div>
+            <h3 class="bulk-included__card-title">Individual Packing</h3>
+            <p class="bulk-included__card-text">
+              Optional per-student packing with labels for class, name, and roll
+              number.
+            </p>
+          </div>
+
+          <div class="bulk-included__card">
+            <div class="bulk-included__icon">
+              <i data-lucide="truck"></i>
+            </div>
+            <h3 class="bulk-included__card-title">Coordinated Delivery</h3>
+            <p class="bulk-included__card-text">
+              Delivery organized by class or section for smooth distribution at
+              school.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bulk-who-serve">
+      <div class="bulk-who-serve__inner">
+        <div class="bulk-who-serve__header">
+          <span class="bulk-who-serve__tag">Who We Serve</span>
+
+          <h2 class="bulk-who-serve__title">
+            Trusted by <span>schools & institutions</span>
+          </h2>
+
+          <p class="bulk-who-serve__text">
+            We partner with a wide range of educational and sports institutions
+            to provide high-quality uniforms, sports kits, and branded apparel
+            in bulk.
+          </p>
+        </div>
+
+        <div class="bulk-who-serve__content">
+          <div class="bulk-who-serve__image">
+            <img
+              src="./images/school4.png"
+              alt="Schools and institutions we serve"
+            />
+          </div>
+
+          <div class="bulk-who-serve__cards">
+            <div class="bulk-who-serve__card">
+              <div class="bulk-who-serve__card-icon">
+                <i data-lucide="school"></i>
+              </div>
+              <h3 class="bulk-who-serve__card-title">
+                CBSE / ICSE / State Board Schools
+              </h3>
+              <p class="bulk-who-serve__card-text">
+                Complete uniform solutions for affiliated schools following
+                national and state curricula.
+              </p>
+            </div>
+
+            <div class="bulk-who-serve__card">
+              <div class="bulk-who-serve__card-icon">
+                <i data-lucide="globe"></i>
+              </div>
+              <h3 class="bulk-who-serve__card-title">International Schools</h3>
+              <p class="bulk-who-serve__card-text">
+                Premium uniforms and sports wear aligned with global standards
+                and branding.
+              </p>
+            </div>
+
+            <div class="bulk-who-serve__card">
+              <div class="bulk-who-serve__card-icon">
+                <i data-lucide="book-open"></i>
+              </div>
+              <h3 class="bulk-who-serve__card-title">
+                Coaching Centers & Tuition Chains
+              </h3>
+              <p class="bulk-who-serve__card-text">
+                Branded T-shirts, polos, and uniforms for coaching institutes
+                and tuition networks.
+              </p>
+            </div>
+
+            <div class="bulk-who-serve__card">
+              <div class="bulk-who-serve__card-icon">
+                <i data-lucide="trophy"></i>
+              </div>
+              <h3 class="bulk-who-serve__card-title">
+                Sports Academies & Clubs
+              </h3>
+              <p class="bulk-who-serve__card-text">
+                Custom sports kits, training wear, and team uniforms for
+                academies and clubs.
+              </p>
+            </div>
+
+            <div class="bulk-who-serve__card">
+              <div class="bulk-who-serve__card-icon">
+                <i data-lucide="heart-handshake"></i>
+              </div>
+              <h3 class="bulk-who-serve__card-title">NGOs Running Schools</h3>
+              <p class="bulk-who-serve__card-text">
+                Affordable, durable uniforms for NGO-led schools and education
+                initiatives.
+              </p>
+            </div>
+
+            <div class="bulk-who-serve__card">
+              <div class="bulk-who-serve__card-icon">
+                <i data-lucide="building-2"></i>
+              </div>
+              <h3 class="bulk-who-serve__card-title">
+                Corporate Training Centers
+              </h3>
+              <p class="bulk-who-serve__card-text">
+                Branded apparel and uniforms for corporate training programs and
+                learning centers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bulk-size-support">
+      <div class="bulk-size-support__inner">
+        <div class="bulk-size-support__header">
+          <span class="bulk-size-support__tag">Size Management Support</span>
+
+          <h2 class="bulk-size-support__title">
+            We handle the <span>tricky part</span>
+          </h2>
+
+          <p class="bulk-size-support__text">
+            Getting sizes right for hundreds of students can be challenging. We
+            simplify the entire process with ready-to-use templates, clear
+            guidance, and flexible support.
+          </p>
+        </div>
+
+        <div class="bulk-size-support__panel">
+          <div class="bulk-size-support__image">
+            <img
+              src="./images/management.png"
+              alt="Size management support for schools"
+            />
+          </div>
+
+          <div class="bulk-size-support__points">
+            <div class="bulk-size-support__point">
+              <div class="bulk-size-support__point-icon">
+                <i data-lucide="file-spreadsheet"></i>
+              </div>
+              <div class="bulk-size-support__point-content">
+                <h4 class="bulk-size-support__point-title">
+                  Free Size Chart Templates
+                </h4>
+                <p class="bulk-size-support__point-text">
+                  Ready-to-use Excel/Google Sheet templates to collect student
+                  sizes quickly and accurately.
+                </p>
+              </div>
+            </div>
+
+            <div class="bulk-size-support__point">
+              <div class="bulk-size-support__point-icon">
+                <i data-lucide="ruler"></i>
+              </div>
+              <div class="bulk-size-support__point-content">
+                <h4 class="bulk-size-support__point-title">
+                  Measurement Guidance
+                </h4>
+                <p class="bulk-size-support__point-text">
+                  Simple instructions and support to help your staff measure
+                  students correctly.
+                </p>
+              </div>
+            </div>
+
+            <div class="bulk-size-support__point">
+              <div class="bulk-size-support__point-icon">
+                <i data-lucide="sheet"></i>
+              </div>
+              <div class="bulk-size-support__point-content">
+                <h4 class="bulk-size-support__point-title">Bulk Size Upload</h4>
+                <p class="bulk-size-support__point-text">
+                  Share a single Google Sheet or Excel file with all student
+                  sizes and classes.
+                </p>
+              </div>
+            </div>
+
+            <div class="bulk-size-support__point">
+              <div class="bulk-size-support__point-icon">
+                <i data-lucide="refresh-ccw"></i>
+              </div>
+              <div class="bulk-size-support__point-content">
+                <h4 class="bulk-size-support__point-title">
+                  Size Exchange Support
+                </h4>
+                <p class="bulk-size-support__point-text">
+                  Hassle-free support for exchanges in case of size issues after
+                  delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bulk-booking" id="bulk-enquiry-form">
+      <div class="bulk-booking__inner">
+        <div class="bulk-booking__header">
+          <span class="bulk-booking__tag">Bulk Booking Form</span>
+
+          <h2 class="bulk-booking__title">
+            Request a <span>bulk order quote</span>
+          </h2>
+
+          <p class="bulk-booking__text">
+            Share your requirements and we’ll get back with a custom quote,
+            samples, and timeline within 24 hours.
+          </p>
+        </div>
+
+        <div class="bulk-booking__card">
+          <form class="bulk-booking__form" action="#" method="POST">
+            <div class="bulk-booking__row">
+              <div class="bulk-booking__field">
+                <label for="schoolName" class="bulk-booking__label"
+                  >School / Institution Name</label
+                >
+                <input
+                  type="text"
+                  id="schoolName"
+                  name="schoolName"
+                  class="bulk-booking__input"
+                  placeholder="Enter school or institution name"
+                  required
+                />
+              </div>
+
+              <div class="bulk-booking__field">
+                <label for="contactName" class="bulk-booking__label"
+                  >Contact Person</label
+                >
+                <input
+                  type="text"
+                  id="contactName"
+                  name="contactName"
+                  class="bulk-booking__input"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="bulk-booking__row">
+              <div class="bulk-booking__field">
+                <label for="phone" class="bulk-booking__label"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="bulk-booking__input"
+                  placeholder="Mobile number"
+                  required
+                />
+              </div>
+
+              <div class="bulk-booking__field">
+                <label for="email" class="bulk-booking__label"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="bulk-booking__input"
+                  placeholder="Official email address"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="bulk-booking__row">
+              <div class="bulk-booking__field">
+                <label for="city" class="bulk-booking__label">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  class="bulk-booking__input"
+                  placeholder="City"
+                  required
+                />
+              </div>
+
+              <div class="bulk-booking__field">
+                <label for="state" class="bulk-booking__label">State</label>
+                <input
+                  type="text"
+                  id="state"
+                  name="state"
+                  class="bulk-booking__input"
+                  placeholder="State"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="bulk-booking__row">
+              <div class="bulk-booking__field">
+                <label for="students" class="bulk-booking__label"
+                  >Approx. Number of Students</label
+                >
+                <input
+                  type="number"
+                  id="students"
+                  name="students"
+                  class="bulk-booking__input"
+                  placeholder="e.g. 250"
+                  min="1"
+                  required
+                />
+              </div>
+
+              <div class="bulk-booking__field">
+                <label for="classes" class="bulk-booking__label">Classes</label>
+                <input
+                  type="text"
+                  id="classes"
+                  name="classes"
+                  class="bulk-booking__input"
+                  placeholder="e.g. KG–10, 1–12"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="bulk-booking__row">
+              <div class="bulk-booking__field bulk-booking__field--full">
+                <label for="items" class="bulk-booking__label"
+                  >Required Items</label
+                >
+                <input
+                  type="text"
+                  id="items"
+                  name="items"
+                  class="bulk-booking__input"
+                  placeholder="e.g. Boys shirts, girls skirts, sports kits, ties"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="bulk-booking__row">
+              <div class="bulk-booking__field bulk-booking__field--full">
+                <label for="timeline" class="bulk-booking__label"
+                  >Preferred Delivery Timeline</label
+                >
+                <input
+                  type="text"
+                  id="timeline"
+                  name="timeline"
+                  class="bulk-booking__input"
+                  placeholder="e.g. Before April 2026 session"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="bulk-booking__row">
+              <div class="bulk-booking__field bulk-booking__field--full">
+                <label for="message" class="bulk-booking__label"
+                  >Additional Details</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  class="bulk-booking__textarea"
+                  rows="4"
+                  placeholder="Share any special requirements, customization needs, or questions"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="bulk-booking__actions">
+              <button type="submit" class="btn-primary">Submit Enquiry</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="bulk-final-cta">
+      <div class="bulk-final-cta__inner">
+        <div class="bulk-final-cta__card">
+          <span class="bulk-final-cta__tag">Ready to Get Started?</span>
+
+          <h2 class="bulk-final-cta__title">
+            Outfit your school with <span>premium uniforms</span>
+          </h2>
+
+          <p class="bulk-final-cta__text">
+            From first measurement to final delivery, we handle everything so
+            you can focus on what matters most – your students.
+          </p>
+
+          <div class="bulk-final-cta__actions">
+            <a href="#bulk-enquiry-form" class="btn-primary">
+              Request a Quote
+            </a>
+            <a
+              href="https://wa.me/910000000000"
+              target="_blank"
+              class="btn-secondary"
+            >
+              WhatsApp Us
+            </a>
+          </div>
+
+          <p class="bulk-final-cta__note">
+            Custom quotes, sample support, and pan-India delivery for bulk
+            orders.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <!-- BRAND -->
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img
+                src="./images/logo.png"
+                alt="CampusCraft Logo"
+                class="brand-logo"
+                id="footerLogo"
+              />
+            </a>
+
+            <div class="brand-content footer-branding">
+              <h1 class="brand-name">
+                <span class="campus">Campus</span>
+                <span class="craft">Craft</span>
+              </h1>
+
+              <div class="brand-subtitle">
+                <span class="brand-line"></span>
+
+                <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+                <span class="brand-line"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            CampusCraft provides quality school uniforms, sportswear and
+            accessories designed for comfort, durability and everyday
+            performance.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="product.html"> Products </a>
+            </li>
+
+            <li>
+              <a href="Customization.html">Customization</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <div class="footer-col">
+          <h3>Products</h3>
+
+          <ul>
+            <li>
+              <a href="school-uniforms.html"> School Uniforms </a>
+            </li>
+
+            <li>
+              <a href="sportswear.html"> Sportswear </a>
+            </li>
+
+            <li>
+              <a href="school-uniforms.html"> School Accessories </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Team Kits </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Custom Uniforms </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INFORMATION -->
+
+        <div class="footer-col">
+          <h3>Information</h3>
+
+          <ul>
+            <li>
+              <a href="404.html"> 404 page </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Bulk Orders </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Enquiries </a>
+            </li>
+            <li>
+              <a href="contact.html"> Customization Guide </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+
+          <ul class="contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+
+              Hyderabad, Telangana
+            </li>
+
+            <li>
+              <i data-lucide="phone"></i>
+
+              +91 98765 43210
+            </li>
+
+            <li>
+              <i data-lucide="mail"></i>
+
+              hello@campuscraft.com
+            </li>
+          </ul>
+
+          <div class="social">
+            <a href="#" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 CampusCraft. All Rights Reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms &amp; Conditions </a>
+
+          <a href="#" class="top-btn" aria-label="Back to top">
+            <i data-lucide="arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="sportswear.js"></script>
+  </body>
+</html>

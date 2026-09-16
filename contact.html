@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CampusCraft | School Uniforms & Sportswear|Contact</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./images/logo.png"
+            alt="CampusCraft Logo"
+            class="brand-logo"
+            id="headerLogo"
+          />
+        </a>
+
+        <div class="brand-content">
+          <h1 class="brand-name">
+            <span class="campus">Campus</span>
+            <span class="craft">Craft</span>
+          </h1>
+
+          <div class="brand-subtitle">
+            <span class="brand-line"></span>
+
+            <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+            <span class="brand-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           NAVIGATION
+      ========================================= -->
+
+      <nav>
+        <ul class="nav-links">
+          <!-- HOME -->
+
+          <li class="dropdown">
+            <a href="index.html">
+              Home
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html">Home 1</a>
+              </li>
+
+              <li>
+                <a href="home2.html">Home 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ABOUT -->
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="product.html">
+              Products
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="mobile-products-link">
+                <a href="product.html">Products</a>
+              </li>
+
+              <li>
+                <a href="school-uniforms.html"> School Uniforms </a>
+              </li>
+
+              <li>
+                <a href="sportswear.html">Sportswear</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="School.html">School Orders</a>
+          </li>
+          <li>
+            <a href="Customization.html">Customization</a>
+          </li>
+
+          <!-- CONTACT -->
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+          <!-- MOBILE CART -->
+
+          <li class="mobile-cart-item">
+            <button
+              class="mobile-cart-btn"
+              id="mobileCartToggle"
+              type="button"
+              aria-label="Open cart"
+              aria-expanded="false"
+              aria-controls="cartPanel"
+            >
+              <span class="mobile-cart-btn__label">
+                <i data-lucide="shopping-bag"></i>
+
+                Cart
+              </span>
+
+              <span class="cart-count mobile-cart-count" id="mobileCartCount">
+                0
+              </span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- MOBILE ENQUIRE BUTTON -->
+
+        <div class="mobile-login">
+          <a href="contact.html" class="login-btn">
+            <i data-lucide="message-circle"></i>
+
+            <span>Enquire Now</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- ========================================
+           HEADER BUTTONS
+      ========================================= -->
+
+      <div class="buttons">
+        <!-- RTL -->
+
+        <button
+          class="icon-btn rtl-btn"
+          id="rtlToggle"
+          title="RTL Mode"
+          aria-label="Toggle RTL mode"
+          type="button"
+        >
+          <i data-lucide="arrow-left-right"></i>
+        </button>
+
+        <!-- DARK MODE -->
+
+        <button
+          class="icon-btn dark-btn"
+          id="darkToggle"
+          title="Dark Mode"
+          aria-label="Toggle dark mode"
+          type="button"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+        <!-- DESKTOP CART -->
+
+        <button
+          class="icon-btn cart-btn desktop-cart-btn"
+          id="cartToggle"
+          title="Cart"
+          aria-label="Open cart"
+          aria-expanded="false"
+          aria-controls="cartPanel"
+          type="button"
+        >
+          <i data-lucide="shopping-bag"></i>
+
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- DESKTOP ENQUIRE BUTTON -->
+
+        <a href="contact.html" class="login-btn desktop-login">
+          <i data-lucide="message-circle"></i>
+
+          <span>Enquire Now</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+
+        <button
+          class="icon-btn menu-btn"
+          id="menuToggle"
+          title="Menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- ========================================
+           CART PANEL
+      ========================================= -->
+
+      <div
+        class="cart-panel"
+        id="cartPanel"
+        hidden
+        aria-labelledby="cartPanelTitle"
+      >
+        <!-- CART HEADER -->
+
+        <div class="cart-panel__head">
+          <h3 id="cartPanelTitle">Your Cart</h3>
+
+          <button
+            type="button"
+            class="cart-panel__close"
+            id="cartClose"
+            aria-label="Close cart"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- CART BODY -->
+
+        <div class="cart-panel__body">
+          <!-- EMPTY CART -->
+
+          <div class="cart-panel__empty" id="cartEmptyState">
+            <i data-lucide="shopping-cart"></i>
+
+            <p>No products selected yet.</p>
+
+            <small>
+              Your selected uniforms and sportswear will appear here.
+            </small>
+          </div>
+
+          <!-- CART PRODUCTS -->
+
+          <div class="cart-items" id="cartItems"></div>
+        </div>
+
+        <!-- CART FOOTER -->
+
+        <div class="cart-panel__footer">
+          <div class="cart-panel__total">
+            <span>Subtotal</span>
+
+            <strong id="cartSubtotal">₹0</strong>
+          </div>
+
+          <button id="buyNowBtn" class="cart-buy-btn" type="button">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="contact-hero" aria-labelledby="contact-hero-title">
+      <div class="contact-hero__content">
+        <nav class="contact-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i data-lucide="chevron-right" aria-hidden="true"></i>
+          <span>Contact</span>
+        </nav>
+
+        <span class="contact-hero__eyebrow">
+          <i data-lucide="message-circle" aria-hidden="true"></i>
+          Start a conversation
+        </span>
+
+        <h1 id="contact-hero-title" class="contact-hero__title">
+          Let’s build your next
+          <span>uniform collection.</span>
+        </h1>
+
+        <p class="contact-hero__description">
+          Tell us what your school, college, academy, or team needs. We can help
+          with uniforms, sportswear, customization, sizing, and bulk orders.
+        </p>
+
+        <a href="contact.html" class="btn-primary contact-hero__button">
+          Send an enquiry
+          <i data-lucide="arrow-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+    <section class="contact-info" aria-labelledby="contact-info-title">
+      <div class="contact-info__container">
+        <div class="contact-info__heading">
+          <span class="contact-info__eyebrow">Contact details</span>
+
+          <h2 id="contact-info-title" class="contact-info__title">
+            Reach the
+            <span>CampusCraft team.</span>
+          </h2>
+
+          <p class="contact-info__description">
+            Whether you need uniforms, sportswear, customization, or bulk-order
+            support, our team is ready to help.
+          </p>
+        </div>
+
+        <div class="contact-info__layout">
+          <div class="contact-info__details">
+            <a href="tel:+919999999999" class="contact-info__item">
+              <span class="contact-info__icon">
+                <i data-lucide="phone" aria-hidden="true"></i>
+              </span>
+
+              <span class="contact-info__item-content">
+                <span class="contact-info__label">Call us</span>
+                <strong>+91 99999 99999</strong>
+                <small>Speak with our team</small>
+              </span>
+
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+
+            <a href="mailto:hello@campuscraft.in" class="contact-info__item">
+              <span class="contact-info__icon">
+                <i data-lucide="mail" aria-hidden="true"></i>
+              </span>
+
+              <span class="contact-info__item-content">
+                <span class="contact-info__label">Email us</span>
+                <strong>hello@campuscraft.in</strong>
+                <small>Send your requirements</small>
+              </span>
+
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+
+            <a
+              href="https://wa.me/919999999999"
+              target="_blank"
+              rel="noopener"
+              class="contact-info__item"
+            >
+              <span class="contact-info__icon">
+                <i data-lucide="message-circle" aria-hidden="true"></i>
+              </span>
+
+              <span class="contact-info__item-content">
+                <span class="contact-info__label">WhatsApp</span>
+                <strong>Chat with us</strong>
+                <small>Get a quick response</small>
+              </span>
+
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+
+            <div class="contact-info__item contact-info__item--static">
+              <span class="contact-info__icon">
+                <i data-lucide="clock-3" aria-hidden="true"></i>
+              </span>
+
+              <span class="contact-info__item-content">
+                <span class="contact-info__label">Business hours</span>
+                <strong>Monday–Saturday</strong>
+                <small>9:30 AM–6:30 PM</small>
+              </span>
+            </div>
+          </div>
+
+          <div class="contact-info__location">
+            <div class="contact-info__location-top">
+              <span class="contact-info__location-icon">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+              </span>
+
+              <div>
+                <span class="contact-info__label">Visit us</span>
+                <h3>CampusCraft Studio</h3>
+              </div>
+            </div>
+
+            <p class="contact-info__address">
+              Serilingampalle,<br />
+              Telangana, India
+            </p>
+
+            <p class="contact-info__location-copy">
+              Visit us to discuss uniform requirements, fabric options, samples,
+              customization, and sizing for your school, college, academy, or
+              team.
+            </p>
+
+            <div class="contact-info__location-meta">
+              <span>
+                <i data-lucide="building-2" aria-hidden="true"></i>
+                Showroom and consultation space
+              </span>
+
+              <span>
+                <i data-lucide="users" aria-hidden="true"></i>
+                Institutional and team enquiries welcome
+              </span>
+            </div>
+
+            <a
+              href="https://www.google.com/maps"
+              class="contact-info__map-link"
+            >
+              View location
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-enquiry">
+      <div class="contact-enquiry__container">
+        <div class="contact-enquiry__intro">
+          <span class="contact-enquiry__eyebrow">
+            PRODUCT & BULK ENQUIRIES
+          </span>
+
+          <h2 class="contact-enquiry__title">
+            Tell Us What Your
+            <span>Institution Needs.</span>
+          </h2>
+
+          <p class="contact-enquiry__description">
+            Share your uniform, sportswear or bulk-order requirements and our
+            team will help you with the right products, customization and
+            production plan.
+          </p>
+
+          <div class="contact-enquiry__support">
+            <div class="contact-enquiry__support-item">
+              <i data-lucide="school"></i>
+
+              <div>
+                <strong>Institutional Orders</strong>
+                <span>Schools, academies and teams</span>
+              </div>
+            </div>
+
+            <div class="contact-enquiry__support-item">
+              <i data-lucide="boxes"></i>
+
+              <div>
+                <strong>Bulk Production</strong>
+                <span>From small batches to large orders</span>
+              </div>
+            </div>
+
+            <div class="contact-enquiry__support-item">
+              <i data-lucide="shirt"></i>
+
+              <div>
+                <strong>Custom Uniform Design</strong>
+                <span>School-specific colours, patterns and branding</span>
+              </div>
+            </div>
+
+            <div class="contact-enquiry__support-item">
+              <i data-lucide="truck"></i>
+
+              <div>
+                <strong>Reliable Delivery</strong>
+                <span
+                  >Planned production and on-time institutional delivery</span
+                >
+              </div>
+            </div>
+
+            <div class="contact-enquiry__support-item">
+              <i data-lucide="palette"></i>
+
+              <div>
+                <strong>Custom Branding</strong>
+                <span>Logos, colours and custom designs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-enquiry__details">
+            <div class="contact-enquiry__details-head">
+              <span></span>
+              <p>WHAT HAPPENS NEXT?</p>
+            </div>
+
+            <div class="contact-enquiry__steps">
+              <div class="contact-enquiry__step">
+                <span class="contact-enquiry__step-number"> 01 </span>
+
+                <div>
+                  <h4>Requirement Review</h4>
+
+                  <p>
+                    Our team reviews your product, quantity, branding and
+                    customization requirements.
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-enquiry__step">
+                <span class="contact-enquiry__step-number"> 02 </span>
+
+                <div>
+                  <h4>Consultation & Quote</h4>
+
+                  <p>
+                    We connect with your institution to confirm specifications
+                    and prepare a suitable quotation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-enquiry__step">
+                <span class="contact-enquiry__step-number"> 03 </span>
+
+                <div>
+                  <h4>Sample & Production</h4>
+
+                  <p>
+                    Once approved, we proceed with samples, sizing and scheduled
+                    bulk manufacturing.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-enquiry__response">
+              <div class="contact-enquiry__response-icon">
+                <i data-lucide="clock-3"></i>
+              </div>
+
+              <div>
+                <span>Typical Response Time</span>
+                <strong>Within 1 Business Day</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-enquiry__form-card">
+          <div class="contact-enquiry__form-head">
+            <div>
+              <span>ENQUIRY FORM</span>
+              <h3>Start Your Requirement</h3>
+            </div>
+
+            <div class="contact-enquiry__form-icon">
+              <i data-lucide="send"></i>
+            </div>
+          </div>
+
+          <form class="contact-enquiry__form">
+            <div class="contact-enquiry__grid">
+              <div class="contact-enquiry__field">
+                <label for="fullName"> Full Name * </label>
+
+                <div class="contact-enquiry__input-wrap">
+                  <i data-lucide="user"></i>
+
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact-enquiry__field">
+                <label for="institutionName"> Institution / Team Name * </label>
+
+                <div class="contact-enquiry__input-wrap">
+                  <i data-lucide="school"></i>
+
+                  <input
+                    type="text"
+                    id="institutionName"
+                    name="institutionName"
+                    placeholder="School or team name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact-enquiry__field">
+                <label for="email"> Email Address * </label>
+
+                <div class="contact-enquiry__input-wrap">
+                  <i data-lucide="mail"></i>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact-enquiry__field">
+                <label for="phone"> Phone Number * </label>
+
+                <div class="contact-enquiry__input-wrap">
+                  <i data-lucide="phone"></i>
+
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+91 98765 43210"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact-enquiry__field">
+                <label for="enquiryType"> Enquiry Type * </label>
+
+                <div class="contact-enquiry__input-wrap">
+                  <i data-lucide="message-square-more"></i>
+
+                  <select id="enquiryType" name="enquiryType" required>
+                    <option value="" selected disabled>
+                      Select enquiry type
+                    </option>
+
+                    <option value="school-uniforms">School Uniforms</option>
+
+                    <option value="sportswear">Sportswear</option>
+
+                    <option value="customization">Customization</option>
+
+                    <option value="bulk-order">Bulk Order</option>
+
+                    <option value="sample-request">Sample Request</option>
+
+                    <option value="general-enquiry">General Enquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="contact-enquiry__field">
+                <label for="members"> Number of Students / Team Members </label>
+
+                <div class="contact-enquiry__input-wrap">
+                  <i data-lucide="users"></i>
+
+                  <input
+                    type="number"
+                    id="members"
+                    name="members"
+                    min="1"
+                    placeholder="Example: 500"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-enquiry__field">
+              <label> Required Products </label>
+
+              <div class="contact-enquiry__products">
+                <label class="contact-enquiry__product">
+                  <input
+                    type="checkbox"
+                    name="products[]"
+                    value="school-uniforms"
+                  />
+
+                  <span>
+                    <i data-lucide="shirt"></i>
+                    School Uniforms
+                  </span>
+                </label>
+
+                <label class="contact-enquiry__product">
+                  <input type="checkbox" name="products[]" value="sportswear" />
+
+                  <span>
+                    <i data-lucide="dumbbell"></i>
+                    Sportswear
+                  </span>
+                </label>
+
+                <label class="contact-enquiry__product">
+                  <input
+                    type="checkbox"
+                    name="products[]"
+                    value="accessories"
+                  />
+
+                  <span>
+                    <i data-lucide="backpack"></i>
+                    Accessories
+                  </span>
+                </label>
+
+                <label class="contact-enquiry__product">
+                  <input type="checkbox" name="products[]" value="team-kits" />
+
+                  <span>
+                    <i data-lucide="trophy"></i>
+                    Team Kits
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="contact-enquiry__field">
+              <label for="message"> Message / Requirements * </label>
+
+              <div class="contact-enquiry__textarea-wrap">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Tell us about required products, quantities, colours, branding, sizes or delivery requirements..."
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="contact-enquiry__field">
+              <label for="referenceFile">
+                Logo / Reference Design
+                <small>Optional</small>
+              </label>
+
+              <label class="contact-enquiry__upload" for="referenceFile">
+                <div class="contact-enquiry__upload-icon">
+                  <i data-lucide="cloud-upload"></i>
+                </div>
+
+                <div>
+                  <strong> Upload your logo or reference design </strong>
+
+                  <span> PNG, JPG, PDF or SVG • Max 10 MB </span>
+                </div>
+
+                <span class="contact-enquiry__browse"> Browse File </span>
+              </label>
+
+              <input
+                type="file"
+                id="referenceFile"
+                name="referenceFile"
+                class="contact-enquiry__file-input"
+                accept=".png,.jpg,.jpeg,.pdf,.svg"
+              />
+            </div>
+
+            <div class="contact-enquiry__footer">
+              <p>
+                <i data-lucide="shield-check"></i>
+                Your enquiry details are kept private.
+              </p>
+
+              <button type="submit" class="btn-primary">
+                Submit Enquiry
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="contact-process">
+      <div class="contact-process__container">
+        <div class="contact-process__heading">
+          <span class="contact-process__eyebrow">HOW IT WORKS</span>
+
+          <h2>
+            From Enquiry to
+            <span>Delivery.</span>
+          </h2>
+
+          <p>
+            A simple and transparent process designed to make school uniform,
+            sportswear and bulk institutional ordering smooth from requirement
+            sharing to final delivery.
+          </p>
+        </div>
+
+        <div class="contact-process__cards">
+          <article class="contact-process__card">
+            <span class="contact-process__number">01</span>
+
+            <div class="contact-process__icon">
+              <i data-lucide="clipboard-list"></i>
+            </div>
+
+            <h3>Share Your Requirements</h3>
+
+            <p>
+              Tell us about the products you need, quantities, institution
+              details, preferred designs and expected timelines.
+            </p>
+          </article>
+
+          <article class="contact-process__card">
+            <span class="contact-process__number">02</span>
+
+            <div class="contact-process__icon">
+              <i data-lucide="ruler"></i>
+            </div>
+
+            <h3>Discuss Sizes & Customization</h3>
+
+            <p>
+              We discuss size requirements, fabrics, colours, logos, embroidery,
+              printing and other customization details.
+            </p>
+          </article>
+
+          <article class="contact-process__card">
+            <span class="contact-process__number">03</span>
+
+            <div class="contact-process__icon">
+              <i data-lucide="badge-check"></i>
+            </div>
+
+            <h3>Review Samples & Details</h3>
+
+            <p>
+              Review product specifications, sample details and branding before
+              confirming the final production requirements.
+            </p>
+          </article>
+
+          <article class="contact-process__card">
+            <span class="contact-process__number">04</span>
+
+            <div class="contact-process__icon">
+              <i data-lucide="truck"></i>
+            </div>
+
+            <h3>Production & Delivery</h3>
+
+            <p>
+              Once approved, your order moves into scheduled production, quality
+              checks, packing and coordinated delivery.
+            </p>
+          </article>
+        </div>
+
+        <div class="contact-process__service">
+          <div class="contact-process__service-icon">
+            <i data-lucide="map-pinned"></i>
+          </div>
+
+          <div class="contact-process__service-content">
+            <span>OUR SERVICE REACH</span>
+
+            <h3>Serving Schools, Institutions & Sports Teams</h3>
+
+            <p>
+              CampusCraft supports schools, educational institutions, academies
+              and sports teams with customized uniforms, sportswear and
+              bulk-order manufacturing requirements.
+            </p>
+          </div>
+
+          <div class="contact-process__service-tags">
+            <span>
+              <i data-lucide="school"></i>
+              Schools
+            </span>
+
+            <span>
+              <i data-lucide="graduation-cap"></i>
+              Institutions
+            </span>
+
+            <span>
+              <i data-lucide="trophy"></i>
+              Academies
+            </span>
+
+            <span>
+              <i data-lucide="users"></i>
+              Teams
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-faq">
+      <div class="contact-faq__container">
+        <div class="contact-faq__grid">
+          <div class="contact-faq__intro">
+            <span class="contact-faq__eyebrow">
+              FREQUENTLY ASKED QUESTIONS
+            </span>
+
+            <h2 class="contact-faq__title">
+              Everything You Need to
+              <span>Know Before Ordering.</span>
+            </h2>
+
+            <p class="contact-faq__description">
+              Find quick answers about bulk orders, customization, samples,
+              measurements and delivery timelines before starting your enquiry.
+            </p>
+
+            <div class="contact-faq__info">
+              <div class="contact-faq__info-item">
+                <div class="contact-faq__info-icon">
+                  <i data-lucide="boxes"></i>
+                </div>
+
+                <div>
+                  <strong>Bulk Order Support</strong>
+                  <span>
+                    Structured ordering support for schools, institutions and
+                    teams.
+                  </span>
+                </div>
+              </div>
+
+              <div class="contact-faq__info-item">
+                <div class="contact-faq__info-icon">
+                  <i data-lucide="palette"></i>
+                </div>
+
+                <div>
+                  <strong>Custom Branding</strong>
+                  <span>
+                    Logos, embroidery, colours, names and numbers can be
+                    customized.
+                  </span>
+                </div>
+              </div>
+
+              <div class="contact-faq__info-item">
+                <div class="contact-faq__info-icon">
+                  <i data-lucide="headphones"></i>
+                </div>
+
+                <div>
+                  <strong>Need More Help?</strong>
+                  <span>
+                    Our team can guide you through products, sizing and
+                    ordering.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-faq__list">
+            <div class="contact-faq__item active">
+              <button class="contact-faq__question" type="button">
+                <span>Do you handle bulk orders?</span>
+
+                <span class="contact-faq__toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+
+              <div class="contact-faq__answer">
+                <div class="contact-faq__answer-inner">
+                  <p>
+                    Yes. CampusCraft supports bulk requirements for schools,
+                    educational institutions, sports academies and teams with
+                    coordinated sizing, customization, production and delivery.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-faq__item">
+              <button class="contact-faq__question" type="button">
+                <span>Can you customize logos, names and numbers?</span>
+
+                <span class="contact-faq__toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+
+              <div class="contact-faq__answer">
+                <div class="contact-faq__answer-inner">
+                  <p>
+                    Yes. Uniforms and sportswear can be customized with
+                    institution logos, team names, player numbers, embroidery,
+                    printing, preferred colours and design specifications.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-faq__item">
+              <button class="contact-faq__question" type="button">
+                <span>Do you provide samples?</span>
+
+                <span class="contact-faq__toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+
+              <div class="contact-faq__answer">
+                <div class="contact-faq__answer-inner">
+                  <p>
+                    Sample options can be discussed depending on the
+                    requirement, product type and order volume so that details
+                    can be reviewed before full production begins.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-faq__item">
+              <button class="contact-faq__question" type="button">
+                <span>How are measurements collected?</span>
+
+                <span class="contact-faq__toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+
+              <div class="contact-faq__answer">
+                <div class="contact-faq__answer-inner">
+                  <p>
+                    Measurement planning can be arranged according to the size
+                    of the institution and order. We can work with size charts,
+                    individual measurements or approved sample sizes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-faq__item">
+              <button class="contact-faq__question" type="button">
+                <span>What is the expected delivery timeline?</span>
+
+                <span class="contact-faq__toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+
+              <div class="contact-faq__answer">
+                <div class="contact-faq__answer-inner">
+                  <p>
+                    Delivery timelines depend on order quantity, customization
+                    and product requirements. The expected production and
+                    delivery schedule is confirmed before the order proceeds.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-faq__cta">
+          <div class="contact-faq__cta-content">
+            <span>NEED PERSONAL GUIDANCE?</span>
+
+            <h3>
+              Not Sure What You Need?
+              <strong>Talk to Our Team.</strong>
+            </h3>
+
+            <p>
+              Share your requirement and our team will help you choose the right
+              uniform, sportswear, customization and bulk-order solution.
+            </p>
+          </div>
+
+          <a href="contact.html" class="btn-primary">
+            Start an Enquiry
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <!-- BRAND -->
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img
+                src="./images/logo.png"
+                alt="CampusCraft Logo"
+                class="brand-logo"
+                id="footerLogo"
+              />
+            </a>
+
+            <div class="brand-content footer-branding">
+              <h1 class="brand-name">
+                <span class="campus">Campus</span>
+                <span class="craft">Craft</span>
+              </h1>
+
+              <div class="brand-subtitle">
+                <span class="brand-line"></span>
+
+                <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+                <span class="brand-line"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            CampusCraft provides quality school uniforms, sportswear and
+            accessories designed for comfort, durability and everyday
+            performance.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="product.html"> Products </a>
+            </li>
+
+            <li>
+              <a href="Customization.html">Customization</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <div class="footer-col">
+          <h3>Products</h3>
+
+          <ul>
+            <li>
+              <a href="school-uniforms.html"> School Uniforms </a>
+            </li>
+
+            <li>
+              <a href="sportswear.html"> Sportswear </a>
+            </li>
+
+            <li>
+              <a href="school-uniforms.html"> School Accessories </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Team Kits </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Custom Uniforms </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INFORMATION -->
+
+        <div class="footer-col">
+          <h3>Information</h3>
+
+          <ul>
+            <li>
+              <a href="404.html"> 404 page </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Bulk Orders </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Enquiries </a>
+            </li>
+            <li>
+              <a href="contact.html"> Customization Guide </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+
+          <ul class="contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+
+              Hyderabad, Telangana
+            </li>
+
+            <li>
+              <i data-lucide="phone"></i>
+
+              +91 98765 43210
+            </li>
+
+            <li>
+              <i data-lucide="mail"></i>
+
+              hello@campuscraft.com
+            </li>
+          </ul>
+
+          <!-- SOCIAL MEDIA -->
+
+          <div class="social">
+            <a href="#" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           FOOTER BOTTOM
+      ========================================= -->
+
+      <div class="footer-bottom">
+        <p>© 2026 CampusCraft. All Rights Reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms &amp; Conditions </a>
+
+          <a href="#" class="top-btn" aria-label="Back to top">
+            <i data-lucide="arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    <script src="https://unpkg.com/lucide@latest"></script> -->
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="contact.js"></script>
+  </body>
+</html>

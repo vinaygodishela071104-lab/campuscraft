@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800&display=swap");
+
+:root {
+  --primary: #062b5c;
+  --secondary: #f5a000;
+  /* --secondary-dark: #d98c00; */
+
+  --text: #1f2937;
+  --muted: #6b7280;
+
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-alt: #f8f9fb;
+  --border: #e1e5eb;
+
+  --white: #ffffff;
+  --danger: #d9534f;
+  --danger-dark: #b52b27;
+
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Inter", sans-serif;
+
+  --body-font-size: 1rem;
+  --nav-font-size: 0.9rem;
+  --button-font-size: 0.88rem;
+
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+  --heading-font-weight: 700;
+
+  --line-height: 1.7;
+
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 40px;
+  --radius-round: 50%;
+
+  --transition: all 0.3s ease;
+  --theme-transition: background-color 0.35s ease, color 0.35s ease;
+
+  --shadow-soft: 0 8px 24px rgba(6, 43, 92, 0.06);
+  --shadow-dropdown: 0 18px 40px rgba(6, 43, 92, 0.12);
+  --shadow-panel: 0 20px 45px rgba(6, 43, 92, 0.16);
+  --shadow-secondary: 0 12px 22px rgba(245, 160, 0, 0.25);
+
+  --primary-btn-bg: var(--secondary);
+  --primary-btn-color: var(--white);
+  --primary-btn-hover-bg: var(--secondary);
+  --primary-btn-border: transparent;
+
+  --secondary-btn-bg: transparent;
+  --secondary-btn-color: var(--primary);
+  --secondary-btn-hover-bg: var(--primary);
+  --secondary-btn-hover-color: var(--white);
+  --secondary-btn-border: var(--primary);
+}
+
+body.dark-mode {
+  --text: #ffffff;
+  --muted: #b9c2ce;
+
+  --background: #081525;
+  --surface: #0b1c30;
+  --surface-alt: #102641;
+  --border: rgba(255, 255, 255, 0.08);
+
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --shadow-dropdown: 0 18px 40px rgba(0, 0, 0, 0.28);
+  --shadow-panel: 0 20px 45px rgba(0, 0, 0, 0.35);
+
+  --secondary-btn-color: var(--white);
+  --secondary-btn-border: rgba(255, 255, 255, 0.18);
+  --secondary-btn-hover-bg: var(--secondary);
+  --secondary-btn-hover-color: var(--white);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
+  transition: var(--theme-transition);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--text);
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+p,
+a,
+li,
+label,
+input,
+textarea,
+select,
+option,
+button {
+  font-family: var(--body-font);
+}
+
+p {
+  color: var(--muted);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 19px;
+  border: 1px solid var(--primary-btn-border);
+  border-radius: var(--radius-pill);
+  background: var(--primary-btn-bg);
+  color: var(--primary-btn-color);
+  font-family: var(--body-font);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--primary-btn-hover-bg);
+  color: var(--primary-btn-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-secondary);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 19px;
+  border: 1px solid var(--secondary-btn-border);
+  border-radius: var(--radius-pill);
+  background: var(--secondary-btn-bg);
+  color: var(--secondary-btn-color);
+  font-family: var(--body-font);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-btn-hover-bg);
+  color: var(--secondary-btn-hover-color);
+  border-color: var(--secondary-btn-hover-bg);
+  transform: translateY(-3px);
+}

@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CampusCraft | School Uniforms & Sportswear|About Page</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./images/logo.png"
+            alt="CampusCraft Logo"
+            class="brand-logo"
+            id="headerLogo"
+          />
+        </a>
+
+        <div class="brand-content">
+          <h1 class="brand-name">
+            <span class="campus">Campus</span>
+            <span class="craft">Craft</span>
+          </h1>
+
+          <div class="brand-subtitle">
+            <span class="brand-line"></span>
+
+            <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+            <span class="brand-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           NAVIGATION
+      ========================================= -->
+
+      <nav>
+        <ul class="nav-links">
+          <!-- HOME -->
+
+          <li class="dropdown">
+            <a href="index.html">
+              Home
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html">Home 1</a>
+              </li>
+
+              <li>
+                <a href="home2.html">Home 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ABOUT -->
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="product.html">
+              Products
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="mobile-products-link">
+                <a href="product.html">Products</a>
+              </li>
+
+              <li>
+                <a href="school-uniforms.html"> School Uniforms </a>
+              </li>
+
+              <li>
+                <a href="sportswear.html">Sportswear</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="School.html">School Orders</a>
+          </li>
+          <li>
+            <a href="Customization.html">Customization</a>
+          </li>
+
+          <!-- CONTACT -->
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+          <!-- MOBILE CART -->
+
+          <li class="mobile-cart-item">
+            <button
+              class="mobile-cart-btn"
+              id="mobileCartToggle"
+              type="button"
+              aria-label="Open cart"
+              aria-expanded="false"
+              aria-controls="cartPanel"
+            >
+              <span class="mobile-cart-btn__label">
+                <i data-lucide="shopping-bag"></i>
+
+                Cart
+              </span>
+
+              <span class="cart-count mobile-cart-count" id="mobileCartCount">
+                0
+              </span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- MOBILE ENQUIRE BUTTON -->
+
+        <div class="mobile-login">
+          <a href="contact.html" class="login-btn">
+            <i data-lucide="message-circle"></i>
+
+            <span>Enquire Now</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- ========================================
+           HEADER BUTTONS
+      ========================================= -->
+
+      <div class="buttons">
+        <!-- RTL -->
+
+        <button
+          class="icon-btn rtl-btn"
+          id="rtlToggle"
+          title="RTL Mode"
+          aria-label="Toggle RTL mode"
+          type="button"
+        >
+          <i data-lucide="arrow-left-right"></i>
+        </button>
+
+        <!-- DARK MODE -->
+
+        <button
+          class="icon-btn dark-btn"
+          id="darkToggle"
+          title="Dark Mode"
+          aria-label="Toggle dark mode"
+          type="button"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+        <!-- DESKTOP CART -->
+
+        <button
+          class="icon-btn cart-btn desktop-cart-btn"
+          id="cartToggle"
+          title="Cart"
+          aria-label="Open cart"
+          aria-expanded="false"
+          aria-controls="cartPanel"
+          type="button"
+        >
+          <i data-lucide="shopping-bag"></i>
+
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- DESKTOP ENQUIRE BUTTON -->
+
+        <a href="contact.html" class="login-btn desktop-login">
+          <i data-lucide="message-circle"></i>
+
+          <span>Enquire Now</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+
+        <button
+          class="icon-btn menu-btn"
+          id="menuToggle"
+          title="Menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- ========================================
+           CART PANEL
+      ========================================= -->
+
+      <div
+        class="cart-panel"
+        id="cartPanel"
+        hidden
+        aria-labelledby="cartPanelTitle"
+      >
+        <!-- CART HEADER -->
+
+        <div class="cart-panel__head">
+          <h3 id="cartPanelTitle">Your Cart</h3>
+
+          <button
+            type="button"
+            class="cart-panel__close"
+            id="cartClose"
+            aria-label="Close cart"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- CART BODY -->
+
+        <div class="cart-panel__body">
+          <!-- EMPTY CART -->
+
+          <div class="cart-panel__empty" id="cartEmptyState">
+            <i data-lucide="shopping-cart"></i>
+
+            <p>No products selected yet.</p>
+
+            <small>
+              Your selected uniforms and sportswear will appear here.
+            </small>
+          </div>
+
+          <!-- CART PRODUCTS -->
+
+          <div class="cart-items" id="cartItems"></div>
+        </div>
+
+        <!-- CART FOOTER -->
+
+        <div class="cart-panel__footer">
+          <div class="cart-panel__total">
+            <span>Subtotal</span>
+
+            <strong id="cartSubtotal">₹0</strong>
+          </div>
+
+          <button id="buyNowBtn" class="cart-buy-btn" type="button">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="about-hero" aria-labelledby="about-hero-title">
+      <div class="about-hero__content">
+        <span class="about-hero__eyebrow">
+          <i data-lucide="shield-check" aria-hidden="true"></i>
+          About CampusCraft
+        </span>
+
+        <h1 id="about-hero-title" class="about-hero__title">
+          Crafting uniforms,
+          <span>building identity.</span>
+        </h1>
+
+        <p class="about-hero__description">
+          CampusCraft creates dependable uniforms and performance sportswear for
+          schools, colleges, academies, teams, and growing athletes.
+        </p>
+
+        <div class="about-hero__actions">
+          <a href="contact.html" class="btn-primary about-hero__button">
+            Enquire now
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+
+          <a href="product.html" class="btn-secondary about-hero__button">
+            Explore products
+          </a>
+        </div>
+
+        <div class="about-hero__trust">
+          <span>
+            <i data-lucide="badge-check" aria-hidden="true"></i>
+            Quality-first materials
+          </span>
+
+          <span>
+            <i data-lucide="shirt" aria-hidden="true"></i>
+            Custom-made solutions
+          </span>
+
+          <span>
+            <i data-lucide="truck" aria-hidden="true"></i>
+            Reliable delivery
+          </span>
+        </div>
+      </div>
+
+      <a
+        href="#our-story"
+        class="about-hero__scroll"
+        aria-label="Discover our story"
+      >
+        <span>Discover our story</span>
+        <i data-lucide="arrow-down" aria-hidden="true"></i>
+      </a>
+    </section>
+    <section
+      class="about-journey"
+      id="our-story"
+      aria-labelledby="about-journey-title"
+    >
+      <div class="about-journey__container">
+        <div class="about-journey__content">
+          <span class="about-journey__eyebrow">Our journey</span>
+
+          <h2 id="about-journey-title" class="about-journey__title">
+            From thoughtful beginnings to
+            <span>trusted identity.</span>
+          </h2>
+
+          <p class="about-journey__description">
+            CampusCraft began with a simple purpose: creating uniforms that feel
+            comfortable, look distinctive, and represent every institution with
+            pride. Today, we support schools, colleges, academies, and teams
+            with dependable uniforms and sportswear.
+          </p>
+
+          <p class="about-journey__description">
+            Our approach combines practical design, reliable materials, and
+            careful production for everyday campus life and athletic
+            performance.
+          </p>
+
+          <a href="contact.html" class="btn-primary about-journey__button">
+            Start a conversation
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="about-journey__visual">
+          <img
+            src="./images/team2.png"
+            alt="CampusCraft team preparing uniforms and sportswear"
+            class="about-journey__image"
+          />
+
+          <div class="about-journey__visual-overlay"></div>
+
+          <div class="about-journey__visual-content">
+            <span>Built with purpose</span>
+            <strong>Every uniform tells a story.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-purpose" aria-labelledby="about-purpose-title">
+      <div class="about-purpose__container">
+        <div class="about-purpose__heading">
+          <span class="about-purpose__eyebrow">What guides us</span>
+
+          <h2 id="about-purpose-title" class="about-purpose__title">
+            Built on purpose,
+            <span>made to matter.</span>
+          </h2>
+
+          <p class="about-purpose__description">
+            Our mission, vision, and values shape every uniform, sportswear
+            order, and relationship we build.
+          </p>
+        </div>
+
+        <div class="about-purpose__grid">
+          <article class="about-purpose__card">
+            <div class="about-purpose__icon">
+              <i data-lucide="target" aria-hidden="true"></i>
+            </div>
+
+            <span class="about-purpose__number">01</span>
+
+            <h3>Our mission</h3>
+
+            <p>
+              To deliver comfortable, durable, and well-designed uniforms and
+              sportswear for students, athletes, teams, and institutions.
+            </p>
+          </article>
+
+          <article class="about-purpose__card about-purpose__card--featured">
+            <div class="about-purpose__icon">
+              <i data-lucide="telescope" aria-hidden="true"></i>
+            </div>
+
+            <span class="about-purpose__number">02</span>
+
+            <h3>Our vision</h3>
+
+            <p>
+              To become a trusted uniform and sportswear partner for
+              institutions across India through quality, consistency, and
+              thoughtful service.
+            </p>
+          </article>
+
+          <article class="about-purpose__card">
+            <div class="about-purpose__icon">
+              <i data-lucide="heart-handshake" aria-hidden="true"></i>
+            </div>
+
+            <span class="about-purpose__number">03</span>
+
+            <h3>Our values</h3>
+
+            <ul class="about-purpose__values">
+              <li>
+                <i data-lucide="check" aria-hidden="true"></i>
+                Quality and durability
+              </li>
+              <li>
+                <i data-lucide="check" aria-hidden="true"></i>
+                On-time delivery
+              </li>
+              <li>
+                <i data-lucide="check" aria-hidden="true"></i>
+                Fair and transparent pricing
+              </li>
+              <li>
+                <i data-lucide="check" aria-hidden="true"></i>
+                Customer-first service
+              </li>
+              <li>
+                <i data-lucide="check" aria-hidden="true"></i>
+                Responsible local support
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="about-offerings" aria-labelledby="about-offerings-title">
+      <div class="about-offerings__container">
+        <div class="about-offerings__heading">
+          <span class="about-offerings__eyebrow">What we do</span>
+
+          <h2 id="about-offerings-title" class="about-offerings__title">
+            One partner for every
+            <span>campus requirement.</span>
+          </h2>
+
+          <p class="about-offerings__description">
+            From everyday uniforms to custom teamwear, we create practical
+            clothing solutions that bring comfort, consistency, and identity to
+            institutions.
+          </p>
+        </div>
+
+        <div class="about-offerings__mosaic">
+          <article class="about-offerings__feature">
+            <div class="about-offerings__image-wrap">
+              <img
+                src="./images/student.png"
+                alt="Students wearing school uniforms"
+                class="about-offerings__image"
+              />
+              <div class="about-offerings__image-overlay"></div>
+            </div>
+
+            <div class="about-offerings__feature-content">
+              <span class="about-offerings__index">01</span>
+
+              <div>
+                <span class="about-offerings__label">Everyday identity</span>
+                <h3>School uniforms</h3>
+                <p>
+                  Daily wear, seasonal layers, and special-occasion uniforms
+                  made for comfort and consistency.
+                </p>
+              </div>
+
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </div>
+          </article>
+
+          <article class="about-offerings__item">
+            <span class="about-offerings__index">02</span>
+
+            <div>
+              <span class="about-offerings__label">Built to perform</span>
+              <h3>Sportswear</h3>
+              <p>
+                Jerseys, tracksuits, shorts, swimwear, and training essentials
+                for active teams.
+              </p>
+            </div>
+
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </article>
+
+          <article class="about-offerings__item about-offerings__item--accent">
+            <span class="about-offerings__index">03</span>
+
+            <div>
+              <span class="about-offerings__label">Make it yours</span>
+              <h3>Customization</h3>
+              <p>
+                Logos, names, numbers, house colors, and coordinated details for
+                a distinct identity.
+              </p>
+            </div>
+
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="about-quality" aria-labelledby="about-quality-title">
+      <div class="about-quality__container">
+        <div class="about-quality__heading">
+          <span class="about-quality__eyebrow">Our quality process</span>
+
+          <h2 id="about-quality-title" class="about-quality__title">
+            Thoughtful details,
+            <span>better results.</span>
+          </h2>
+
+          <p class="about-quality__description">
+            From material selection to final delivery, every stage is guided by
+            comfort, durability, accuracy, and care.
+          </p>
+        </div>
+
+        <div class="about-quality__timeline">
+          <div class="about-quality__track">
+            <span class="about-quality__track-line"></span>
+          </div>
+
+          <div class="about-quality__steps">
+            <article class="about-quality__step">
+              <div class="about-quality__step-marker">
+                <div class="about-quality__step-icon">
+                  <i data-lucide="layers" aria-hidden="true"></i>
+                </div>
+              </div>
+
+              <span class="about-quality__step-number">01</span>
+              <span class="about-quality__step-label">Foundation</span>
+              <h3>Premium fabrics</h3>
+              <p>
+                Breathable, durable, and easy-care materials selected for daily
+                campus life and active movement.
+              </p>
+            </article>
+
+            <article class="about-quality__step">
+              <div class="about-quality__step-marker">
+                <div class="about-quality__step-icon">
+                  <i data-lucide="scissors" aria-hidden="true"></i>
+                </div>
+              </div>
+
+              <span class="about-quality__step-number">02</span>
+              <span class="about-quality__step-label">Construction</span>
+              <h3>Precision stitching</h3>
+              <p>
+                Reinforced seams and consistent sizing create garments that stay
+                comfortable and reliable.
+              </p>
+            </article>
+
+            <article class="about-quality__step">
+              <div class="about-quality__step-marker">
+                <div class="about-quality__step-icon">
+                  <i data-lucide="search-check" aria-hidden="true"></i>
+                </div>
+              </div>
+
+              <span class="about-quality__step-number">03</span>
+              <span class="about-quality__step-label">Inspection</span>
+              <h3>Strict quality checks</h3>
+              <p>
+                We review finishing, measurements, customization, and
+                consistency before dispatch.
+              </p>
+            </article>
+
+            <article class="about-quality__step">
+              <div class="about-quality__step-marker">
+                <div class="about-quality__step-icon">
+                  <i data-lucide="package-check" aria-hidden="true"></i>
+                </div>
+              </div>
+
+              <span class="about-quality__step-number">04</span>
+              <span class="about-quality__step-label">Fulfillment</span>
+              <h3>Measured delivery</h3>
+              <p>
+                Quantities, sizes, packing, and timelines are coordinated for
+                smoother bulk-order fulfillment.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="about-quality__statement">
+          <i data-lucide="sparkles" aria-hidden="true"></i>
+          <span>Made carefully. Delivered confidently.</span>
+        </div>
+      </div>
+    </section>
+    <section class="about-impact" aria-labelledby="about-impact-title">
+      <div class="about-impact__container">
+        <div class="about-impact__heading">
+          <span class="about-impact__eyebrow">Our impact</span>
+
+          <h2 id="about-impact-title" class="about-impact__title">
+            Numbers that reflect
+            <span>the trust we build.</span>
+          </h2>
+
+          <p class="about-impact__description">
+            Every number represents an institution, team, student, or athlete
+            supported by CampusCraft.
+          </p>
+        </div>
+
+        <div class="about-impact__stats">
+          <div class="about-impact__stat">
+            <div class="about-impact__stat-top">
+              <i data-lucide="school" aria-hidden="true"></i>
+              <span class="about-impact__stat-index">01</span>
+            </div>
+
+            <strong
+              class="about-impact__number"
+              data-impact-number="50"
+              data-impact-suffix="+"
+            >
+              0
+            </strong>
+
+            <span class="about-impact__label"
+              >Schools and academies served</span
+            >
+          </div>
+
+          <div class="about-impact__stat about-impact__stat--featured">
+            <div class="about-impact__stat-top">
+              <i data-lucide="shirt" aria-hidden="true"></i>
+              <span class="about-impact__stat-index">02</span>
+            </div>
+
+            <strong
+              class="about-impact__number"
+              data-impact-number="20000"
+              data-impact-suffix="+"
+            >
+              0
+            </strong>
+
+            <span class="about-impact__label">Uniforms delivered</span>
+          </div>
+
+          <div class="about-impact__stat">
+            <div class="about-impact__stat-top">
+              <i data-lucide="calendar-days" aria-hidden="true"></i>
+              <span class="about-impact__stat-index">03</span>
+            </div>
+
+            <strong
+              class="about-impact__number"
+              data-impact-number="8"
+              data-impact-suffix="+"
+            >
+              0
+            </strong>
+
+            <span class="about-impact__label">Years of experience</span>
+          </div>
+
+          <div class="about-impact__stat">
+            <div class="about-impact__stat-top">
+              <i data-lucide="map-pinned" aria-hidden="true"></i>
+              <span class="about-impact__stat-index">04</span>
+            </div>
+
+            <strong
+              class="about-impact__number"
+              data-impact-number="12"
+              data-impact-suffix="+"
+            >
+              0
+            </strong>
+
+            <span class="about-impact__label">Cities and towns covered</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-team" aria-labelledby="about-team-title">
+      <div class="about-team__container">
+        <div class="about-team__heading">
+          <span class="about-team__eyebrow">Behind CampusCraft</span>
+
+          <h2 id="about-team-title" class="about-team__title">
+            The people behind
+            <span>the finished detail.</span>
+          </h2>
+
+          <p class="about-team__description">
+            Our team brings together practical experience, creative thinking,
+            and careful execution to make every order dependable.
+          </p>
+        </div>
+
+        <div class="about-team__grid">
+          <article class="about-team__member">
+            <div class="about-team__image-wrap">
+              <img
+                src="./images/arjunrao.avif"
+                alt="Portrait of Arjun Rao"
+                class="about-team__image"
+              />
+
+              <span class="about-team__number">01</span>
+            </div>
+
+            <div class="about-team__member-content">
+              <span class="about-team__role">Founder and director</span>
+              <h3>Arjun Rao</h3>
+              <p>
+                Leads the CampusCraft vision and works closely with institutions
+                to understand their uniform and sportswear needs.
+              </p>
+
+              <div class="about-team__speciality">
+                <i data-lucide="compass" aria-hidden="true"></i>
+                <span>Brand direction</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-team__member">
+            <div class="about-team__image-wrap">
+              <img
+                src="./images/Kavya Menon.avif"
+                alt="Portrait of Kavya Menon"
+                class="about-team__image"
+              />
+
+              <span class="about-team__number">02</span>
+            </div>
+
+            <div class="about-team__member-content">
+              <span class="about-team__role">Design lead</span>
+              <h3>Kavya Menon</h3>
+              <p>
+                Develops thoughtful colour combinations, garment details, and
+                practical designs that reflect each institution’s identity.
+              </p>
+
+              <div class="about-team__speciality">
+                <i data-lucide="palette" aria-hidden="true"></i>
+                <span>Design and identity</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-team__member">
+            <div class="about-team__image-wrap">
+              <img
+                src="./images/sameer.avif"
+                alt="Portrait of Sameer Khan"
+                class="about-team__image"
+              />
+
+              <span class="about-team__number">03</span>
+            </div>
+
+            <div class="about-team__member-content">
+              <span class="about-team__role">Production manager</span>
+              <h3>Sameer Khan</h3>
+              <p>
+                Coordinates fabric preparation, stitching standards, sizing,
+                quality checks, and production timelines.
+              </p>
+
+              <div class="about-team__speciality">
+                <i data-lucide="settings-2" aria-hidden="true"></i>
+                <span>Production quality</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-team__member">
+            <div class="about-team__image-wrap">
+              <img
+                src="./images/neha reddy.avif"
+                alt="Portrait of Neha Reddy"
+                class="about-team__image"
+              />
+
+              <span class="about-team__number">04</span>
+            </div>
+
+            <div class="about-team__member-content">
+              <span class="about-team__role">Client operations</span>
+              <h3>Neha Reddy</h3>
+              <p>
+                Supports customers with measurements, order coordination,
+                communication, and smooth delivery from start to finish.
+              </p>
+
+              <div class="about-team__speciality">
+                <i data-lucide="messages-square" aria-hidden="true"></i>
+                <span>Customer support</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="about-cta" aria-labelledby="about-cta-title">
+      <div class="about-cta__container">
+        <div class="about-cta__content">
+          <span class="about-cta__eyebrow">Let’s work together</span>
+
+          <h2 id="about-cta-title" class="about-cta__title">
+            Ready to upgrade
+            <span>your uniforms?</span>
+          </h2>
+
+          <p class="about-cta__description">
+            Talk to us about bulk orders, customization, sizing support,
+            samples, and complete uniform solutions for your institution or
+            team.
+          </p>
+
+          <div class="about-cta__actions">
+            <a href="contact.html" class="btn-primary about-cta__button">
+              Enquire now
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+
+            <a href="product.html" class="btn-secondary about-cta__button">
+              View products
+              <i data-lucide="grid-2x2" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-cta__details">
+          <span>
+            <i data-lucide="ruler" aria-hidden="true"></i>
+            Sizing support
+          </span>
+
+          <span>
+            <i data-lucide="palette" aria-hidden="true"></i>
+            Custom identity
+          </span>
+
+          <span>
+            <i data-lucide="package-check" aria-hidden="true"></i>
+            Bulk fulfillment
+          </span>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <!-- BRAND -->
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img
+                src="./images/logo.png"
+                alt="CampusCraft Logo"
+                class="brand-logo"
+                id="footerLogo"
+              />
+            </a>
+
+            <div class="brand-content footer-branding">
+              <h1 class="brand-name">
+                <span class="campus">Campus</span>
+                <span class="craft">Craft</span>
+              </h1>
+
+              <div class="brand-subtitle">
+                <span class="brand-line"></span>
+
+                <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+                <span class="brand-line"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            CampusCraft provides quality school uniforms, sportswear and
+            accessories designed for comfort, durability and everyday
+            performance.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="product.html"> Products </a>
+            </li>
+
+            <li>
+              <a href="Customization.html">Customization</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <div class="footer-col">
+          <h3>Products</h3>
+
+          <ul>
+            <li>
+              <a href="school-uniforms.html"> School Uniforms </a>
+            </li>
+
+            <li>
+              <a href="sportswear.html"> Sportswear </a>
+            </li>
+
+            <li>
+              <a href="school-uniforms.html"> School Accessories </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Team Kits </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Custom Uniforms </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INFORMATION -->
+
+        <div class="footer-col">
+          <h3>Information</h3>
+
+          <ul>
+            <li>
+              <a href="404.html"> 404 page </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Bulk Orders </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Enquiries </a>
+            </li>
+            <li>
+              <a href="contact.html"> Customization Guide </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+
+          <ul class="contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+
+              Hyderabad, Telangana
+            </li>
+
+            <li>
+              <i data-lucide="phone"></i>
+
+              +91 98765 43210
+            </li>
+
+            <li>
+              <i data-lucide="mail"></i>
+
+              hello@campuscraft.com
+            </li>
+          </ul>
+
+          <!-- SOCIAL MEDIA -->
+
+          <div class="social">
+            <a href="#" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           FOOTER BOTTOM
+      ========================================= -->
+
+      <div class="footer-bottom">
+        <p>© 2026 CampusCraft. All Rights Reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms &amp; Conditions </a>
+
+          <a href="#" class="top-btn" aria-label="Back to top">
+            <i data-lucide="arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    <script src="https://unpkg.com/lucide@latest"></script> -->
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="about.js"></script>
+  </body>
+</html>

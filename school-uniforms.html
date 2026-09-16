@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CampusCraft | School Uniforms & Sportswear|School-Wear</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="school-uniforms.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./images/logo.png"
+            alt="CampusCraft Logo"
+            class="brand-logo"
+            id="headerLogo"
+          />
+        </a>
+
+        <div class="brand-content">
+          <h1 class="brand-name">
+            <span class="campus">Campus</span>
+            <span class="craft">Craft</span>
+          </h1>
+
+          <div class="brand-subtitle">
+            <span class="brand-line"></span>
+
+            <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+            <span class="brand-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           NAVIGATION
+      ========================================= -->
+
+      <nav>
+        <ul class="nav-links">
+          <!-- HOME -->
+
+          <li class="dropdown">
+            <a href="index.html">
+              Home
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html">Home 1</a>
+              </li>
+
+              <li>
+                <a href="home2.html">Home 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ABOUT -->
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <!-- PRODUCTS -->
+
+          <li class="dropdown">
+            <a href="product.html">
+              Products
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="mobile-products-link">
+                <a href="product.html">Products</a>
+              </li>
+
+              <li>
+                <a href="school-uniforms.html"> School Uniforms </a>
+              </li>
+
+              <li>
+                <a href="sportswear.html">Sportswear</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="School.html">School Orders</a>
+          </li>
+          <li>
+            <a href="Customization.html">Customization</a>
+          </li>
+          <!-- CONTACT -->
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+          <!-- MOBILE CART -->
+
+          <li class="mobile-cart-item">
+            <button
+              class="mobile-cart-btn"
+              id="mobileCartToggle"
+              type="button"
+              aria-label="Open cart"
+              aria-expanded="false"
+              aria-controls="cartPanel"
+            >
+              <span class="mobile-cart-btn__label">
+                <i data-lucide="shopping-bag"></i>
+
+                Cart
+              </span>
+
+              <span class="cart-count mobile-cart-count" id="mobileCartCount">
+                0
+              </span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- MOBILE ENQUIRE BUTTON -->
+
+        <div class="mobile-login">
+          <a href="contact.html" class="login-btn">
+            <i data-lucide="message-circle"></i>
+
+            <span>Enquire Now</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- ========================================
+           HEADER BUTTONS
+      ========================================= -->
+
+      <div class="buttons">
+        <!-- RTL -->
+
+        <button
+          class="icon-btn rtl-btn"
+          id="rtlToggle"
+          title="RTL Mode"
+          aria-label="Toggle RTL mode"
+          type="button"
+        >
+          <i data-lucide="arrow-left-right"></i>
+        </button>
+
+        <!-- DARK MODE -->
+
+        <button
+          class="icon-btn dark-btn"
+          id="darkToggle"
+          title="Dark Mode"
+          aria-label="Toggle dark mode"
+          type="button"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+        <!-- DESKTOP CART -->
+
+        <button
+          class="icon-btn cart-btn desktop-cart-btn"
+          id="cartToggle"
+          title="Cart"
+          aria-label="Open cart"
+          aria-expanded="false"
+          aria-controls="cartPanel"
+          type="button"
+        >
+          <i data-lucide="shopping-bag"></i>
+
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- DESKTOP ENQUIRE BUTTON -->
+
+        <a href="contact.html" class="login-btn desktop-login">
+          <i data-lucide="message-circle"></i>
+
+          <span>Enquire Now</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+
+        <button
+          class="icon-btn menu-btn"
+          id="menuToggle"
+          title="Menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- ========================================
+           CART PANEL
+      ========================================= -->
+
+      <div
+        class="cart-panel"
+        id="cartPanel"
+        hidden
+        aria-labelledby="cartPanelTitle"
+      >
+        <!-- CART HEADER -->
+
+        <div class="cart-panel__head">
+          <h3 id="cartPanelTitle">Your Cart</h3>
+
+          <button
+            type="button"
+            class="cart-panel__close"
+            id="cartClose"
+            aria-label="Close cart"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- CART BODY -->
+
+        <div class="cart-panel__body">
+          <!-- EMPTY CART -->
+
+          <div class="cart-panel__empty" id="cartEmptyState">
+            <i data-lucide="shopping-cart"></i>
+
+            <p>No products selected yet.</p>
+
+            <small>
+              Your selected uniforms and sportswear will appear here.
+            </small>
+          </div>
+
+          <!-- CART PRODUCTS -->
+
+          <div class="cart-items" id="cartItems"></div>
+        </div>
+
+        <!-- CART FOOTER -->
+
+        <div class="cart-panel__footer">
+          <div class="cart-panel__total">
+            <span>Subtotal</span>
+
+            <strong id="cartSubtotal">₹0</strong>
+          </div>
+
+          <button id="buyNowBtn" class="cart-buy-btn" type="button">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="uniform-hero">
+      <div class="uniform-hero__content">
+        <div class="uniform-hero__breadcrumb">
+          <a href="product.html" class="uniform-hero__crumb-link"> Products </a>
+          <span class="uniform-hero__separator">/</span>
+          <a href="school-uniforms.html" class="uniform-hero__crumb-link">
+            School Uniforms
+          </a>
+        </div>
+
+        <h1 class="uniform-hero__title">
+          Discover premium <span>school uniforms</span>
+        </h1>
+
+        <p class="uniform-hero__text">
+          Explore durable, comfortable, and neatly tailored uniforms designed
+          for everyday learning, sports, and school events.
+        </p>
+
+        <a href="#uniform-products" class="uniform-hero__btn"
+          >Shop Collection</a
+        >
+      </div>
+    </section>
+
+    <section class="uniform-products" id="uniform-products">
+      <div class="uniform-products__inner">
+        <div class="uniform-products__top">
+          <span class="uniform-products__label">Shop Uniforms</span>
+          <h2 class="uniform-products__title">
+            Explore our <span>school uniform</span> range
+          </h2>
+        </div>
+
+        <div
+          class="uniform-products__tabs"
+          role="tablist"
+          aria-label="School uniform categories"
+        >
+          <button
+            class="uniform-tab is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-tab="all"
+          >
+            All
+          </button>
+
+          <button
+            class="uniform-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="boys"
+          >
+            Boys Uniforms
+          </button>
+
+          <button
+            class="uniform-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="girls"
+          >
+            Girls Uniforms
+          </button>
+
+          <button
+            class="uniform-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="accessories"
+          >
+            Accessories
+          </button>
+        </div>
+
+        <div class="uniform-products__grid">
+          <article class="product-card" data-category="boys">
+            <div class="product-card__media">
+              <img src="./images/formal.png" alt="Boys Formal Shirt" />
+              <span class="product-card__badge">Best Seller</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Boys Formal Shirt</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.7</span>
+                </div>
+                <div class="product-card__price">₹599</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">28</button>
+                  <button type="button" class="size-chip">30</button>
+                  <button type="button" class="size-chip">32</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="uniform-boys-1"
+                  data-name="Boys Formal Shirt"
+                  data-price="599"
+                  data-image="./images/formal.png"
+                  data-size="28"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="uniform-boys-1"
+                  data-name="Boys Formal Shirt"
+                  data-price="599"
+                  data-image="./images/formal.png"
+                  data-size="28"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="boys">
+            <div class="product-card__media">
+              <img src="./images/trousers.png" alt="Boys School Trousers" />
+              <span class="product-card__badge">New</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Boys School Trousers</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.6</span>
+                </div>
+                <div class="product-card__price">₹649</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip">28</button>
+                  <button type="button" class="size-chip is-active">30</button>
+                  <button type="button" class="size-chip">32</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="uniform-boys-2"
+                  data-name="Boys School Trousers"
+                  data-price="649"
+                  data-image="./images/trousers.png"
+                  data-size="30"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="uniform-boys-2"
+                  data-name="Boys School Trousers"
+                  data-price="649"
+                  data-image="./images/trousers.png"
+                  data-size="30"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="boys">
+            <div class="product-card__media">
+              <img src="./images/blazer.png" alt="School Blazer" />
+              <span class="product-card__badge">Best Seller</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">School Blazer</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.8</span>
+                </div>
+                <div class="product-card__price">₹1299</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip">28</button>
+                  <button type="button" class="size-chip is-active">30</button>
+                  <button type="button" class="size-chip">32</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="uniform-boys-3"
+                  data-name="School Blazer"
+                  data-price="1299"
+                  data-image="./images/blazer.png"
+                  data-size="30"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="uniform-boys-3"
+                  data-name="School Blazer"
+                  data-price="1299"
+                  data-image="./images/blazer.png"
+                  data-size="30"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="girls">
+            <div class="product-card__media">
+              <img src="./images/girls-shirt.png" alt="Girls Formal Shirt" />
+              <span class="product-card__badge">Popular</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Girls Formal Shirt</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.8</span>
+                </div>
+                <div class="product-card__price">₹579</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">28</button>
+                  <button type="button" class="size-chip">30</button>
+                  <button type="button" class="size-chip">32</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="uniform-girls-1"
+                  data-name="Girls Formal Shirt"
+                  data-price="579"
+                  data-image="./images/girls-shirt.png"
+                  data-size="28"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="uniform-girls-1"
+                  data-name="Girls Formal Shirt"
+                  data-price="579"
+                  data-image="./images/girls-shirt.png"
+                  data-size="28"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="girls">
+            <div class="product-card__media">
+              <img src="./images/skirt2.png" alt="Girls Pleated Skirt" />
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Girls Pleated Skirt</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.7</span>
+                </div>
+                <div class="product-card__price">₹499</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip">26</button>
+                  <button type="button" class="size-chip is-active">28</button>
+                  <button type="button" class="size-chip">30</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="uniform-girls-2"
+                  data-name="Girls Pleated Skirt"
+                  data-price="499"
+                  data-image="./images/skirt2.png"
+                  data-size="28"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="uniform-girls-2"
+                  data-name="Girls Pleated Skirt"
+                  data-price="499"
+                  data-image="./images/skirt2.png"
+                  data-size="28"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="girls">
+            <div class="product-card__media">
+              <img src="./images/girls-blazer.jpg" alt="Girls School Blazer" />
+              <span class="product-card__badge">Best Seller</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Girls School Blazer</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.8</span>
+                </div>
+                <div class="product-card__price">₹1299</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip">28</button>
+                  <button type="button" class="size-chip is-active">30</button>
+                  <button type="button" class="size-chip">32</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="uniform-girls-3"
+                  data-name="Girls School Blazer"
+                  data-price="1299"
+                  data-image="./images/girls-blazer.jpg"
+                  data-size="30"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="uniform-girls-3"
+                  data-name="Girls School Blazer"
+                  data-price="1299"
+                  data-image="../images/girls-blazer.jpg"
+                  data-size="30"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories">
+            <div class="product-card__media">
+              <img src="./images/tie.png" alt="School Tie" />
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">School Tie</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.4</span>
+                </div>
+                <div class="product-card__price">₹199</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">
+                    One Size
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="uniform-accessories-1"
+                  data-name="School Tie"
+                  data-price="199"
+                  data-image="./images/tie.png"
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="uniform-accessories-1"
+                  data-name="School Tie"
+                  data-price="199"
+                  data-image="./images/tie.png"
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories">
+            <div class="product-card__media">
+              <img src="./images/belt.png" alt="School Belt" />
+              <span class="product-card__badge">New</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">School Belt</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.3</span>
+                </div>
+                <div class="product-card__price">₹249</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">
+                    One Size
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="uniform-accessories-2"
+                  data-name="School Belt"
+                  data-price="249"
+                  data-image="./images/belt.png"
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="uniform-accessories-2"
+                  data-name="School Belt"
+                  data-price="249"
+                  data-image="./images/belt.png
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories">
+            <div class="product-card__media">
+              <img src="./images/ribbons.png" alt="Girls Hair Ribbon" />
+              <span class="product-card__badge">Popular</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Girls Hair Ribbon</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.4</span>
+                </div>
+                <div class="product-card__price">₹99</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">
+                    One Size
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="uniform-accessories-3"
+                  data-name="Girls Hair Ribbon"
+                  data-price="99"
+                  data-image="./images/ribbons.png"
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="uniform-accessories-3"
+                  data-name="Girls Hair Ribbon"
+                  data-price="99"
+                  data-image="./images/ribbons.png"
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="complete-look uniform-complete-look">
+      <div class="complete-look__inner">
+        <div class="complete-look__content">
+          <span class="complete-look__eyebrow">Uniform Focus</span>
+
+          <h2 class="complete-look__title">
+            Refined for <span>Everyday Learning</span>
+          </h2>
+
+          <p class="complete-look__text">
+            Discover comfortable, durable uniforms designed for long school
+            days, sports periods, and formal events. Every piece is tailored to
+            offer a neat, polished look while allowing free movement and all-day
+            comfort.
+          </p>
+
+          <ul class="complete-look__list">
+            <li>
+              Premium fabrics with a focus on comfort, breathability, and
+              longevity
+            </li>
+            <li>
+              Neat, school-appropriate styling that maintains a sharp appearance
+            </li>
+            <li>
+              Easy mix-and-match across shirts, bottoms, blazers, and
+              accessories
+            </li>
+          </ul>
+
+          <div class="complete-look__actions">
+            <a href="product.html" class="btn-primary">
+              Shop Essentials
+            </a>
+            <a href="product.html" class="btn-secondary">
+              View more
+            </a>
+          </div>
+        </div>
+
+        <div class="complete-look__visual">
+          <article class="complete-look__card">
+            <div class="complete-look__card-media">
+              <img
+                src="./images/schooluniform.png"
+                alt="Premium school uniforms collection"
+              />
+            </div>
+
+            <div class="complete-look__card-body">
+              <span class="complete-look__card-tag">Featured Story</span>
+              <h3 class="complete-look__card-title">Smart Uniform Selection</h3>
+              <p class="complete-look__card-text">
+                A focused edit of school uniforms designed to deliver clean
+                style, comfortable fit, and a sharp, disciplined look through
+                every part of the school day.
+              </p>
+              <a href="school-uniforms.html" class="complete-look__card-link">
+                Explore Edit
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta uniform-final-cta">
+      <div class="final-cta__inner">
+        <span class="final-cta__eyebrow">New Academic Year</span>
+
+        <h2 class="final-cta__title">
+          Upgrade Your <span>School Wardrobe</span>
+        </h2>
+
+        <p class="final-cta__text">
+          Discover elevated shirts, trousers, skirts, blazers, and accessories
+          designed to look sharp and feel comfortable throughout the academic
+          year.
+        </p>
+
+        <div class="final-cta__actions">
+          <a href="customization.html" class="btn-primary">
+            Shop now
+          </a>
+          <a href="contact.html" class="btn-secondary">
+            Contact Us
+          </a>
+        </div>
+
+        <p class="final-cta__note">
+          Premium uniforms, curated collections, and seamless shopping in one
+          place.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <!-- BRAND -->
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img
+                src="./images/logo.png"
+                alt="CampusCraft Logo"
+                class="brand-logo"
+                id="footerLogo"
+              />
+            </a>
+
+            <div class="brand-content footer-branding">
+              <h1 class="brand-name">
+                <span class="campus">Campus</span>
+                <span class="craft">Craft</span>
+              </h1>
+
+              <div class="brand-subtitle">
+                <span class="brand-line"></span>
+
+                <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+                <span class="brand-line"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            CampusCraft provides quality school uniforms, sportswear and
+            accessories designed for comfort, durability and everyday
+            performance.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="product.html"> Products </a>
+            </li>
+
+            <li>
+              <a href="Customization.html">Customization</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <div class="footer-col">
+          <h3>Products</h3>
+
+          <ul>
+            <li>
+              <a href="school-uniforms.html"> School Uniforms </a>
+            </li>
+
+            <li>
+              <a href="sportswear.html"> Sportswear </a>
+            </li>
+
+            <li>
+              <a href="school-uniforms.html"> School Accessories </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Team Kits </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Custom Uniforms </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INFORMATION -->
+
+        <div class="footer-col">
+          <h3>Information</h3>
+
+          <ul>
+            <li>
+              <a href="404.html"> 404 page </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Bulk Orders </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Enquiries </a>
+            </li>
+            <li>
+              <a href="contact.html"> Customization Guide </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+
+          <ul class="contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+
+              Hyderabad, Telangana
+            </li>
+
+            <li>
+              <i data-lucide="phone"></i>
+
+              +91 98765 43210
+            </li>
+
+            <li>
+              <i data-lucide="mail"></i>
+
+              hello@campuscraft.com
+            </li>
+          </ul>
+
+          <!-- SOCIAL MEDIA -->
+
+          <div class="social">
+            <a href="#" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           FOOTER BOTTOM
+      ========================================= -->
+
+      <div class="footer-bottom">
+        <p>© 2026 CampusCraft. All Rights Reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms &amp; Conditions </a>
+
+          <a href="#" class="top-btn" aria-label="Back to top">
+            <i data-lucide="arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    <script src="https://unpkg.com/lucide@latest"></script> -->
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="school-uniforms.js"></script>
+  </body>
+</html>

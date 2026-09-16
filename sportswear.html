@@ -1,0 +1,1174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CampusCraft | School Uniforms & Sportswear|Sports-Wear</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="sportswear.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./images/logo.png"
+            alt="CampusCraft Logo"
+            class="brand-logo"
+            id="headerLogo"
+          />
+        </a>
+
+        <div class="brand-content">
+          <h1 class="brand-name">
+            <span class="campus">Campus</span>
+            <span class="craft">Craft</span>
+          </h1>
+
+          <div class="brand-subtitle">
+            <span class="brand-line"></span>
+
+            <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+            <span class="brand-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           NAVIGATION
+      ========================================= -->
+
+      <nav>
+        <ul class="nav-links">
+          <!-- HOME -->
+
+          <li class="dropdown">
+            <a href="index.html">
+              Home
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html">Home 1</a>
+              </li>
+
+              <li>
+                <a href="home2.html">Home 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ABOUT -->
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <!-- PRODUCTS -->
+
+          <li class="dropdown">
+            <a href="product.html">
+              Products
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="mobile-products-link">
+                <a href="product.html">Products</a>
+              </li>
+
+              <li>
+                <a href="school-uniforms.html"> School Uniforms </a>
+              </li>
+
+              <li>
+                <a href="sportswear.html">Sportswear</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="School.html">School Orders</a>
+          </li>
+          <li>
+            <a href="Customization.html">Customization</a>
+          </li>
+          <!-- CONTACT -->
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+          <!-- MOBILE CART -->
+
+          <li class="mobile-cart-item">
+            <button
+              class="mobile-cart-btn"
+              id="mobileCartToggle"
+              type="button"
+              aria-label="Open cart"
+              aria-expanded="false"
+              aria-controls="cartPanel"
+            >
+              <span class="mobile-cart-btn__label">
+                <i data-lucide="shopping-bag"></i>
+
+                Cart
+              </span>
+
+              <span class="cart-count mobile-cart-count" id="mobileCartCount">
+                0
+              </span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- MOBILE ENQUIRE BUTTON -->
+
+        <div class="mobile-login">
+          <a href="contact.html" class="login-btn">
+            <i data-lucide="message-circle"></i>
+
+            <span>Enquire Now</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- ========================================
+           HEADER BUTTONS
+      ========================================= -->
+
+      <div class="buttons">
+        <!-- RTL -->
+
+        <button
+          class="icon-btn rtl-btn"
+          id="rtlToggle"
+          title="RTL Mode"
+          aria-label="Toggle RTL mode"
+          type="button"
+        >
+          <i data-lucide="arrow-left-right"></i>
+        </button>
+
+        <!-- DARK MODE -->
+
+        <button
+          class="icon-btn dark-btn"
+          id="darkToggle"
+          title="Dark Mode"
+          aria-label="Toggle dark mode"
+          type="button"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+        <!-- DESKTOP CART -->
+
+        <button
+          class="icon-btn cart-btn desktop-cart-btn"
+          id="cartToggle"
+          title="Cart"
+          aria-label="Open cart"
+          aria-expanded="false"
+          aria-controls="cartPanel"
+          type="button"
+        >
+          <i data-lucide="shopping-bag"></i>
+
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- DESKTOP ENQUIRE BUTTON -->
+
+        <a href="contact.html" class="login-btn desktop-login">
+          <i data-lucide="message-circle"></i>
+
+          <span>Enquire Now</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+
+        <button
+          class="icon-btn menu-btn"
+          id="menuToggle"
+          title="Menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- ========================================
+           CART PANEL
+      ========================================= -->
+
+      <div
+        class="cart-panel"
+        id="cartPanel"
+        hidden
+        aria-labelledby="cartPanelTitle"
+      >
+        <!-- CART HEADER -->
+
+        <div class="cart-panel__head">
+          <h3 id="cartPanelTitle">Your Cart</h3>
+
+          <button
+            type="button"
+            class="cart-panel__close"
+            id="cartClose"
+            aria-label="Close cart"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- CART BODY -->
+
+        <div class="cart-panel__body">
+          <!-- EMPTY CART -->
+
+          <div class="cart-panel__empty" id="cartEmptyState">
+            <i data-lucide="shopping-cart"></i>
+
+            <p>No products selected yet.</p>
+
+            <small>
+              Your selected uniforms and sportswear will appear here.
+            </small>
+          </div>
+
+          <!-- CART PRODUCTS -->
+
+          <div class="cart-items" id="cartItems"></div>
+        </div>
+
+        <!-- CART FOOTER -->
+
+        <div class="cart-panel__footer">
+          <div class="cart-panel__total">
+            <span>Subtotal</span>
+
+            <strong id="cartSubtotal">₹0</strong>
+          </div>
+
+          <button id="buyNowBtn" class="cart-buy-btn" type="button">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="sports-hero">
+      <div class="sports-hero__content">
+        <div class="sports-hero__breadcrumb">
+          <a href="product.html" class="sports-hero__crumb-link"> Products </a>
+          <span class="sports-hero__separator">/</span>
+          <a href="sportswear.html" class="sports-hero__crumb-link">
+            Sportswear
+          </a>
+        </div>
+
+        <h1 class="sports-hero__title">
+          Perform better in <span>premium sportswear</span>
+        </h1>
+
+        <p class="sports-hero__text">
+          Explore high-performance sports kits, training wear, and accessories
+          designed for comfort, speed, and confidence on and off the field.
+        </p>
+
+        <a href="#sports-products" class="sports-hero__btn">Shop Collection</a>
+      </div>
+    </section>
+
+    <section class="sports-products" id="sports-products">
+      <div class="sports-products__inner">
+        <div class="sports-products__top">
+          <span class="sports-products__label">Shop Sportswear</span>
+          <h2 class="sports-products__title">
+            Explore our <span>performance</span> collection
+          </h2>
+        </div>
+
+        <div
+          class="sports-products__tabs"
+          role="tablist"
+          aria-label="Sportswear categories"
+        >
+          <button
+            class="sports-tab is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-tab="all"
+          >
+            All
+          </button>
+
+          <button
+            class="sports-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="boys"
+          >
+            Boys Sportswear
+          </button>
+
+          <button
+            class="sports-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="girls"
+          >
+            Girls Sportswear
+          </button>
+
+          <button
+            class="sports-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="accessories"
+          >
+            Sports Accessories
+          </button>
+        </div>
+
+        <div class="sports-products__grid">
+          <article class="product-card" data-category="boys">
+            <div class="product-card__media">
+              <img src="./images/prokit1.png" alt="Boys Pro Sports Kit" />
+              <span class="product-card__badge">Best Seller</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Boys Pro Sports Kit</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.7</span>
+                </div>
+                <div class="product-card__price">₹899</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">M</button>
+                  <button type="button" class="size-chip">L</button>
+                  <button type="button" class="size-chip">XL</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="sports-boys-1"
+                  data-name="Boys Pro Sports Kit"
+                  data-price="899"
+                  data-image="./images/prokit1.png"
+                  data-size="M"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="sports-boys-1"
+                  data-name="Boys Pro Sports Kit"
+                  data-price="899"
+                  data-image="./images/prokit1.png"
+                  data-size="M"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="boys">
+            <div class="product-card__media">
+              <img src="./images/boystraining.png" alt="Boys Training Kit" />
+              <span class="product-card__badge">New</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Boys Training Kit</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.6</span>
+                </div>
+                <div class="product-card__price">₹949</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip">M</button>
+                  <button type="button" class="size-chip is-active">L</button>
+                  <button type="button" class="size-chip">XL</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="sports-boys-2"
+                  data-name="Boys Training Kit"
+                  data-price="949"
+                  data-image="./images/boystraining.png"
+                  data-size="L"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="sports-boys-2"
+                  data-name="Boys Training Kit"
+                  data-price="949"
+                  data-image="./images/boystraining.png"
+                  data-size="L"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="boys">
+            <div class="product-card__media">
+              <img src="./images/track1.png" alt="Boys Track Pants" />
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Boys Track Pants</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.5</span>
+                </div>
+                <div class="product-card__price">₹549</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">M</button>
+                  <button type="button" class="size-chip">L</button>
+                  <button type="button" class="size-chip">XL</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="sports-boys-3"
+                  data-name="Boys Track Pants"
+                  data-price="549"
+                  data-image="./images/track1.png"
+                  data-size="M"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="sports-boys-3"
+                  data-name="Boys Track Pants"
+                  data-price="549"
+                  data-image="./images/track1.png"
+                  data-size="M"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="girls">
+            <div class="product-card__media">
+              <img
+                src="./images/girlssportskit.png"
+                alt="Girls Pro Sports Kit"
+              />
+              <span class="product-card__badge">Popular</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Girls Pro Sports Kit</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.8</span>
+                </div>
+                <div class="product-card__price">₹879</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">M</button>
+                  <button type="button" class="size-chip">L</button>
+                  <button type="button" class="size-chip">XL</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="sports-girls-1"
+                  data-name="Girls Pro Sports Kit"
+                  data-price="879"
+                  data-image="./images/girlssportskit.png"
+                  data-size="M"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="sports-girls-1"
+                  data-name="Girls Pro Sports Kit"
+                  data-price="879"
+                  data-image="./images/girlssportskit.png"
+                  data-size="M"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="girls">
+            <div class="product-card__media">
+              <img src="./images/girls-training.png" alt="Girls Training Kit" />
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Girls Training Kit</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.7</span>
+                </div>
+                <div class="product-card__price">₹929</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip">M</button>
+                  <button type="button" class="size-chip is-active">L</button>
+                  <button type="button" class="size-chip">XL</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="sports-girls-2"
+                  data-name="Girls Training Kit"
+                  data-price="929"
+                  data-image="./images/girls-training.png"
+                  data-size="L"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="sports-girls-2"
+                  data-name="Girls Training Kit"
+                  data-price="929"
+                  data-image="./images/girls-training.png"
+                  data-size="L"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="girls">
+            <div class="product-card__media">
+              <img src="./images/girls-track.png" alt="Girls Track Pants" />
+              <span class="product-card__badge">Trending</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Girls Track Pants</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.6</span>
+                </div>
+                <div class="product-card__price">₹549</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">M</button>
+                  <button type="button" class="size-chip">L</button>
+                  <button type="button" class="size-chip">XL</button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="sports-girls-3"
+                  data-name="Girls Track Pants"
+                  data-price="549"
+                  data-image="./images/girls-track.png"
+                  data-size="M"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="sports-girls-3"
+                  data-name="Girls Track Pants"
+                  data-price="549"
+                  data-image="./images/girls-track.png"
+                  data-size="M"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories">
+            <div class="product-card__media">
+              <img src="./images/cap.png" alt="Performance Sports Cap" />
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Performance Sports Cap</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.4</span>
+                </div>
+                <div class="product-card__price">₹249</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">
+                    One Size
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="sports-accessories-1"
+                  data-name="Performance Sports Cap"
+                  data-price="249"
+                  data-image="./images/cap.png"
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="sports-accessories-1"
+                  data-name="Performance Sports Cap"
+                  data-price="249"
+                  data-image="./images/cap.png"
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories">
+            <div class="product-card__media">
+              <img src="./images/socks.png" alt="Pro Sports Socks (3 Pack)" />
+              <span class="product-card__badge">New</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Pro Sports Socks (3 Pack)</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.5</span>
+                </div>
+                <div class="product-card__price">₹299</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">
+                    One Size
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="sports-accessories-2"
+                  data-name="Pro Sports Socks (3 Pack)"
+                  data-price="299"
+                  data-image="../images/sports-socks.jpg"
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="sports-accessories-2"
+                  data-name="Pro Sports Socks (3 Pack)"
+                  data-price="299"
+                  data-image="../images/sports-socks.jpg"
+                  data-size="One Size"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories">
+            <div class="product-card__media">
+              <img src="./images/bottle.png" alt="Sports Water Bottle" />
+              <span class="product-card__badge">Best Seller</span>
+            </div>
+
+            <div class="product-card__body">
+              <h3 class="product-card__title">Sports Water Bottle</h3>
+
+              <div class="product-card__meta">
+                <div class="product-card__rating">
+                  <i data-lucide="star"></i>
+                  <span>4.7</span>
+                </div>
+                <div class="product-card__price">₹349</div>
+              </div>
+
+              <div class="product-card__sizes">
+                <span class="product-card__sizes-label">Sizes</span>
+                <div class="product-card__size-list">
+                  <button type="button" class="size-chip is-active">
+                    750ml
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card__actions">
+                <button
+                  type="button"
+                  class="btn-primary add-to-cart-btn"
+                  data-add-to-cart
+                  data-id="sports-accessories-3"
+                  data-name="Sports Water Bottle"
+                  data-price="349"
+                  data-image="./images/bottle.png"
+                  data-size="750ml"
+                >
+                  <i data-lucide="shopping-cart"></i>
+                  <span>Add to Cart</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-secondary buy-now-btn"
+                  data-add-to-cart
+                  data-id="sports-accessories-3"
+                  data-name="Sports Water Bottle"
+                  data-price="349"
+                  data-image="./images/bottle.png"
+                  data-size="750ml"
+                >
+                  <i data-lucide="shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="complete-look sports-complete-look">
+      <div class="complete-look__inner">
+        <div class="complete-look__content">
+          <span class="complete-look__eyebrow">Performance Focus</span>
+
+          <h2 class="complete-look__title">
+            Engineered for <span>Peak Performance</span>
+          </h2>
+
+          <p class="complete-look__text">
+            Discover lightweight, breathable sportswear designed for training,
+            matches, and everyday fitness. Every piece is crafted to support
+            movement, comfort, and confidence through every session.
+          </p>
+
+          <ul class="complete-look__list">
+            <li>
+              Moisture-wicking fabrics that keep you cool and dry during intense
+              activity
+            </li>
+            <li>Flexible, ergonomic cuts that allow full range of motion</li>
+            <li>
+              Durable construction built to withstand regular training and
+              matches
+            </li>
+          </ul>
+
+          <div class="complete-look__actions">
+            <a href="products.html" class="btn-primary"> Shop All Products </a>
+            <a href="product.html" class="btn-secondary">
+              View Best Models
+            </a>
+          </div>
+        </div>
+
+        <div class="complete-look__visual">
+          <article class="complete-look__card">
+            <div class="complete-look__card-media">
+              <img
+                src="./images/prokit.png"
+                alt="Premium sportswear collection"
+              />
+            </div>
+
+            <div class="complete-look__card-body">
+              <span class="complete-look__card-tag">Featured Story</span>
+              <h3 class="complete-look__card-title">Pro Performance Edit</h3>
+              <p class="complete-look__card-text">
+                A focused selection of sportswear and accessories engineered to
+                deliver comfort, speed, and a sharp athletic look through every
+                training session and match.
+              </p>
+              <a href="sportswear.html" class="complete-look__card-link">
+                Explore Edit
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta sports-final-cta">
+      <div class="final-cta__inner">
+        <span class="final-cta__eyebrow">New Season Gear</span>
+
+        <h2 class="final-cta__title">Upgrade Your <span>Sports Kit</span></h2>
+
+        <p class="final-cta__text">
+          Discover elevated sports kits, training wear, and accessories designed
+          to perform confidently through every season and every game.
+        </p>
+
+        <div class="final-cta__actions">
+          <a href="product.html" class="btn-primary">
+            Shop Now
+          </a>
+          <a href="product.html" class="btn-secondary">
+            View More
+          </a>
+        </div>
+
+        <p class="final-cta__note">
+          Premium sportswear, curated collections, and seamless shopping in one
+          place.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <!-- BRAND -->
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img
+                src="./images/logo.png"
+                alt="CampusCraft Logo"
+                class="brand-logo"
+                id="footerLogo"
+              />
+            </a>
+
+            <div class="brand-content footer-branding">
+              <h1 class="brand-name">
+                <span class="campus">Campus</span>
+                <span class="craft">Craft</span>
+              </h1>
+
+              <div class="brand-subtitle">
+                <span class="brand-line"></span>
+
+                <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+                <span class="brand-line"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            CampusCraft provides quality school uniforms, sportswear and
+            accessories designed for comfort, durability and everyday
+            performance.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="product.html"> Products </a>
+            </li>
+
+            <li>
+              <a href="Customization.html">Customization</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <div class="footer-col">
+          <h3>Products</h3>
+
+          <ul>
+            <li>
+              <a href="school-uniforms.html"> School Uniforms </a>
+            </li>
+
+            <li>
+              <a href="sportswear.html"> Sportswear </a>
+            </li>
+
+            <li>
+              <a href="school-uniforms.html"> School Accessories </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Team Kits </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Custom Uniforms </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INFORMATION -->
+
+        <div class="footer-col">
+          <h3>Information</h3>
+
+          <ul>
+            <li>
+              <a href="404.html"> 404 page </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Bulk Orders </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Enquiries </a>
+            </li>
+            <li>
+              <a href="contact.html"> Customization Guide </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+
+          <ul class="contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+
+              Hyderabad, Telangana
+            </li>
+
+            <li>
+              <i data-lucide="phone"></i>
+
+              +91 98765 43210
+            </li>
+
+            <li>
+              <i data-lucide="mail"></i>
+
+              hello@campuscraft.com
+            </li>
+          </ul>
+
+          <!-- SOCIAL MEDIA -->
+
+          <div class="social">
+            <a href="#" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           FOOTER BOTTOM
+      ========================================= -->
+
+      <div class="footer-bottom">
+        <p>© 2026 CampusCraft. All Rights Reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms &amp; Conditions </a>
+
+          <a href="#" class="top-btn" aria-label="Back to top">
+            <i data-lucide="arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    <script src="https://unpkg.com/lucide@latest"></script> -->
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="sportswear.js"></script>
+  </body>
+</html>

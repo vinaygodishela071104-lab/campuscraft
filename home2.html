@@ -1,0 +1,2113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CampusCraft | School Uniforms & Sportswear|Home 2</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="home2.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./images/logo.png"
+            alt="CampusCraft Logo"
+            class="brand-logo"
+            id="headerLogo"
+          />
+        </a>
+
+        <div class="brand-content">
+          <h1 class="brand-name">
+            <span class="campus">Campus</span>
+            <span class="craft">Craft</span>
+          </h1>
+
+          <div class="brand-subtitle">
+            <span class="brand-line"></span>
+
+            <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+            <span class="brand-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           NAVIGATION
+      ========================================= -->
+
+      <nav>
+        <ul class="nav-links">
+          <!-- HOME -->
+
+          <li class="dropdown">
+            <a href="index.html">
+              Home
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html">Home 1</a>
+              </li>
+
+              <li>
+                <a href="home2.html">Home 2</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ABOUT -->
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="product.html">
+              Products
+
+              <i data-lucide="chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="mobile-products-link">
+                <a href="product.html">Products</a>
+              </li>
+
+              <li>
+                <a href="school-uniforms.html"> School Uniforms </a>
+              </li>
+
+              <li>
+                <a href="sportswear.html">Sportswear</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="School.html">School Orders</a>
+          </li>
+          <li>
+            <a href="Customization.html">Customization</a>
+          </li>
+          <!-- CONTACT -->
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+          <!-- MOBILE CART -->
+
+          <li class="mobile-cart-item">
+            <button
+              class="mobile-cart-btn"
+              id="mobileCartToggle"
+              type="button"
+              aria-label="Open cart"
+              aria-expanded="false"
+              aria-controls="cartPanel"
+            >
+              <span class="mobile-cart-btn__label">
+                <i data-lucide="shopping-bag"></i>
+
+                Cart
+              </span>
+
+              <span class="cart-count mobile-cart-count" id="mobileCartCount">
+                0
+              </span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- MOBILE ENQUIRE BUTTON -->
+
+        <div class="mobile-login">
+          <a href="contact.html" class="login-btn">
+            <i data-lucide="message-circle"></i>
+
+            <span>Enquire Now</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- ========================================
+           HEADER BUTTONS
+      ========================================= -->
+
+      <div class="buttons">
+        <!-- RTL -->
+
+        <button
+          class="icon-btn rtl-btn"
+          id="rtlToggle"
+          title="RTL Mode"
+          aria-label="Toggle RTL mode"
+          type="button"
+        >
+          <i data-lucide="arrow-left-right"></i>
+        </button>
+
+        <!-- DARK MODE -->
+
+        <button
+          class="icon-btn dark-btn"
+          id="darkToggle"
+          title="Dark Mode"
+          aria-label="Toggle dark mode"
+          type="button"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+        <!-- DESKTOP CART -->
+
+        <button
+          class="icon-btn cart-btn desktop-cart-btn"
+          id="cartToggle"
+          title="Cart"
+          aria-label="Open cart"
+          aria-expanded="false"
+          aria-controls="cartPanel"
+          type="button"
+        >
+          <i data-lucide="shopping-bag"></i>
+
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- DESKTOP ENQUIRE BUTTON -->
+
+        <a href="contact.html" class="login-btn desktop-login">
+          <i data-lucide="message-circle"></i>
+
+          <span>Enquire Now</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+
+        <button
+          class="icon-btn menu-btn"
+          id="menuToggle"
+          title="Menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- ========================================
+           CART PANEL
+      ========================================= -->
+
+      <div
+        class="cart-panel"
+        id="cartPanel"
+        hidden
+        aria-labelledby="cartPanelTitle"
+      >
+        <!-- CART HEADER -->
+
+        <div class="cart-panel__head">
+          <h3 id="cartPanelTitle">Your Cart</h3>
+
+          <button
+            type="button"
+            class="cart-panel__close"
+            id="cartClose"
+            aria-label="Close cart"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- CART BODY -->
+
+        <div class="cart-panel__body">
+          <!-- EMPTY CART -->
+
+          <div class="cart-panel__empty" id="cartEmptyState">
+            <i data-lucide="shopping-cart"></i>
+
+            <p>No products selected yet.</p>
+
+            <small>
+              Your selected uniforms and sportswear will appear here.
+            </small>
+          </div>
+
+          <!-- CART PRODUCTS -->
+
+          <div class="cart-items" id="cartItems"></div>
+        </div>
+
+        <!-- CART FOOTER -->
+
+        <div class="cart-panel__footer">
+          <div class="cart-panel__total">
+            <span>Subtotal</span>
+
+            <strong id="cartSubtotal">₹0</strong>
+          </div>
+
+          <button id="buyNowBtn" class="cart-buy-btn" type="button">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="premium-hero">
+      <div class="premium-hero__background">
+        <img
+          src="./images/hero3.png"
+          data-light="./images/hero3.png"
+          data-dark="./images/hero4.png"
+          alt="CampusCraft premium school uniforms"
+          class="premium-hero__image"
+          id="premiumHeroImage"
+        />
+      </div>
+
+      <!-- <div class="premium-hero__blend"></div> -->
+
+      <div class="premium-hero__container">
+        <div class="premium-hero__content">
+          <div class="premium-hero__eyebrow">
+            <span>PREMIUM SCHOOLWEAR MANUFACTURER</span>
+            <span class="premium-hero__eyebrow-line"></span>
+          </div>
+
+          <h1 class="premium-hero__title">
+            <span>Crafted for Schools.</span>
+
+            <span class="premium-hero__title-accent"> Designed to </span>
+
+            <span class="premium-hero__title-accent"> Stand Apart. </span>
+          </h1>
+
+          <p class="premium-hero__description">
+            Premium school uniforms and sportswear manufactured with precision,
+            comfort and lasting quality for a brighter tomorrow.
+          </p>
+
+          <div class="premium-hero__buttons">
+            <a href="contact.html" class="btn-primary">
+              Request a Quote
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+            <a href="product.html" class="btn-secondary">
+              View Collection
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="premium-hero__features">
+            <div class="premium-hero__feature">
+              <div class="premium-hero__feature-icon">
+                <i data-lucide="school"></i>
+              </div>
+
+              <p>
+                Trusted by
+                <span>100+ Schools</span>
+              </p>
+            </div>
+
+            <span class="premium-hero__divider"></span>
+
+            <div class="premium-hero__feature">
+              <div class="premium-hero__feature-icon">
+                <i data-lucide="settings"></i>
+              </div>
+
+              <p>
+                Custom
+                <span>Manufacturing</span>
+              </p>
+            </div>
+
+            <span class="premium-hero__divider"></span>
+
+            <div class="premium-hero__feature">
+              <div class="premium-hero__feature-icon">
+                <i data-lucide="shield-check"></i>
+              </div>
+
+              <p>
+                Quality
+                <span>Assured</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="premium-hero__bottom">
+            <span class="premium-hero__bottom-line"></span>
+
+            <span> UNIFORMS FOR A BRIGHTER TOMORROW </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="brand-manifesto section-padding" id="our-story">
+      <div class="brand-manifesto__container">
+        <div class="brand-manifesto__content">
+          <div class="brand-manifesto__eyebrow">
+            <span>The CampusCraft Standard</span>
+          </div>
+
+          <span class="brand-manifesto__line" aria-hidden="true"></span>
+
+          <h2 class="brand-manifesto__title">
+            More Than a <span>Uniform.</span>
+            <span class="brand-manifesto__title-break"
+              >A Sense of Belonging.</span
+            >
+          </h2>
+
+          <p class="brand-manifesto__description">
+            CampusCraft creates schoolwear that brings confidence to the
+            classroom, pride to the playground, and a distinct identity to every
+            institution. Designed with care, built for movement, and made to
+            represent the students who wear it.
+          </p>
+
+          <div class="brand-manifesto__table-wrap">
+            <table class="brand-manifesto__table">
+              <caption>
+                Crafted for comfort, designed for everyday school life.
+              </caption>
+
+              <thead>
+                <tr>
+                  <th scope="col">Fabric</th>
+                  <th scope="col">Best for</th>
+                  <th scope="col">Key benefit</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Structured Suiting</td>
+                  <td>Blazers &amp; Formalwear</td>
+                  <td>Refined, durable finish</td>
+                </tr>
+
+                <tr>
+                  <td>Everyday Cotton Blend</td>
+                  <td>Shirts &amp; Polos</td>
+                  <td>Soft and easy-care</td>
+                </tr>
+
+                <tr>
+                  <td>Performance Mesh</td>
+                  <td>PE &amp; Sportswear</td>
+                  <td>Lightweight comfort</td>
+                </tr>
+
+                <tr>
+                  <td>Comfort Knitwear</td>
+                  <td>Sweaters &amp; Cardigans</td>
+                  <td>Warm and flexible</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div
+          class="brand-manifesto__gallery"
+          aria-label="CampusCraft uniform fabric and tailoring details"
+        >
+          <figure
+            class="brand-manifesto__detail brand-manifesto__detail--crest"
+          >
+            <img
+              src="./images/closeup.png"
+              alt="Close-up embroidered school crest on a navy school blazer"
+            />
+            <figcaption>Signature Crests</figcaption>
+          </figure>
+
+          <figure
+            class="brand-manifesto__detail brand-manifesto__detail--button"
+          >
+            <img
+              src="./images/refined.png"
+              alt="Premium navy blazer button and tailored lapel detail"
+            />
+            <figcaption>Refined Finishes</figcaption>
+          </figure>
+
+          <figure
+            class="brand-manifesto__detail brand-manifesto__detail--plaid"
+          >
+            <img
+              src="./images/fabric.png"
+              alt="Blue plaid school skirt fabric close-up"
+            />
+            <figcaption>Heritage Fabrics</figcaption>
+          </figure>
+
+          <figure
+            class="brand-manifesto__detail brand-manifesto__detail--sports"
+          >
+            <img
+              src="./images/comfort.png"
+              alt="Breathable navy school sportswear fabric close-up"
+            />
+            <figcaption>Active Comfort</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section
+      class="signature-collections section-padding"
+      id="signature-collections"
+    >
+      <div class="signature-collections__container">
+        <div class="signature-collections__heading">
+          <div class="signature-collections__eyebrow">
+            <span>Signature Collections</span>
+          </div>
+
+          <h2 class="signature-collections__title">
+            Designed for Every <span>School Day.</span>
+          </h2>
+
+          <p class="signature-collections__description">
+            Discover premium school uniforms, high-performance sportswear, and
+            coordinated essentials designed to reflect every school’s identity.
+          </p>
+        </div>
+
+        <div
+          class="signature-collections__tabs"
+          role="tablist"
+          aria-label="Signature collection categories"
+        >
+          <button
+            class="signature-collections__tab is-active"
+            type="button"
+            role="tab"
+            id="signature-tab-uniforms"
+            aria-selected="true"
+            aria-controls="signature-panel-uniforms"
+            data-category="uniforms"
+          >
+            School Uniforms
+          </button>
+
+          <button
+            class="signature-collections__tab"
+            type="button"
+            role="tab"
+            id="signature-tab-sportswear"
+            aria-selected="false"
+            aria-controls="signature-panel-sportswear"
+            data-category="sportswear"
+            tabindex="-1"
+          >
+            Sportswear
+          </button>
+
+          <button
+            class="signature-collections__tab"
+            type="button"
+            role="tab"
+            id="signature-tab-accessories"
+            aria-selected="false"
+            aria-controls="signature-panel-accessories"
+            data-category="accessories"
+            tabindex="-1"
+          >
+            Accessories
+          </button>
+        </div>
+
+        <div class="signature-collections__panels">
+          <div
+            class="signature-collections__panel is-active"
+            id="signature-panel-uniforms"
+            role="tabpanel"
+            aria-labelledby="signature-tab-uniforms"
+            data-panel="uniforms"
+          >
+            <div class="signature-collections__grid">
+              <article class="signature-card">
+                <div class="signature-card__image-wrap">
+                  <span class="signature-card__badge">Best Seller</span>
+
+                  <img
+                    class="signature-card__image"
+                    src="./images/product1.png"
+                    alt="Heritage navy school blazer with embroidered crest"
+                  />
+
+                  <button
+                    class="signature-card__quick-view"
+                    type="button"
+                    aria-label="Quick view Heritage Navy Blazer"
+                  >
+                    <i data-lucide="eye"></i>
+                  </button>
+                </div>
+
+                <div class="signature-card__content">
+                  <div class="signature-card__meta">
+                    <span>Formal Collection</span>
+                    <span>01</span>
+                  </div>
+
+                  <h3 class="signature-card__title">Heritage Navy Blazer</h3>
+
+                  <p class="signature-card__description">
+                    Structured navy blazer with refined piping, crest-ready
+                    pocket, and a polished everyday schoolwear finish.
+                  </p>
+
+                  <div class="signature-card__bottom">
+                    <p class="signature-card__price">₹2,499</p>
+
+                    <div class="signature-card__actions">
+                      <button
+                        class="signature-card__add btn-primary"
+                        type="button"
+                        data-add-to-cart
+                        data-id="cc-blazer-001"
+                        data-name="Heritage Navy Blazer"
+                        data-price="2499"
+                        data-image="./images/blazer.png"
+                        data-size="Standard"
+                      >
+                        <i data-lucide="shopping-bag"></i>
+                        <span>Add to Cart</span>
+                      </button>
+
+                      <button
+                        class="signature-card__buy btn-secondary"
+                        type="button"
+                        data-buy-now
+                        data-id="cc-blazer-001"
+                        data-name="Heritage Navy Blazer"
+                        data-price="2499"
+                        data-image="./images/blazer.png"
+                        data-size="Standard"
+                      >
+                        <span>Buy Now</span>
+                        <i data-lucide="arrow-up-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="signature-card">
+                <div class="signature-card__image-wrap">
+                  <span class="signature-card__badge">Daily Essential</span>
+
+                  <img
+                    class="signature-card__image"
+                    src="./images/schoolshirt.png"
+                    alt="Classic white school shirt"
+                  />
+
+                  <button
+                    class="signature-card__quick-view"
+                    type="button"
+                    aria-label="Quick view Classic White School Shirt"
+                  >
+                    <i data-lucide="eye"></i>
+                  </button>
+                </div>
+
+                <div class="signature-card__content">
+                  <div class="signature-card__meta">
+                    <span>Daily Essentials</span>
+                    <span>02</span>
+                  </div>
+
+                  <h3 class="signature-card__title">
+                    Classic White School Shirt
+                  </h3>
+
+                  <p class="signature-card__description">
+                    Soft, easy-care shirt with a crisp collar, clean tailoring,
+                    and comfortable all-day wear.
+                  </p>
+
+                  <div class="signature-card__bottom">
+                    <p class="signature-card__price">₹899</p>
+
+                    <div class="signature-card__actions">
+                      <button
+                        class="signature-card__add btn-primary"
+                        type="button"
+                        data-add-to-cart
+                        data-id="cc-shirt-002"
+                        data-name="Classic White School Shirt"
+                        data-price="899"
+                        data-image="./images/schoolshirt.png"
+                        data-size="Standard"
+                      >
+                        <i data-lucide="shopping-bag"></i>
+                        <span>Add to Cart</span>
+                      </button>
+
+                      <button
+                        class="signature-card__buy btn-secondary"
+                        type="button"
+                        data-buy-now
+                        data-id="cc-shirt-002"
+                        data-name="Classic White School Shirt"
+                        data-price="899"
+                        data-image="./images/schoolshirt.png"
+                        data-size="Standard"
+                      >
+                        <span>Buy Now</span>
+                        <i data-lucide="arrow-up-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="signature-card">
+                <div class="signature-card__image-wrap">
+                  <span class="signature-card__badge">Signature Detail</span>
+
+                  <img
+                    class="signature-card__image"
+                    src="./images/skirt2.png"
+                    alt="Navy and blue plaid school skirt"
+                  />
+
+                  <button
+                    class="signature-card__quick-view"
+                    type="button"
+                    aria-label="Quick view Heritage Plaid School Skirt"
+                  >
+                    <i data-lucide="eye"></i>
+                  </button>
+                </div>
+
+                <div class="signature-card__content">
+                  <div class="signature-card__meta">
+                    <span>Heritage Collection</span>
+                    <span>03</span>
+                  </div>
+
+                  <h3 class="signature-card__title">
+                    Heritage Plaid School Skirt
+                  </h3>
+
+                  <p class="signature-card__description">
+                    Pleated plaid skirt with coordinated school colours and
+                    dependable movement for everyday campus life.
+                  </p>
+
+                  <div class="signature-card__bottom">
+                    <p class="signature-card__price">₹1,599</p>
+
+                    <div class="signature-card__actions">
+                      <button
+                        class="signature-card__add btn-primary"
+                        type="button"
+                        data-add-to-cart
+                        data-id="cc-skirt-003"
+                        data-name="Heritage Plaid School Skirt"
+                        data-price="1599"
+                        data-image="./images/skirt2.png"
+                        data-size="Standard"
+                      >
+                        <i data-lucide="shopping-bag"></i>
+                        <span>Add to Cart</span>
+                      </button>
+
+                      <button
+                        class="signature-card__buy btn-secondary"
+                        type="button"
+                        data-buy-now
+                        data-id="cc-skirt-003"
+                        data-name="Heritage Plaid School Skirt"
+                        data-price="1599"
+                        data-image="./images/skirt2.png"
+                        data-size="Standard"
+                      >
+                        <span>Buy Now</span>
+                        <i data-lucide="arrow-up-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div
+            class="signature-collections__panel"
+            id="signature-panel-sportswear"
+            role="tabpanel"
+            aria-labelledby="signature-tab-sportswear"
+            data-panel="sportswear"
+            hidden
+          >
+            <div class="signature-collections__grid">
+              <article class="signature-card">
+                <div class="signature-card__image-wrap">
+                  <span class="signature-card__badge">House Ready</span>
+
+                  <img
+                    class="signature-card__image"
+                    src="./images/polo.png"
+                    alt="Navy school performance polo shirt"
+                  />
+
+                  <button
+                    class="signature-card__quick-view"
+                    type="button"
+                    aria-label="Quick view Performance House Polo"
+                  >
+                    <i data-lucide="eye"></i>
+                  </button>
+                </div>
+
+                <div class="signature-card__content">
+                  <div class="signature-card__meta">
+                    <span>PE Essentials</span>
+                    <span>01</span>
+                  </div>
+
+                  <h3 class="signature-card__title">Performance House Polo</h3>
+
+                  <p class="signature-card__description">
+                    Lightweight sports polo for PE sessions, house events, and
+                    comfortable movement throughout the day.
+                  </p>
+
+                  <div class="signature-card__bottom">
+                    <p class="signature-card__price">₹749</p>
+
+                    <div class="signature-card__actions">
+                      <button
+                        class="signature-card__add btn-primary"
+                        type="button"
+                        data-add-to-cart
+                        data-id="cc-polo-004"
+                        data-name="Performance House Polo"
+                        data-price="749"
+                        data-image="./images/polo.png"
+                        data-size="Standard"
+                      >
+                        <i data-lucide="shopping-bag"></i>
+                        <span>Add to Cart</span>
+                      </button>
+
+                      <button
+                        class="signature-card__buy btn-secondary"
+                        type="button"
+                        data-buy-now
+                        data-id="cc-polo-004"
+                        data-name="Performance House Polo"
+                        data-price="749"
+                        data-image="./images/polo.png"
+                        data-size="Standard"
+                      >
+                        <span>Buy Now</span>
+                        <i data-lucide="arrow-up-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="signature-card">
+                <div class="signature-card__image-wrap">
+                  <span class="signature-card__badge">Active Collection</span>
+
+                  <img
+                    class="signature-card__image"
+                    src="./images/track.png"
+                    alt="Navy school performance tracksuit"
+                  />
+
+                  <button
+                    class="signature-card__quick-view"
+                    type="button"
+                    aria-label="Quick view Campus Performance Tracksuit"
+                  >
+                    <i data-lucide="eye"></i>
+                  </button>
+                </div>
+
+                <div class="signature-card__content">
+                  <div class="signature-card__meta">
+                    <span>Outer Layers</span>
+                    <span>02</span>
+                  </div>
+
+                  <h3 class="signature-card__title">
+                    Campus Performance Tracksuit
+                  </h3>
+
+                  <p class="signature-card__description">
+                    Coordinated jacket and track pant set for warm-ups, training
+                    days, inter-school travel, and outdoor activity.
+                  </p>
+
+                  <div class="signature-card__bottom">
+                    <p class="signature-card__price">₹2,199</p>
+
+                    <div class="signature-card__actions">
+                      <button
+                        class="signature-card__add btn-primary"
+                        type="button"
+                        data-add-to-cart
+                        data-id="cc-trackset-005"
+                        data-name="Campus Performance Tracksuit"
+                        data-price="2199"
+                        data-image="./images/track.png"
+                        data-size="Standard"
+                      >
+                        <i data-lucide="shopping-bag"></i>
+                        <span>Add to Cart</span>
+                      </button>
+
+                      <button
+                        class="signature-card__buy btn-secondary"
+                        type="button"
+                        data-buy-now
+                        data-id="cc-trackset-005"
+                        data-name="Campus Performance Tracksuit"
+                        data-price="2199"
+                        data-image="./images/track.png"
+                        data-size="Standard"
+                      >
+                        <span>Buy Now</span>
+                        <i data-lucide="arrow-up-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="signature-card">
+                <div class="signature-card__image-wrap">
+                  <span class="signature-card__badge">Custom Team Kit</span>
+
+                  <img
+                    class="signature-card__image"
+                    src="./images/sportsjersey.png"
+                    alt="Custom navy and orange school sports team jersey"
+                  />
+
+                  <button
+                    class="signature-card__quick-view"
+                    type="button"
+                    aria-label="Quick view Custom Team Match Jersey"
+                  >
+                    <i data-lucide="eye"></i>
+                  </button>
+                </div>
+
+                <div class="signature-card__content">
+                  <div class="signature-card__meta">
+                    <span>Teamwear</span>
+                    <span>03</span>
+                  </div>
+
+                  <h3 class="signature-card__title">
+                    Custom Team Match Jersey
+                  </h3>
+
+                  <p class="signature-card__description">
+                    School-colour sports jersey developed for team identity,
+                    tournament performance, and player personalization.
+                  </p>
+
+                  <div class="signature-card__bottom">
+                    <p class="signature-card__price">₹1,199</p>
+
+                    <div class="signature-card__actions">
+                      <button
+                        class="signature-card__add btn-primary"
+                        type="button"
+                        data-add-to-cart
+                        data-id="cc-team-jersey-006"
+                        data-name="Custom Team Match Jersey"
+                        data-price="1199"
+                        data-image="./images/sportsjersey.png"
+                        data-size="Standard"
+                      >
+                        <i data-lucide="shopping-bag"></i>
+                        <span>Add to Cart</span>
+                      </button>
+
+                      <button
+                        class="signature-card__buy btn-secondary"
+                        type="button"
+                        data-buy-now
+                        data-id="cc-team-jersey-006"
+                        data-name="Custom Team Match Jersey"
+                        data-price="1199"
+                        data-image="./images/sportsjersey.png"
+                        data-size="Standard"
+                      >
+                        <span>Buy Now</span>
+                        <i data-lucide="arrow-up-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div
+            class="signature-collections__panel"
+            id="signature-panel-accessories"
+            role="tabpanel"
+            aria-labelledby="signature-tab-accessories"
+            data-panel="accessories"
+            hidden
+          >
+            <div class="signature-collections__grid">
+              <article class="signature-card">
+                <div class="signature-card__image-wrap">
+                  <span class="signature-card__badge">Custom Colours</span>
+
+                  <img
+                    class="signature-card__image"
+                    src="./images/tie.png"
+                    alt="Navy and gold striped school tie"
+                  />
+
+                  <button
+                    class="signature-card__quick-view"
+                    type="button"
+                    aria-label="Quick view Custom Striped School Tie"
+                  >
+                    <i data-lucide="eye"></i>
+                  </button>
+                </div>
+
+                <div class="signature-card__content">
+                  <div class="signature-card__meta">
+                    <span>School Identity</span>
+                    <span>01</span>
+                  </div>
+
+                  <h3 class="signature-card__title">
+                    Custom Striped School Tie
+                  </h3>
+
+                  <p class="signature-card__description">
+                    A signature school tie designed around institutional
+                    colours, formal identity, and coordinated uniform
+                    presentation.
+                  </p>
+
+                  <div class="signature-card__bottom">
+                    <p class="signature-card__price">₹399</p>
+
+                    <div class="signature-card__actions">
+                      <button
+                        class="signature-card__add btn-primary"
+                        type="button"
+                        data-add-to-cart
+                        data-id="cc-tie-007"
+                        data-name="Custom Striped School Tie"
+                        data-price="399"
+                        data-image="./images/tie.png"
+                        data-size="Standard"
+                      >
+                        <i data-lucide="shopping-bag"></i>
+                        <span>Add to Cart</span>
+                      </button>
+
+                      <button
+                        class="signature-card__buy btn-secondary"
+                        type="button"
+                        data-buy-now
+                        data-id="cc-tie-007"
+                        data-name="Custom Striped School Tie"
+                        data-price="399"
+                        data-image="./images/tie.png"
+                        data-size="Standard"
+                      >
+                        <span>Buy Now</span>
+                        <i data-lucide="arrow-up-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="signature-card">
+                <div class="signature-card__image-wrap">
+                  <span class="signature-card__badge">Campus Essential</span>
+
+                  <img
+                    class="signature-card__image"
+                    src="./images/bag.png"
+                    alt="Navy school backpack with crest detail"
+                  />
+
+                  <button
+                    class="signature-card__quick-view"
+                    type="button"
+                    aria-label="Quick view Campus Crest Backpack"
+                  >
+                    <i data-lucide="eye"></i>
+                  </button>
+                </div>
+
+                <div class="signature-card__content">
+                  <div class="signature-card__meta">
+                    <span>Daily Carry</span>
+                    <span>02</span>
+                  </div>
+
+                  <h3 class="signature-card__title">Campus Crest Backpack</h3>
+
+                  <p class="signature-card__description">
+                    A durable school backpack with organized storage,
+                    comfortable straps, and optional embroidered school
+                    branding.
+                  </p>
+
+                  <div class="signature-card__bottom">
+                    <p class="signature-card__price">₹1,499</p>
+
+                    <div class="signature-card__actions">
+                      <button
+                        class="signature-card__add btn-primary"
+                        type="button"
+                        data-add-to-cart
+                        data-id="cc-backpack-008"
+                        data-name="Campus Crest Backpack"
+                        data-price="1499"
+                        data-image="./images/bag.png"
+                        data-size="Standard"
+                      >
+                        <i data-lucide="shopping-bag"></i>
+                        <span>Add to Cart</span>
+                      </button>
+
+                      <button
+                        class="signature-card__buy btn-secondary"
+                        type="button"
+                        data-buy-now
+                        data-id="cc-backpack-008"
+                        data-name="Campus Crest Backpack"
+                        data-price="1499"
+                        data-image="./images/bag.png"
+                        data-size="Standard"
+                      >
+                        <span>Buy Now</span>
+                        <i data-lucide="arrow-up-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="signature-card">
+                <div class="signature-card__image-wrap">
+                  <span class="signature-card__badge">Everyday Essential</span>
+
+                  <img
+                    class="signature-card__image"
+                    src="./images/socks.png"
+                    alt="Navy school socks with school crest"
+                  />
+
+                  <button
+                    class="signature-card__quick-view"
+                    type="button"
+                    aria-label="Quick view Crested School Socks"
+                  >
+                    <i data-lucide="eye"></i>
+                  </button>
+                </div>
+
+                <div class="signature-card__content">
+                  <div class="signature-card__meta">
+                    <span>Finishing Touches</span>
+                    <span>03</span>
+                  </div>
+
+                  <h3 class="signature-card__title">Crested School Socks</h3>
+
+                  <p class="signature-card__description">
+                    Comfortable everyday socks with coordinated colours and a
+                    refined optional woven crest detail.
+                  </p>
+
+                  <div class="signature-card__bottom">
+                    <p class="signature-card__price">₹249</p>
+
+                    <div class="signature-card__actions">
+                      <button
+                        class="signature-card__add btn-primary"
+                        type="button"
+                        data-add-to-cart
+                        data-id="cc-socks-009"
+                        data-name="Crested School Socks"
+                        data-price="249"
+                        data-image="./images/socks.png"
+                        data-size="Standard"
+                      >
+                        <i data-lucide="shopping-bag"></i>
+                        <span>Add to Cart</span>
+                      </button>
+
+                      <button
+                        class="signature-card__buy btn-secondary"
+                        type="button"
+                        data-buy-now
+                        data-id="cc-socks-009"
+                        data-name="Crested School Socks"
+                        data-price="249"
+                        data-image="./images/socks.png"
+                        data-size="Standard"
+                      >
+                        <span>Buy Now</span>
+                        <i data-lucide="arrow-up-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="signature-collections__footer">
+          <a class="btn-secondary" href="product.html">
+            <span>Explore All Products</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="craftsmanship-story section-padding" id="craftsmanship">
+      <div class="craftsmanship-story__container">
+        <div class="craftsmanship-story__media">
+          <div class="craftsmanship-story__image-wrap">
+            <img
+              class="craftsmanship-story__image"
+              src="./images/blazer.png"
+              alt="Close-up of a premium navy school blazer with crest, piping, and tailored stitching"
+            />
+
+            <div class="craftsmanship-story__image-overlay"></div>
+
+            <div class="craftsmanship-story__media-label">
+              <span>CampusCraft</span>
+              <strong>Built in the Details</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="craftsmanship-story__content">
+          <div class="craftsmanship-story__eyebrow">
+            <span>Craftsmanship Story</span>
+          </div>
+
+          <h2 class="craftsmanship-story__title">
+            Precision You Can <span>See.</span>
+            <span class="craftsmanship-story__title-break">
+              Comfort They Can Feel.
+            </span>
+          </h2>
+
+          <p class="craftsmanship-story__description">
+            Every collar, seam, button, crest, and fabric choice is considered
+            for the realities of school life: early mornings, active
+            playgrounds, busy classrooms, repeated washing, and years of daily
+            wear.
+          </p>
+
+          <div class="craftsmanship-story__points">
+            <article class="craftsmanship-story__point">
+              <span class="craftsmanship-story__number">01</span>
+
+              <div class="craftsmanship-story__point-content">
+                <h3>Reinforced Stitching</h3>
+                <p>
+                  Strength where uniforms are used the hardest, helping key
+                  seams stay secure through everyday school activity.
+                </p>
+              </div>
+            </article>
+
+            <article class="craftsmanship-story__point">
+              <span class="craftsmanship-story__number">02</span>
+
+              <div class="craftsmanship-story__point-content">
+                <h3>Refined Finishes</h3>
+                <p>
+                  Neat piping, secure buttons, polished collars, and clean hems
+                  create a consistently smart school appearance.
+                </p>
+              </div>
+            </article>
+
+            <article class="craftsmanship-story__point">
+              <span class="craftsmanship-story__number">03</span>
+
+              <div class="craftsmanship-story__point-content">
+                <h3>Comfort-Led Construction</h3>
+                <p>
+                  Thoughtful proportions and soft structure support learning,
+                  play, movement, and confidence throughout the day.
+                </p>
+              </div>
+            </article>
+
+            <article class="craftsmanship-story__point">
+              <span class="craftsmanship-story__number">04</span>
+
+              <div class="craftsmanship-story__point-content">
+                <h3>Colour Consistency</h3>
+                <p>
+                  Coordinated tones across formalwear, housewear, and sports
+                  kits help every school collection look unified.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fit-comfort section-padding" id="fit-comfort">
+      <div class="fit-comfort__container">
+        <div class="fit-comfort__heading">
+          <div class="fit-comfort__eyebrow">
+            <span>Fit &amp; Comfort</span>
+          </div>
+
+          <h2 class="fit-comfort__title">
+            A Better Fit, From First Bell to
+            <span>Final Whistle.</span>
+          </h2>
+
+          <p class="fit-comfort__description">
+            Great schoolwear should never distract from the day ahead. Our
+            collections are developed around comfortable proportions, practical
+            movement, and dependable sizing across student age groups.
+          </p>
+        </div>
+
+        <div class="fit-comfort__showcase">
+          <div class="fit-comfort__image-panel">
+            <img
+              class="fit-comfort__image"
+              src="./images/student.png"
+              alt="Student wearing a tailored navy school uniform"
+            />
+
+            <div class="fit-comfort__image-overlay"></div>
+
+            <div class="fit-comfort__image-caption">
+              <span>Designed Around Movement</span>
+              <strong>Comfort in every school day.</strong>
+            </div>
+          </div>
+
+          <div
+            class="fit-comfort__spectrum"
+            aria-label="CampusCraft fit spectrum"
+          >
+            <div class="fit-comfort__spectrum-item">
+              <span class="fit-comfort__spectrum-label">Formal Fit</span>
+              <strong>Blazers &amp; Shirts</strong>
+            </div>
+
+            <span class="fit-comfort__spectrum-line" aria-hidden="true"></span>
+
+            <div class="fit-comfort__spectrum-item">
+              <span class="fit-comfort__spectrum-label">Everyday Comfort</span>
+              <strong>Daily Schoolwear</strong>
+            </div>
+
+            <span class="fit-comfort__spectrum-line" aria-hidden="true"></span>
+
+            <div class="fit-comfort__spectrum-item">
+              <span class="fit-comfort__spectrum-label">Active Movement</span>
+              <strong>PE &amp; Sportswear</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="fit-comfort__features">
+          <article class="fit-comfort__feature">
+            <span class="fit-comfort__feature-number">01</span>
+
+            <div class="fit-comfort__feature-content">
+              <h3>Age-Appropriate Size Ranges</h3>
+              <p>
+                Practical size systems developed to support students across
+                different age groups and school stages.
+              </p>
+            </div>
+          </article>
+
+          <article class="fit-comfort__feature">
+            <span class="fit-comfort__feature-number">02</span>
+
+            <div class="fit-comfort__feature-content">
+              <h3>Fit Options for Every Stage</h3>
+              <p>
+                Coordinated fit planning for primary, middle, senior, and
+                institution-specific student requirements.
+              </p>
+            </div>
+          </article>
+
+          <article class="fit-comfort__feature">
+            <span class="fit-comfort__feature-number">03</span>
+
+            <div class="fit-comfort__feature-content">
+              <h3>Size-Set Sample Approval</h3>
+              <p>
+                Review representative garment sizes before collection approval
+                and wider production begins.
+              </p>
+            </div>
+          </article>
+
+          <article class="fit-comfort__feature">
+            <span class="fit-comfort__feature-number">04</span>
+
+            <div class="fit-comfort__feature-content">
+              <h3>Movement Allowance</h3>
+              <p>
+                Balanced proportions that help students sit, learn, play, train,
+                and move with greater ease.
+              </p>
+            </div>
+          </article>
+
+          <article class="fit-comfort__feature">
+            <span class="fit-comfort__feature-number">05</span>
+
+            <div class="fit-comfort__feature-content">
+              <h3>Clear School Size Charts</h3>
+              <p>
+                School-specific measurement references help parents and
+                administrators plan quantities with clarity.
+              </p>
+            </div>
+          </article>
+
+          <article class="fit-comfort__feature">
+            <span class="fit-comfort__feature-number">06</span>
+
+            <div class="fit-comfort__feature-content">
+              <h3>Repeat-Order Consistency</h3>
+              <p>
+                Maintain consistent garment sizing and collection standards when
+                your school needs replenishment.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section
+      class="institutions-served section-padding"
+      id="institutions-served"
+    >
+      <div class="institutions-served__container">
+        <div class="institutions-served__heading">
+          <div class="institutions-served__eyebrow">
+            <span>Who We Serve</span>
+          </div>
+
+          <h2 class="institutions-served__title">
+            Designed for Every Kind of
+            <span>Learning Community.</span>
+          </h2>
+
+          <p class="institutions-served__description">
+            From a child’s first school uniform to coordinated campuswear and
+            performance kits, CampusCraft supports institutions with collections
+            made around their identity, students, and everyday requirements.
+          </p>
+        </div>
+
+        <div
+          class="institutions-served__grid"
+          aria-label="Types of schools and institutions CampusCraft serves"
+        >
+          <article class="institution-tile">
+            <span class="institution-tile__index">01</span>
+            <h3>Pre-Schools &amp; Montessori</h3>
+            <p>Comfort-first uniform essentials for early learning years.</p>
+          </article>
+
+          <article class="institution-tile">
+            <span class="institution-tile__index">02</span>
+            <h3>Primary Schools</h3>
+            <p>Practical, durable schoolwear for active everyday routines.</p>
+          </article>
+
+          <article class="institution-tile">
+            <span class="institution-tile__index">03</span>
+            <h3>Secondary Schools</h3>
+            <p>Formalwear, housewear, PE kits, and coordinated accessories.</p>
+          </article>
+
+          <article class="institution-tile">
+            <span class="institution-tile__index">04</span>
+            <h3>International Schools</h3>
+            <p>Distinctive campus collections built around a clear identity.</p>
+          </article>
+
+          <article class="institution-tile">
+            <span class="institution-tile__index">05</span>
+            <h3>Colleges &amp; Universities</h3>
+            <p>
+              Professional apparel, event wear, teamswear, and campus
+              essentials.
+            </p>
+          </article>
+
+          <article class="institution-tile">
+            <span class="institution-tile__index">06</span>
+            <h3>Residential Schools</h3>
+            <p>Complete year-round wardrobes for campus life and activities.</p>
+          </article>
+
+          <article class="institution-tile">
+            <span class="institution-tile__index">07</span>
+            <h3>Sports Academies</h3>
+            <p>Performance-driven training apparel, jerseys, and team kits.</p>
+          </article>
+
+          <article class="institution-tile">
+            <span class="institution-tile__index">08</span>
+            <h3>School Groups &amp; Trusts</h3>
+            <p>Consistent collections across multiple schools and campuses.</p>
+          </article>
+        </div>
+
+        <div class="institutions-served__note">
+          <span class="institutions-served__note-dot" aria-hidden="true"></span>
+          <p>
+            We tailor each collection to your school colours, student age
+            groups, dress code, and seasonal requirements.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="annual-programme section-padding" id="annual-programme">
+      <div class="annual-programme__container">
+        <div class="annual-programme__heading">
+          <div class="annual-programme__eyebrow">
+            <span>Annual Uniform Programme</span>
+          </div>
+
+          <h2 class="annual-programme__title">
+            Support That Continues
+            <span>Beyond Delivery.</span>
+          </h2>
+
+          <p class="annual-programme__description">
+            Schoolwear is not a one-time purchase. CampusCraft helps schools
+            plan seasonal needs, incoming student requirements, repeat orders,
+            and future collection updates with confidence.
+          </p>
+        </div>
+
+        <div class="annual-programme__journey">
+          <div class="annual-programme__orbit" aria-hidden="true"></div>
+
+          <article class="annual-programme__phase annual-programme__phase--one">
+            <span class="annual-programme__phase-number">01</span>
+            <p class="annual-programme__phase-period">April – June</p>
+            <h3>Plan the Collection</h3>
+            <p>
+              Confirm school requirements, new intake forecasts, samples,
+              sizing, and collection updates for the academic year ahead.
+            </p>
+          </article>
+
+          <article class="annual-programme__phase annual-programme__phase--two">
+            <span class="annual-programme__phase-number">02</span>
+            <p class="annual-programme__phase-period">July – September</p>
+            <h3>Welcome the New Term</h3>
+            <p>
+              Coordinate back-to-school supply, class-wise distribution support,
+              admissions requirements, and early-term replenishment.
+            </p>
+          </article>
+
+          <article
+            class="annual-programme__phase annual-programme__phase--three"
+          >
+            <span class="annual-programme__phase-number">03</span>
+            <p class="annual-programme__phase-period">October – January</p>
+            <h3>Adapt for the Season</h3>
+            <p>
+              Plan winterwear, housewear, sports kits, tournament apparel, and
+              mid-year requirements as the school calendar evolves.
+            </p>
+          </article>
+
+          <article
+            class="annual-programme__phase annual-programme__phase--four"
+          >
+            <span class="annual-programme__phase-number">04</span>
+            <p class="annual-programme__phase-period">February – March</p>
+            <h3>Review &amp; Renew</h3>
+            <p>
+              Review demand, continue repeat-order support, refresh collection
+              details, and prepare confidently for the coming year.
+            </p>
+          </article>
+
+          <div class="annual-programme__core">
+            <span class="annual-programme__core-kicker"
+              >Your Uniform Partner</span
+            >
+
+            <strong>365</strong>
+
+            <span class="annual-programme__core-label">
+              Days of planned schoolwear support
+            </span>
+
+            <span class="annual-programme__core-dot" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="annual-programme__support">
+          <p class="annual-programme__support-intro">
+            One coordinated programme for every point in your school year.
+          </p>
+
+          <div class="annual-programme__support-list">
+            <span>Academic-year planning</span>
+            <span>Sample and design reviews</span>
+            <span>Admissions replenishment</span>
+            <span>Seasonal uniform additions</span>
+            <span>Sports and event apparel</span>
+            <span>Repeat-order consistency</span>
+            <span>Multi-campus coordination</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================
+     TESTIMONIALS SECTION
+     ========================= -->
+    <section class="testi-section" aria-labelledby="testi-heading">
+      <div class="testi-wrap">
+        <!-- Testimonials heading block -->
+        <div class="testi-head">
+          <span class="testi-label">
+            <span>Testimonials</span>
+          </span>
+          <h2 id="testi-heading" class="testi-title">
+            Loved by teams and <span>athletes</span>
+          </h2>
+          <p class="testi-desc">
+            Real stories from customers who trust our gear for training,
+            competition, and everyday comfort.
+          </p>
+        </div>
+
+        <div class="testi-grid">
+          <!-- Testimonial 1 (visible) -->
+          <article class="testi-item">
+            <div class="testi-top">
+              <div class="testi-avatar">
+                <img
+                  src="./images/meer.avif"
+                  alt="Portrait of Priya Sharma"
+                  class="testi-img"
+                />
+              </div>
+              <div class="testi-info">
+                <h3 class="testi-name">Priya Sharma</h3>
+                <p class="testi-role">Competitive Swimmer</p>
+              </div>
+            </div>
+
+            <blockquote class="testi-quote">
+              “The fabric feels premium and holds up perfectly after months of
+              intense training. I’ve recommended this brand to my entire team.”
+            </blockquote>
+
+            <div class="testi-bottom">
+              <div class="testi-stars" aria-label="Rating: 5 out of 5 stars">
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+              </div>
+              <span class="testi-verified">
+                <i data-lucide="badge-check" class="testi-badge"></i>
+                Verified Buyer
+              </span>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 (visible) -->
+          <article class="testi-item">
+            <div class="testi-top">
+              <div class="testi-avatar">
+                <img
+                  src="./images/arjunrao.avif"
+                  alt="Portrait of Rohan Mehta"
+                  class="testi-img"
+                />
+              </div>
+              <div class="testi-info">
+                <h3 class="testi-name">Rohan Mehta</h3>
+                <p class="testi-role">Triathlon Coach</p>
+              </div>
+            </div>
+
+            <blockquote class="testi-quote">
+              “I outfit all my athletes with these suits. The fit is consistent,
+              the durability is excellent, and the look is sharp.”
+            </blockquote>
+
+            <div class="testi-bottom">
+              <div class="testi-stars" aria-label="Rating: 5 out of 5 stars">
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+              </div>
+              <span class="testi-verified">
+                <i data-lucide="badge-check" class="testi-badge"></i>
+                Verified Buyer
+              </span>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 (visible) -->
+          <article class="testi-item">
+            <div class="testi-top">
+              <div class="testi-avatar">
+                <img
+                  src="./images/ananya.avif"
+                  alt="Portrait of Ananya Reddy"
+                  class="testi-img"
+                />
+              </div>
+              <div class="testi-info">
+                <h3 class="testi-name">Ananya Reddy</h3>
+                <p class="testi-role">Fitness Enthusiast</p>
+              </div>
+            </div>
+
+            <blockquote class="testi-quote">
+              “Finally, swimwear that doesn’t dig in or lose shape. I feel
+              confident and comfortable from warm-up to cool-down.”
+            </blockquote>
+
+            <div class="testi-bottom">
+              <div class="testi-stars" aria-label="Rating: 5 out of 5 stars">
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+              </div>
+              <span class="testi-verified">
+                <i data-lucide="badge-check" class="testi-badge"></i>
+                Verified Buyer
+              </span>
+            </div>
+          </article>
+
+          <!-- Testimonial 4 (hidden initially) -->
+          <article class="testi-item" hidden>
+            <div class="testi-top">
+              <div class="testi-avatar">
+                <img
+                  src="./images/Kavya Menon.avif"
+                  alt="Portrait of Arjun Nair"
+                  class="testi-img"
+                />
+              </div>
+              <div class="testi-info">
+                <h3 class="testi-name">Arjun Nair</h3>
+                <p class="testi-role">Swim Club Director</p>
+              </div>
+            </div>
+
+            <blockquote class="testi-quote">
+              “Bulk ordering was smooth and the quality is consistent across
+              sizes. Our club has been using this brand for two seasons now.”
+            </blockquote>
+
+            <div class="testi-bottom">
+              <div class="testi-stars" aria-label="Rating: 5 out of 5 stars">
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+              </div>
+              <span class="testi-verified">
+                <i data-lucide="badge-check" class="testi-badge"></i>
+                Verified Buyer
+              </span>
+            </div>
+          </article>
+
+          <!-- Testimonial 5 (hidden initially) -->
+          <article class="testi-item" hidden>
+            <div class="testi-top">
+              <div class="testi-avatar">
+                <img
+                  src="./images/Sameer Khan.avif"
+                  alt="Portrait of Meera Iyer"
+                  class="testi-img"
+                />
+              </div>
+              <div class="testi-info">
+                <h3 class="testi-name">Meera Iyer</h3>
+                <p class="testi-role">Yoga & Mobility Coach</p>
+              </div>
+            </div>
+
+            <blockquote class="testi-quote">
+              “The stretch and recovery are fantastic. I use these for both pool
+              sessions and dry-land workouts without any issues.”
+            </blockquote>
+
+            <div class="testi-bottom">
+              <div class="testi-stars" aria-label="Rating: 5 out of 5 stars">
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+              </div>
+              <span class="testi-verified">
+                <i data-lucide="badge-check" class="testi-badge"></i>
+                Verified Buyer
+              </span>
+            </div>
+          </article>
+
+          <!-- Testimonial 6 (hidden initially) -->
+          <article class="testi-item" hidden>
+            <div class="testi-top">
+              <div class="testi-avatar">
+                <img
+                  src="./images/navy.png"
+                  alt="Portrait of Karthik Desai"
+                  class="testi-img"
+                />
+              </div>
+              <div class="testi-info">
+                <h3 class="testi-name">Karthik Desai</h3>
+                <p class="testi-role">College Athlete</p>
+              </div>
+            </div>
+
+            <blockquote class="testi-quote">
+              “Great value for the quality. The colors haven’t faded and the
+              stitching is still perfect after heavy use.”
+            </blockquote>
+
+            <div class="testi-bottom">
+              <div class="testi-stars" aria-label="Rating: 5 out of 5 stars">
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+                <i data-lucide="star" class="testi-star"></i>
+              </div>
+              <span class="testi-verified">
+                <i data-lucide="badge-check" class="testi-badge"></i>
+                Verified Buyer
+              </span>
+            </div>
+          </article>
+        </div>
+        <div class="testi-foot">
+          <button
+            id="testiViewMore"
+            class="btn-secondary testi-load"
+            type="button"
+          >
+            View more
+            <i data-lucide="arrow-down"></i>
+          </button>
+
+          <button
+            id="testiViewLess"
+            class="btn-secondary testi-load"
+            type="button"
+            hidden
+          >
+            View less
+            <i data-lucide="arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- =========================
+     CTA SECTION
+     ========================= -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-wrap">
+        <div class="cta-card">
+          <div class="cta-content">
+            <h2 id="cta-heading" class="cta-title">
+              Elevate your team with
+              <span class="cta-highlight">premium gear</span>
+            </h2>
+
+            <p class="cta-desc">
+              High-performance uniforms and sportswear designed for comfort,
+              durability, and style.
+            </p>
+
+            <div class="cta-actions">
+              <a href="contact.html" class="btn-primary">
+                Enquire now
+                <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="product.html" class="btn-secondary"> View products </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <!-- BRAND -->
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img
+                src="./images/logo.png"
+                alt="CampusCraft Logo"
+                class="brand-logo"
+                id="footerLogo"
+              />
+            </a>
+
+            <div class="brand-content footer-branding">
+              <h1 class="brand-name">
+                <span class="campus">Campus</span>
+                <span class="craft">Craft</span>
+              </h1>
+
+              <div class="brand-subtitle">
+                <span class="brand-line"></span>
+
+                <span class="subtitle-text"> UNIFORMS &amp; SPORTSWEAR </span>
+
+                <span class="brand-line"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-about">
+            CampusCraft provides quality school uniforms, sportswear and
+            accessories designed for comfort, durability and everyday
+            performance.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About</a>
+            </li>
+
+            <li>
+              <a href="product.html"> Products </a>
+            </li>
+
+            <li>
+              <a href="Customization.html">Customization</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <div class="footer-col">
+          <h3>Products</h3>
+
+          <ul>
+            <li>
+              <a href="school-uniforms.html"> School Uniforms </a>
+            </li>
+
+            <li>
+              <a href="sportswear.html"> Sportswear </a>
+            </li>
+
+            <li>
+              <a href="school-uniforms.html"> School Accessories </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Team Kits </a>
+            </li>
+
+            <li>
+              <a href="product.html"> Custom Uniforms </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INFORMATION -->
+
+        <div class="footer-col">
+          <h3>Information</h3>
+
+          <ul>
+            <li>
+              <a href="404.html"> 404 page </a>
+            </li>
+
+            <li>
+              <a href="comming.html"> Comming soon</a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Bulk Orders </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Enquiries </a>
+            </li>
+            <li>
+              <a href="contact.html"> Customization Guide </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+
+          <ul class="contact">
+            <li>
+              <i data-lucide="map-pin"></i>
+
+              Hyderabad, Telangana
+            </li>
+
+            <li>
+              <i data-lucide="phone"></i>
+
+              +91 98765 43210
+            </li>
+
+            <li>
+              <i data-lucide="mail"></i>
+
+              hello@campuscraft.com
+            </li>
+          </ul>
+
+          <!-- SOCIAL MEDIA -->
+
+          <div class="social">
+            <a href="#" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================
+           FOOTER BOTTOM
+      ========================================= -->
+
+      <div class="footer-bottom">
+        <p>© 2026 CampusCraft. All Rights Reserved.</p>
+
+        <div class="footer-bottom-links">
+          <a href="privacy.html"> Privacy Policy </a>
+
+          <a href="terms.html"> Terms &amp; Conditions </a>
+
+          <a href="#" class="top-btn" aria-label="Back to top">
+            <i data-lucide="arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    <script src="https://unpkg.com/lucide@latest"></script> -->
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
+    </script>
+    <script src="home2.js"></script>
+  </body>
+</html>
