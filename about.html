@@ -50,14 +50,8 @@
         </div>
       </div>
 
-      <!-- ========================================
-           NAVIGATION
-      ========================================= -->
-
       <nav>
         <ul class="nav-links">
-          <!-- HOME -->
-
           <li class="dropdown">
             <a href="index.html">
               Home
@@ -75,8 +69,6 @@
               </li>
             </ul>
           </li>
-
-          <!-- ABOUT -->
 
           <li>
             <a href="about.html">About</a>
@@ -111,13 +103,9 @@
             <a href="Customization.html">Customization</a>
           </li>
 
-          <!-- CONTACT -->
-
           <li>
             <a href="contact.html">Contact</a>
           </li>
-
-          <!-- MOBILE CART -->
 
           <li class="mobile-cart-item">
             <button
@@ -141,24 +129,15 @@
           </li>
         </ul>
 
-        <!-- MOBILE ENQUIRE BUTTON -->
-
         <div class="mobile-login">
-          <a href="contact.html" class="login-btn">
+          <a href="contact.html#product-enquiry" class="login-btn">
             <i data-lucide="message-circle"></i>
-
             <span>Enquire Now</span>
           </a>
         </div>
       </nav>
 
-      <!-- ========================================
-           HEADER BUTTONS
-      ========================================= -->
-
       <div class="buttons">
-        <!-- RTL -->
-
         <button
           class="icon-btn rtl-btn"
           id="rtlToggle"
@@ -169,8 +148,6 @@
           <i data-lucide="arrow-left-right"></i>
         </button>
 
-        <!-- DARK MODE -->
-
         <button
           class="icon-btn dark-btn"
           id="darkToggle"
@@ -180,8 +157,6 @@
         >
           <i data-lucide="moon"></i>
         </button>
-
-        <!-- DESKTOP CART -->
 
         <button
           class="icon-btn cart-btn desktop-cart-btn"
@@ -196,16 +171,10 @@
 
           <span class="cart-count" id="cartCount">0</span>
         </button>
-
-        <!-- DESKTOP ENQUIRE BUTTON -->
-
-        <a href="contact.html" class="login-btn desktop-login">
+        <a href="contact.html#product-enquiry" class="login-btn">
           <i data-lucide="message-circle"></i>
-
           <span>Enquire Now</span>
         </a>
-
-        <!-- MOBILE MENU -->
 
         <button
           class="icon-btn menu-btn"
@@ -219,18 +188,12 @@
         </button>
       </div>
 
-      <!-- ========================================
-           CART PANEL
-      ========================================= -->
-
       <div
         class="cart-panel"
         id="cartPanel"
         hidden
         aria-labelledby="cartPanelTitle"
       >
-        <!-- CART HEADER -->
-
         <div class="cart-panel__head">
           <h3 id="cartPanelTitle">Your Cart</h3>
 
@@ -244,11 +207,7 @@
           </button>
         </div>
 
-        <!-- CART BODY -->
-
         <div class="cart-panel__body">
-          <!-- EMPTY CART -->
-
           <div class="cart-panel__empty" id="cartEmptyState">
             <i data-lucide="shopping-cart"></i>
 
@@ -259,12 +218,8 @@
             </small>
           </div>
 
-          <!-- CART PRODUCTS -->
-
           <div class="cart-items" id="cartItems"></div>
         </div>
-
-        <!-- CART FOOTER -->
 
         <div class="cart-panel__footer">
           <div class="cart-panel__total">
