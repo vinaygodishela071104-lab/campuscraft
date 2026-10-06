@@ -2022,8 +2022,8 @@
   display: flex;
   flex-direction: column;
 }
-
 .bulk-booking-eyebrow {
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2038,7 +2038,6 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
 .bulk-booking-summary-text {
   margin-top: 12px;
   margin-bottom: 20px;

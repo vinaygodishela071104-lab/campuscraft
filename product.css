@@ -389,13 +389,22 @@
 .zigzag-card__link {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  justify-content: center;
+  gap: 9px;
   width: fit-content;
   margin-top: auto;
-  padding-top: 22px;
-  color: var(--text);
+  padding: 11px 19px;
+  border: 1px solid var(--primary-btn-border);
+  border-radius: var(--radius-pill);
+  background: var(--primary-btn-bg);
+  color: var(--primary-btn-color);
+  font-family: var(--body-font);
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
   transition: var(--transition);
 }
 
@@ -403,17 +412,20 @@
 .zigzag-card__link i {
   width: 16px;
   height: 16px;
-  color: var(--secondary);
+  color: currentColor;
   transition: var(--transition);
 }
 
 .zigzag-card__link:hover {
-  color: var(--secondary);
+  background: var(--primary-btn-hover-bg);
+  color: var(--primary-btn-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-secondary);
 }
 
 .zigzag-card__link:hover svg,
 .zigzag-card__link:hover i {
-  transform: translate(4px, -4px);
+  transform: translateX(4px);
 }
 
 .zigzag-card__number {

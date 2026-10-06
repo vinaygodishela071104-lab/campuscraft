@@ -1324,7 +1324,6 @@
   width: 15px;
   height: 15px;
 }
-
 .custom-quote {
   padding: 105px 0;
   background: var(--surface-alt);
@@ -1346,6 +1345,7 @@
 }
 
 .custom-quote__pill {
+  align-self: flex-start;
   margin-bottom: 16px;
   padding: 8px 4px;
   display: inline-flex;
@@ -1611,6 +1611,11 @@
   resize: vertical;
 }
 
+.custom-quote__field input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  cursor: pointer;
+}
+
 .custom-quote__consent {
   display: flex;
   align-items: flex-start;
@@ -1638,6 +1643,13 @@
   margin-top: 13px;
   color: var(--secondary);
   font-size: 0.8rem;
+}
+
+body.dark-mode
+  .custom-quote__field
+  input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(2);
+  opacity: 1;
 }
 .quote-cta {
   position: relative;

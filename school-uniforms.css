@@ -18,29 +18,88 @@
   max-width: 920px;
   margin: 0 auto;
 }
-
-.uniform-hero__breadcrumb {
+.school-uniform__pill {
+  align-self: flex-start;
+  margin-bottom: 16px;
+  padding: 8px 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.uniform-hero__crumb-link {
-  font-size: 0.95rem;
-  font-weight: var(--nav-font-weight);
-  letter-spacing: 0.04em;
+  gap: 8px;
+  border: 1px solid rgba(6, 43, 92, 0.12);
+  border-radius: var(--radius-pill);
+  background: rgba(245, 160, 0, 0.16);
+  border: 1px solid rgba(245, 160, 0, 0.28);
+  color: var(--secondary);
+  font-family: var(--heading-font);
+  font-size: 0.72rem;
+  font-weight: var(--heading-font-weight);
+  letter-spacing: 0.1em;
+  line-height: 1;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.92);
-  transition: color 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
-.uniform-hero__crumb-link:hover {
+.school-uniform__pill svg {
+  width: 15px;
+  height: 15px;
   color: var(--secondary);
 }
+@media screen and (max-width: 480px) {
+  .school-uniform__pill {
+    margin-bottom: 14px;
+    padding: 8px 5px;
+    gap: 7px;
+    font-size: 0.68rem;
+  }
 
+  .school-uniform__pill svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .school-uniform__pill {
+    margin-bottom: 15px;
+    padding: 8px 5px;
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+
+  .school-uniform__pill svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .school-uniform__pill {
+    margin-bottom: 16px;
+    padding: 8px 5px;
+    gap: 8px;
+    font-size: 0.72rem;
+  }
+
+  .school-uniform__pill svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .school-uniform__pill {
+    margin-bottom: 16px;
+    padding: 8px 5px;
+    gap: 8px;
+    font-size: 0.72rem;
+  }
+
+  .school-uniform__pill svg {
+    width: 15px;
+    height: 15px;
+  }
+}
 .uniform-hero__separator {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.7);
